@@ -1,0 +1,249 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
+<link rel="import" href="../bower_components/iron-data-table/iron-data-table.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-input/paper-textarea.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view2">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      .flex-horizontal {
+        @apply(--layout-horizontal);
+      }
+      .flexchild {
+        @apply(--layout-flex);
+      }
+
+      paper-tabs {
+        width: 100%;
+        background-color: #0088BF;
+        text-transform: uppercase;
+        margin-bottom: 1px;
+      }
+      paper-tab{
+        color: white;
+      }
+
+      iron-pages div{
+
+        @apply(--layout-vertical);
+
+      }
+      .flexchild-vertical {
+        @apply(--layout-flex);
+      }
+
+      paper-textarea,
+      paper-input{
+
+        @apply(--paper-font-body2);
+        padding: 0 8px;
+        color: rgba(0,0,0,0.38);
+        border-bottom: none;
+
+      }
+      paper-card{
+        @apply(--layout-vertical);
+
+
+      }
+      .page{
+
+        padding: 8px;
+        @apply(--layout-horizontal);
+        justify-content:space-around;
+        align-items:stretch;
+        min-height: calc(100vh - 132px);
+      }
+
+      .contain-two-sizes-inputs paper-input:first-child{
+        flex-grow:2
+      }
+
+      .contain-two-sizes-inputs paper-input:last-child{
+        flex-grow:1
+      }
+      .page paper-card{
+        @apply(--layout-vertical);
+      }
+      .page paper-card:last-child{
+        flex-grow:1;
+        border-left:1px solid rgba(0,0,0,.16);
+      }
+      .page paper-card:first-child{
+        flex-grow:3;
+      }
+
+      div[main-title]{
+        margin: 8px 16px 0 16px;
+        @apply(--paper-font-title);
+      }
+      .avatar {
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 80px;
+        box-sizing: border-box;
+        background-color: #DDD;
+      }
+      hr{
+        border-top:1px solid rgba(0,0,0,.16);
+        float: left;
+        width: 100%;
+        height:1px;
+      }
+      @media (max-width: 768px){
+        div[main-title]{
+          padding: 8px 0;
+          margin: 0;
+        }
+        .page,
+        .page paper-card,
+        .page paper-card paper-input,
+        .flex-horizontal {
+          display: table;
+          width: 99.9%;
+          padding: 0;
+        }
+        .page paper-card:last-child{
+          border-left:none;
+          border-top:1px solid rgba(0,0,0,.16);
+        }
+
+      }
+    </style>
+
+
+
+    <paper-tabs selected="{{selected}}" scrollable>
+      <paper-tab active>Dados Principais</paper-tab>
+      <paper-tab>Contatos Relacionados</paper-tab>
+      <paper-tab>Grupos</paper-tab>
+      <paper-tab>Configurações Comerciais</paper-tab>
+    </paper-tabs>
+
+    <iron-pages selected="{{selected}}">
+      <div class="page">
+
+        <paper-card>
+
+
+          <div class="card-content flexchild-vertical">
+            <div main-title>Dados Pessoais</div>
+
+            <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
+            <div class="contain-two-sizes-inputs flex-horizontal">
+              <paper-input label="Nome" class="flexchild"></paper-input>
+
+              <paper-input label="Código" disabled class="flexchild"></paper-input>
+            </div>
+            <div class="contain-two-sizes-inputs flex-horizontal">
+              <paper-input label="Apelido" class="flexchild"></paper-input>
+              <paper-input label="Matriz" disabled class="flexchild"></paper-input>
+            </div>
+            <div class="contain-three-inputs flex-horizontal">
+              <paper-input label="CPF/CNPJ" class="flexchild"></paper-input>
+              <paper-input label="RG" class="flexchild"></paper-input>
+              <paper-input label="Inscrição Municipal" class="flexchild"></paper-input>
+            </div>
+            <div class="contain-two-inputs flex-horizontal">
+
+              <paper-input label="Site" class="flexchild"></paper-input>
+              <paper-input label="E-mail" class="flexchild"></paper-input>
+            </div>
+            <div class="contain-two-inputs flex-horizontal">
+              <paper-input label="NFe E-mail" class="flexchild"></paper-input>
+              <paper-input label="Obs NFe" class="flexchild"></paper-input>
+            </div>
+
+            <div class="contain-two-inputs flex-horizontal">
+              <paper-input label="Profissão" class="flexchild"></paper-input>
+              <paper-input label="Sexo" class="flexchild"></paper-input>
+            </div>
+            <div class="contain-two-inputs flex-horizontal">
+              <paper-input label="Data Nascimento" class="flexchild"></paper-input>
+              <paper-input label="Idade" class="flexchild"></paper-input>
+            </div>
+            <div class="container flex-horizontal">
+              <paper-textarea label="Observação" class="flexchild"></paper-textarea>
+            </div>
+            <div class="container flex-horizontal">
+              <paper-input label="Indicação" class="flexchild"></paper-input>
+              <paper-input label="Data de Cadastro" disabled class="flexchild"></paper-input>
+              <paper-input label="Ultima Alteração" disabled class="flexchild"></paper-input>
+            </div>
+          </div>
+        </paper-card>
+        <paper-card>
+
+          <div class="card-content flexchild-vertical">
+            <div main-title>Telefones</div>
+            <div class="container flex-horizontal">
+
+              <paper-input label="Tipo" class="flexchild"></paper-input>
+              <paper-input label="Telefone" class="flexchild"></paper-input>
+              <paper-input label="Observação" class="flexchild"></paper-input>
+            </div>
+
+          </div>
+          <hr>
+
+          <div class="card-content flexchild-vertical">
+            <div main-title>Consulta de Cadastro</div>
+            <div class="container flex-horizontal">
+
+
+              <paper-input label="Data" class="flexchild"></paper-input>
+              <paper-input label="Descrição" class="flexchild"></paper-input>
+            </div>
+
+          </div>
+        </paper-card>
+      </div>
+      <div>Page 2</div>
+      <div>Page 3</div>
+      <div>Page 4</div>
+    </iron-pages>
+
+  </template>
+
+  <script>
+    class MyView2 extends Polymer.Element {
+      static get is() { return 'my-view2'; }
+        static get properties() {
+            return {
+                selected:{
+                    type: Number,
+                    value: 0
+                }
+            }
+        }
+    }
+
+    window.customElements.define(MyView2.is, MyView2);
+  </script>
+</dom-module>

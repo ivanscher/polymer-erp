@@ -1,0 +1,233 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      iron-list {
+        padding-top: 0px;
+        height: calc(100vh - 128px);
+        --iron-list-items-container: {
+          width: calc(100% - 16px);
+          margin: 0 auto;
+          border-bottom: 1px solid #ddd;
+
+        };
+      }
+      paper-fab{
+        position: fixed;
+        z-index: 999;
+        bottom: 16px;
+        right: 16px;
+        --paper-fab-background: #0098DB;
+        height: 56px;
+        width: 56px;
+      }
+
+      iron-list iron-icon.blue{
+        color: #0098DB;
+      }
+      iron-list iron-icon.red{
+        color: #EB5757;
+      }
+      iron-list iron-icon{
+
+        margin-right: 10px;
+
+      }
+      .item {
+        @apply --layout-horizontal;
+        padding: 20px;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .avatar {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        background-color: #DDD;
+      }
+
+      .pad {
+        padding: 0 16px;
+        @apply(--layout-flex);
+        @apply(--layout-horizontal);
+        @apply(--layout-around-justified);
+      }
+
+      .pad div{
+        @apply(--layout-self-center)
+      }
+      .primary {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .code,
+      .shortText, .longText {
+        font-size: 14px;
+        color: rgba(0,0,0,.54);
+      }
+
+      .longText {
+        color: gray;
+        display: none;
+      }
+
+
+      .item:hover .shortText::after {
+        content: ' [+]';
+        color: gray;
+      }
+
+      .item.expanded:hover .shortText::after {
+        content: '';
+      }
+
+      .item.expanded .longText {
+        display: block;
+      }
+
+
+      .item.expanded:hover .longText::after {
+        content: ' [–]';
+      }
+
+      .spacer {
+        @apply --layout-flex;
+      }
+      paper-input.card{
+        padding: 8px;
+        margin: 8px;
+        border-radius: 2px;
+      }
+      paper-input{
+        --paper-input-container: {
+          padding: 0;
+          --light-theme-secondary-color:white;
+        }
+        --paper-input-container-underline: {
+          background-color: white;
+          background: white;
+          color: white;
+          border-color: white;
+        }
+
+
+      }
+      paper-input iron-icon{
+        margin-right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .pad {
+          @apply --layout-vertical);
+        }
+        .pad div{
+          @apply(--layout-self-start)
+        }
+        paper-toolbar .bottom.title {
+          font-size: 14px;
+        }
+        iron-list{
+          --iron-list-items-container: {
+            width: 100% ;
+          }
+        }
+      }
+    </style>
+
+    <paper-input label="Buscar" class="card" no-label-float>
+      <iron-icon icon="search" slot="prefix"></iron-icon>
+    </paper-input>
+
+    <paper-fab mini icon="add"></paper-fab>
+
+    <iron-ajax url="http://localhost/geek/erp/src/contatos.json" last-response="{{data}}" auto></iron-ajax>
+    <iron-list id="list" items="[[data]]" as="item" selection-enabled multi-selection>
+      <template>
+        <!--<div class$="[[getClassForItem(item, selected)]]" tabindex$="[[tabIndex]]">-->
+        <div class="item" tabindex$="[[tabIndex]]">
+          <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
+          <div class="pad">
+            <div class="primary">[[item.name]]</div>
+            <div class="shortText">[[item.nickname]]</div>
+            <div class="shortText">[[item.phone]]</div>
+            <div class="shortText">[[item.email]]</div>
+            <div class="shortText">CPF: [[item.cpf]]</div>
+            <div class="shortText">RG: [[item.rg]]</div>
+
+
+          </div>
+
+          <iron-icon icon$="[[iconForItem(item)]]" class$="[[colorForItem(item)]]"></iron-icon>
+          <div class="code">[[item.index]]</div>
+        </div>
+      </template>
+    </iron-list>
+
+  </template>
+
+  <script>
+    class MyView1 extends Polymer.Element {
+      static get is() { return 'my-view1'; }
+        static get properties() {
+            return {
+                items: {
+                    type: Array,
+                    value: function() {
+                        return [];
+                    }
+                }
+            }
+        }
+
+        attached() {
+            // Use the document element
+            this.$.list.scrollTarget = this.ownerDocument.documentElement;
+        }
+
+        colorForItem(item) {
+            return item ? (item.status == 0 ? 'blue' : 'red') : '';
+        }
+        iconForItem(item) {
+            return item ? (item.status == 0 ? 'verified-user' : 'backspace') : '';
+        }
+
+        getClassForItem(item, selected) {
+            return selected ? 'item expanded' : 'item';
+        }
+
+    }
+
+
+    window.customElements.define(MyView1.is, MyView1);
+  </script>
+</dom-module>

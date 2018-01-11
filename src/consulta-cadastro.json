@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "consult": {
+        "date": "11/01/2018",
+        "description": "Lorem ipsum dolor"
+      }
+    },
+    {
+      "consult": {
+        "date": "11/01/2018",
+        "description": "Lorem ipsum dolor"
+      }
+    }
+  ]
+}
