@@ -27,7 +27,7 @@
     "iron-image": "PolymerElements/iron-image#^2.1.2",
     "paper-fab": "PolymerElements/paper-fab#^2.0.0",
     "paper-card": "PolymerElements/paper-card#^2.0.0",
-    "iron-data-table": "Saulis/iron-data-table#^1.0.7"
+    "paper-menu-button": "PolymerElements/paper-menu-button#^2.0.0"
   },
   "resolutions": {
     "polymer": "^2.0.0"

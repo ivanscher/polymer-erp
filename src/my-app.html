@@ -11,8 +11,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+
 <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
 <link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+
 <link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../bower_components/app-route/app-location.html">
@@ -20,6 +22,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="my-view1.html">
@@ -37,17 +43,41 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
       }
 
+      app-drawer {
+        --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
+        --app-drawer-content-container: {
+          color: #fff;
+          background-color: #0098DB;;
+        }
+      }
       app-drawer-layout:not([narrow]) [drawer-toggle] {
         display: none;
       }
 
-      app-header {
-        color: #fff;
-        background-color: #0098DB;
-      }
-
       app-header paper-icon-button {
         --paper-icon-button-ink-color: white;
+      }
+      app-header{
+        padding: 8px;
+        background-color: rgba(0,0,0,.16);
+      }
+
+      .avatar {
+        height: 64px;
+        width: 64px;
+        margin: 16px 0;
+        display: block;
+        border-radius: 80px;
+        box-sizing: border-box;
+        background-color: #DDD;
+        @apply(--shadow-elevation-3dp)
+      }
+
+      .contact-info .name {
+        @apply(--paper-font-body1);
+      }
+      .contact-info .email {
+        @apply(--paper-font-caption);
       }
 
       .drawer-list {
@@ -60,12 +90,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-decoration: none;
         color: var(--app-secondary-color);
         line-height: 40px;
+        color: white;
       }
 
       .drawer-list a.iron-selected {
-        color: black;
+        color: white;
         font-weight: bold;
       }
+
+
     </style>
 
 
@@ -85,25 +118,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <app-drawer-layout fullbleed narrow="{{narrow}}">
       <!-- Drawer content -->
       <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-        <app-toolbar>Menu</app-toolbar>
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="[[rootPath]]view1">Contatos</a>
-          <a name="view2" href="[[rootPath]]view2">View Two</a>
-          <a name="view3" href="[[rootPath]]view3">View Three</a>
-        </iron-selector>
+        <app-toolbar>ERP B18</app-toolbar>
+        <app-header-layout has-scrolling-region>
+
+          <app-header fixed slot="header">
+            <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
+            <div class="contact-info">
+              <div class="name">Jonathan</div>
+              <div class="email">heyfromjonathan@gmail.com</div>
+            </div>
+          </app-header>
+          <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+            <a name="view1" href="[[rootPath]]view1">Lista Contatos</a>
+            <a name="view2" href="[[rootPath]]view2">Editar/Adicionar Contatos</a>
+            <a name="view3" href="[[rootPath]]view3">View Three</a>
+          </iron-selector>
+
+        </app-header-layout>
+
+
       </app-drawer>
 
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
-
-        <app-header slot="header" condenses reveals effects="waterfall">
-          <app-toolbar>
-            <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>My App</div>
-          </app-toolbar>
-        </app-header>
-
-
         <iron-pages
             selected="[[page]]"
             attr-for-selected="name"

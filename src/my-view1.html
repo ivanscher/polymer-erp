@@ -17,6 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/paper-tooltip/paper-tooltip.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 
 <link rel="import" href="shared-styles.html">
@@ -26,6 +27,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
+      }
+      app-header {
+        color: #fff;
+        background-color: #0098DB;
       }
       iron-list {
         padding-top: 0px;
@@ -102,11 +107,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
 
-      .item:hover .shortText::after {
-        content: ' [+]';
-        color: gray;
-      }
-
       .item.expanded:hover .shortText::after {
         content: '';
       }
@@ -128,6 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 8px;
         border-radius: 2px;
       }
+
       paper-input{
         --paper-input-container: {
           padding: 0;
@@ -163,6 +164,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
     </style>
+
+    <app-header slot="header" condenses reveals effects="waterfall">
+      <app-toolbar>
+
+        <div main-title>Contatos</div>
+
+
+
+
+        <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
+        <paper-tooltip for="button-import" offset="0">Importar</paper-tooltip>
+
+        <paper-progress value="10" indeterminate bottom-item></paper-progress>
+      </app-toolbar>
+    </app-header>
 
     <paper-input label="Buscar" class="card" no-label-float>
       <iron-icon icon="search" slot="prefix"></iron-icon>
@@ -218,7 +234,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             return item ? (item.status == 0 ? 'blue' : 'red') : '';
         }
         iconForItem(item) {
-            return item ? (item.status == 0 ? 'verified-user' : 'backspace') : '';
+            return item ? (item.status == 0 ? 'check' : 'clear') : '';
         }
 
         getClassForItem(item, selected) {
