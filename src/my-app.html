@@ -23,6 +23,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../ower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
 
 <link rel="import" href="../bower_components/paper-styles/paper-styles.html">
 
@@ -86,16 +91,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .drawer-list a {
         display: block;
-        padding: 0 16px;
+
+        width: 100%;
         text-decoration: none;
         color: var(--app-secondary-color);
         line-height: 40px;
         color: white;
       }
 
+      .drawer-list iron-collapse paper-item a {
+        padding: 0 16px;
+      }
       .drawer-list a.iron-selected {
         color: white;
         font-weight: bold;
+      }
+
+      paper-icon-item,
+      paper-item{
+        cursor: pointer;
       }
 
 
@@ -129,9 +143,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
           </app-header>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <a name="view1" href="[[rootPath]]view1">Lista Contatos</a>
-            <a name="view2" href="[[rootPath]]view2">Editar/Adicionar Contatos</a>
-            <a name="view3" href="[[rootPath]]view3">View Three</a>
+            <paper-menu>
+
+
+              <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">Tem Submenu</paper-item>
+              <iron-collapse id="collapse" opened="{{opened}}">
+                <paper-menu class="menu-content">
+                  <paper-item><a name="view1" href="[[rootPath]]view1">Lista</a></paper-item>
+                  <paper-item><a name="view2" href="[[rootPath]]view2">Editar/Adicionar</a></paper-item>
+                  <paper-item><a name="view2" href="[[rootPath]]view3">Editar/Adicionar</a></paper-item>
+                </paper-menu>
+              </iron-collapse>
+              <paper-item><a name="view3" href="[[rootPath]]view4">View Three</a></paper-item>
+              <paper-icon-item>
+                <iron-icon icon="inbox" slot="item-icon"></iron-icon>
+                Menu com icone
+              </paper-icon-item>
+            </paper-menu>
+
           </iron-selector>
 
         </app-header-layout>
@@ -205,6 +234,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       _showPage404() {
         this.page = 'view404';
       }
+
+      toggle() {
+          this.$.collapse.toggle();
+      }
+
     }
 
     window.customElements.define(MyApp.is, MyApp);
