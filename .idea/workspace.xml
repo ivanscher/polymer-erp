@@ -22,10 +22,17 @@
         <entry file="file://$PROJECT_DIR$/src/my-view2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="507">
-              <caret line="772" column="16" lean-forward="false" selection-start-line="772" selection-start-column="16" selection-end-line="772" selection-end-column="16" />
+              <caret line="885" column="20" lean-forward="false" selection-start-line="885" selection-start-column="20" selection-end-line="885" selection-end-column="20" />
               <folding>
                 <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
                 <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -220,12 +227,12 @@
       <workItem from="1516198256370" duration="14003000" />
       <workItem from="1516273308491" duration="90000" />
       <workItem from="1516273400457" duration="9000" />
-      <workItem from="1516707745367" duration="208000" />
+      <workItem from="1516707745367" duration="2326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14999000" />
+    <option name="totallyTimeSpent" value="17117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -289,6 +296,13 @@
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -300,6 +314,13 @@
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -311,6 +332,13 @@
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -487,10 +515,17 @@
     <entry file="file://$PROJECT_DIR$/src/my-view2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
-          <caret line="772" column="16" lean-forward="false" selection-start-line="772" selection-start-column="16" selection-end-line="772" selection-end-column="16" />
+          <caret line="885" column="20" lean-forward="false" selection-start-line="885" selection-start-column="20" selection-end-line="885" selection-end-column="20" />
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
