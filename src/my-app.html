@@ -1,215 +1,27 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
 <script src="../sw-precache-config.js"></script>
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
-<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
-
-<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
-<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
-
-<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
-<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../bower_components/app-route/app-location.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
-<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
-<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../bower_components/iron-image/iron-image.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
-<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
-<link rel="import" href="../ower_components/paper-menu/paper-menu.html">
-<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
-
-<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
-
-<link rel="import" href="my-icons.html">
-
-<link rel="lazy-import" href="my-view1.html">
-<link rel="lazy-import" href="my-view2.html">
-<link rel="lazy-import" href="my-view3.html">
-<link rel="lazy-import" href="my-view404.html">
+<link rel="import" href="pages/login/Login.component.html">
+<link rel="import" href="my-view404.html">
 
 <dom-module id="my-app">
     <template>
-        <style>
-            :host {
-                --app-primary-color: #4285f4;
-                --app-secondary-color: black;
+        <app-location route="{{route}}"></app-location>
 
-                display: block;
-            }
-
-            app-drawer {
-                --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
-                --app-drawer-content-container: {
-                    color: #fff;
-                    background-color: #0098DB;;
-                }
-            }
-
-            app-header paper-icon-button {
-                --paper-icon-button-ink-color: white;
-            }
-
-            app-header {
-                padding: 8px;
-                background-color: rgba(0, 0, 0, .16);
-            }
-
-            .avatar {
-                height: 64px;
-                width: 64px;
-                margin: 16px 0;
-                display: block;
-                border-radius: 80px;
-                box-sizing: border-box;
-                background-color: #DDD;
-                @apply(--shadow-elevation-3dp)
-            }
-
-            .contact-info .name {
-                @apply(--paper-font-body1);
-            }
-
-            .contact-info .email {
-                @apply(--paper-font-caption);
-            }
-
-            .drawer-list {
-                margin: 0 20px;
-            }
-
-            .drawer-list a {
-                display: block;
-
-                width: 100%;
-                text-decoration: none;
-                color: var(--app-secondary-color);
-                line-height: 40px;
-                color: white;
-            }
-
-            .drawer-list iron-collapse paper-item a {
-                padding: 0 16px;
-            }
-
-            .drawer-list a.iron-selected {
-                color: white;
-                font-weight: bold;
-            }
-
-            paper-icon-item,
-            paper-item {
-                cursor: pointer;
-            }
-
-
-        </style>
-
-
-        <app-location
-                route="{{route}}"
-                url-space-regex="^[[rootPath]]">
-        </app-location>
-
-        <app-route
-                route="{{route}}"
-                pattern="[[rootPath]]:page"
-                data="{{routeData}}"
-                tail="{{subroute}}">
+        <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
         </app-route>
-
-
-
-            <app-drawer-layout id="drawerLayout" slot="drawerLayout" fullbleed narrow="{{narrow}}">
-
-                <!--
-                <app-header reveals>
-                    <app-toolbar>
-                        <paper-icon-button icon="menu" on-click="drawerToggle"></paper-icon-button>
-                        <div main-title>My app</div>
-                        <paper-icon-button icon="search"></paper-icon-button>
-                        <paper-progress value="10" indeterminate bottom-item></paper-progress>
-                    </app-toolbar>
-                </app-header>
-                <!-- Drawer content -->
-                <app-drawer id="drawer" slot="drawer" swipe-open >
-                    <app-toolbar>ERP B15</app-toolbar>
-                    <app-header-layout has-scrolling-region>
-
-                        <app-header fixed slot="header">
-
-                            <iron-image class="avatar" sizing="contain"
-                                        src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
-                            <div class="contact-info">
-                                <div class="name">Jonathan</div>
-                                <div class="email">heyfromjonathan@gmail.com</div>
-                            </div>
-                        </app-header>
-                        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list"
-                                       role="navigation">
-                            <paper-menu>
-
-
-                                <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">Tem
-                                    Submenu
-                                </paper-item>
-                                <iron-collapse id="collapse" opened="{{opened}}">
-                                    <paper-menu class="menu-content">
-                                        <paper-item><a name="view1" href="[[rootPath]]view1">Lista</a></paper-item>
-                                        <paper-item><a name="view2" href="[[rootPath]]view2">Editar/Adicionar</a>
-                                        </paper-item>
-
-                                    </paper-menu>
-                                </iron-collapse>
-                                <paper-item><a name="view3" href="[[rootPath]]view3">View Three</a></paper-item>
-                                <paper-icon-item>
-                                    <iron-icon icon="inbox" slot="item-icon"></iron-icon>
-                                    Menu com icone
-                                </paper-icon-item>
-                            </paper-menu>
-
-                        </iron-selector>
-
-                    </app-header-layout>
-
-
-                </app-drawer>
-
-                <!-- Main content -->
-                <app-header-layout has-scrolling-region>
-                    <iron-pages
-                            selected="[[page]]"
-                            attr-for-selected="name"
-                            fallback-selection="view404"
-                            selected-attribute="visible"
-                            role="main">
-                        <my-view1 name="view1"></my-view1>
-                        <my-view2 name="view2"></my-view2>
-                        <my-view3 name="view3"></my-view3>
-                        <my-view404 name="view404"></my-view404>
-                    </iron-pages>
-                </app-header-layout>
-            </app-drawer-layout>
-
+        <iron-pages  selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="view404"  selected-attribute="visible" role="main">
+            <login-page name="login"></login-page>
+            <my-view404 name="view404"></my-view404>
+        </iron-pages>
     </template>
-
     <script>
         class MyApp extends Polymer.Element {
             static get is() {
                 return 'my-app';
             }
-
             static get properties() {
                 return {
                     page: {
@@ -218,33 +30,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                         observer: '_pageChanged',
                     },
                     routeData: Object,
-                    subroute: String,
-                    // This shouldn't be neccessary, but the Analyzer isn't picking up
-                    // Polymer.Element#rootPath
-                    rootPath: String
+                    subroute: String
                 };
             }
-
             static get observers() {
                 return [
                     '_routePageChanged(routeData.page)'
                 ];
             }
-
             _routePageChanged(page) {
                 // If no page was found in the route data, page will be an empty string.
                 // Default to 'view1' in that case.
-                this.page = page || 'view1';
+                this.page = page || 'login';
 
-                // Close a non-persistent drawer when the page & route are changed.
-                if (!this.$.drawer.persistent) {
-                    this.$.drawer.close();
-                }
             }
-
             _pageChanged(page) {
                 // Load page import on demand. Show 404 page if fails
-                var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+                var resolvedPageUrl = this.resolveUrl(page + '.html');
                 Polymer.importHref(
                     resolvedPageUrl,
                     null,
@@ -255,28 +57,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             _showPage404() {
                 this.page = 'view404';
             }
-
-            toggle() {
-                this.$.collapse.toggle();
-            }
-
-            drawerToggle() {
-
-                this.$.drawer.toggle();
-                /*
-                if (this.$.drawer.persistent) {
-
-                    this.$.drawer.persistent = false;
-                    this.$.drawerLayout.narrow = true;
-                }else{
-                    this.$.drawer.open();
-                    this.$.drawer.persistent = true;
-                    this.$.drawerLayout.narrow = false;
-                }*/
-            }
-
         }
-
 
         window.customElements.define(MyApp.is, MyApp);
     </script>

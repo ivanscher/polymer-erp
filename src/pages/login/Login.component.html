@@ -1,0 +1,27 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="Login.style.html">
+<dom-module id="login-page">
+    <template>
+        <style include="login-style"></style>
+        <main class="flex-vertical justified-center-center">
+
+            <img src="http://beta.spartandesign.com.br/b15/wp-content/uploads/2017/12/Logo_b15_home_footer.png" alt="B15">
+            <paper-card>
+                <paper-input label="CPF" type="number" required class="flexchild"></paper-input>
+                <paper-input label="Senha" type="password" required class="flexchild"></paper-input>
+
+                <paper-button class="blocked">Entrar</paper-button>
+            </paper-card>
+            <paper-button class="forgot-password">Esqueci a senha.</paper-button>
+            <div class="sing-up-container flex-horizontal">
+                <p>Não tem uma conta?</p>
+                <paper-button class="sing-up"> Cadastre-se!</paper-button>
+            </div>
+
+        </main>
+    </template>
+    <script src="Login.component.js"></script>
+</dom-module>

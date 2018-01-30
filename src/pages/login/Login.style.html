@@ -1,0 +1,61 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../utils/shared-styles.html">
+<dom-module id="login-style">
+    <template>
+        <style include="shared-styles">
+            :host{
+                border:none;
+                padding: 0;
+                margin: 0;
+            }
+            main{
+                width: 100vw;
+                height: 100vh;
+                background: url(../../resources/login-bg.jpg) top no-repeat;
+                background-size: cover;
+
+            }
+            h1  {
+                color: white;
+            }
+
+
+            paper-card{
+                padding: 16px;
+                width: 380px;
+                max-width: 90%;
+                background-color: transparent;
+                @apply(--shadow-none);
+            }
+
+            paper-input{
+                --paper-input-container-color: white;
+                --paper-input-container-focus-color: var(--paper-light-blue-100);
+                --paper-input-container-invalid-color: var(--paper-red-400);
+                --paper-input-container-input-color: var(--paper-light-blue-50);
+            }
+            .sing-up-container{
+                position: fixed;
+                bottom: 16px;
+            }
+            .sing-up-container p{
+                color: var(--paper-light-blue-100);
+            }
+            paper-button.sing-up,
+            paper-button.forgot-password{
+
+                text-transform: none;
+                margin-right: 0;
+                color: white;
+            }
+            paper-button.blocked{
+                background-color: white;
+                color: var(--paper-light-blue-900);
+                width: 100%;
+                margin: 16px 0 0 0;
+                border-radius: 100px;
+            }
+
+        </style>
+    </template>
+</dom-module>
