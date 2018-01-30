@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3dc10c5c-0bef-4a48-9241-3b3a59094c72" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/my-app.html" afterPath="$PROJECT_DIR$/src/my-app.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/my-view2.html" afterPath="$PROJECT_DIR$/src/my-view2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/my-view3.html" afterPath="$PROJECT_DIR$/src/my-view3.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,22 +20,74 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="my-view2.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/my-view2.html">
+      <file leaf-file-name="paper-styles.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/paper-styles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="885" column="20" lean-forward="false" selection-start-line="885" selection-start-column="20" selection-end-line="885" selection-end-column="20" />
+            <state relative-caret-position="646">
+              <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/color.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shadow.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/shadow.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-view3.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/my-view3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4036">
+              <caret line="407" column="63" lean-forward="false" selection-start-line="407" selection-start-column="63" selection-end-line="407" selection-end-column="63" />
               <folding>
-                <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iron-flex-layout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5763">
+              <caret line="339" column="6" lean-forward="false" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my-view1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/my-view1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3162">
+              <caret line="186" column="4" lean-forward="false" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paper-textarea.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,11 +105,19 @@
       <find>white</find>
       <find>flex-horizonta</find>
       <find>no-label-float&gt;</find>
-      <find>my-view2</find>
       <find>flex-vertical</find>
       <find>f5f5f5</find>
       <find>var</find>
       <find>paper-f</find>
+      <find>drawer</find>
+      <find>_routePageChanged</find>
+      <find>toggle</find>
+      <find>drawerToggle</find>
+      <find>persistent</find>
+      <find>drawerLayout</find>
+      <find>my-view2</find>
+      <find>flex-stretch</find>
+      <find>content</find>
     </findStrings>
     <replaceStrings>
       <replace>my-view3</replace>
@@ -72,9 +134,10 @@
         <option value="$PROJECT_DIR$/ower_components/paper-menu/paper-submenu.html" />
         <option value="$PROJECT_DIR$/ower_components/paper-menu/paper-menu.html" />
         <option value="$PROJECT_DIR$/ower_components/paper-menu/index.html" />
+        <option value="$PROJECT_DIR$/bower_components/app-layout/app-drawer/app-drawer.html" />
+        <option value="$PROJECT_DIR$/src/my-view2.html" />
         <option value="$PROJECT_DIR$/src/my-app.html" />
         <option value="$PROJECT_DIR$/src/my-view3.html" />
-        <option value="$PROJECT_DIR$/src/my-view2.html" />
       </list>
     </option>
   </component>
@@ -108,6 +171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -136,8 +201,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,25 +290,28 @@
       <workItem from="1516198256370" duration="14003000" />
       <workItem from="1516273308491" duration="90000" />
       <workItem from="1516273400457" duration="9000" />
-      <workItem from="1516707745367" duration="2326000" />
+      <workItem from="1516707745367" duration="3057000" />
+      <workItem from="1516717868904" duration="12211000" />
+      <workItem from="1517187315960" duration="12000" />
+      <workItem from="1517270331193" duration="950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17117000" />
+    <option name="totallyTimeSpent" value="31021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26439232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27238807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26327193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -289,17 +355,153 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/paper-styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/color.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/shadow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5763">
+          <caret line="339" column="6" lean-forward="false" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="186" column="4" lean-forward="false" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/paper-styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/color.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/shadow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5763">
+          <caret line="339" column="6" lean-forward="false" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="186" column="4" lean-forward="false" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/my-view2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
@@ -313,11 +515,31 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
@@ -331,11 +553,69 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
@@ -443,61 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/my-app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="156" column="65" lean-forward="false" selection-start-line="156" selection-start-column="65" selection-end-line="156" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/my-view3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="343" column="12" lean-forward="true" selection-start-line="234" selection-start-column="6" selection-end-line="343" selection-end-column="12" />
-          <folding>
-            <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#paper-card#1;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/my-view1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1268">
-          <caret line="186" column="4" lean-forward="false" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="208" column="6" lean-forward="false" selection-start-line="208" selection-start-column="6" selection-end-line="208" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/shadow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/color.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4303">
-          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/paper-styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/typography.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1778">
@@ -512,20 +737,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-behavior.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="247" column="8" lean-forward="false" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/app-layout/app-drawer/app-drawer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="202" column="10" lean-forward="false" selection-start-line="202" selection-start-column="10" selection-end-line="202" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="277" column="30" lean-forward="false" selection-start-line="277" selection-start-column="30" selection-end-line="277" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/shadow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="174" column="83" lean-forward="false" selection-start-line="174" selection-start-column="83" selection-end-line="174" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/my-view2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="885" column="20" lean-forward="false" selection-start-line="885" selection-start-column="20" selection-end-line="885" selection-end-column="20" />
+        <state relative-caret-position="287">
+          <caret line="1095" column="12" lean-forward="true" selection-start-line="934" selection-start-column="29" selection-end-line="1095" selection-end-column="12" />
           <folding>
             <element signature="n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#paper-card#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#0;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#1;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#2;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#3;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#paper-card#4;n#div#1;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#1;n#div#0;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#paper-card#0;n#div#1;n#div#2;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/paper-styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/color.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="186" column="4" lean-forward="false" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5763">
+          <caret line="339" column="6" lean-forward="false" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-view3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4036">
+          <caret line="407" column="63" lean-forward="false" selection-start-line="407" selection-start-column="63" selection-end-line="407" selection-end-column="63" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#iron-pages#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

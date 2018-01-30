@@ -80,15 +80,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         border-bottom: none;
 
       }
-.page{
-  @apply(--layout-flex);
-  min-height: calc(100vh - 115px);
-}
+      .page{
+        @apply(--layout-flex);
+        min-height: calc(100vh - 115px);
+      }
       .flex-stretch{
-
         @apply(--layout-around-aligned);
         @apply(--layout-self-stretch);
-
       }
       .contain-two-sizes-inputs paper-input:first-child{
         @apply(--layout-flex-2)
@@ -96,9 +94,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .contain-two-sizes-inputs paper-input:last-child{
         @apply(--layout-flex)
-      }
-      .page-1 paper-card{
-        @apply(--layout-vertical);
       }
 
       .flex-size-2{
@@ -134,17 +129,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .flex-size-12{
         @apply(--layout-flex-12);
       }
-      .page-1 paper-card:last-child{
+
+
+      paper-card {
+        @apply(--shadow-none);
+      }
+
+
+      .border-bottom{
+        border-bottom:1px solid rgba(0,0,0,.16);
+      }
+      .border-right{
+        border-right:1px solid rgba(0,0,0,.16);
+      }
+      .border-left{
         border-left:1px solid rgba(0,0,0,.16);
       }
 
-      paper-card .card-content{
-        border-left:1px solid rgba(0,0,0,.16);
+      .border-top{
+        border-top:1px solid rgba(0,0,0,.16);
       }
-      paper-card .card-content:first-child{
-        border-left: none;
-      }
-
       .title{
         margin: 8px;
         @apply(--paper-font-title);
@@ -174,9 +178,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       div[phone-type]{
         @apply(--paper-font-caption);
       }
-      .border-top{
-        border-top:1px solid rgba(0,0,0,.16);
-      }
       paper-fab[super-mini]{
         --paper-fab-background: white;
         color: var(--paper-red-700);
@@ -204,9 +205,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 99.9%;
           padding: 0;
         }
-        .page-1 paper-card:last-child{
+        .border-left{
           border-left:none;
           border-top:1px solid rgba(0,0,0,.16);
+        }
+        .border-right{
+          border-right:none;
+          border-bottom:1px solid rgba(0,0,0,.16);
         }
 
       }
@@ -223,10 +228,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           width: 99.9%;
           padding: 0;
         }
-        .page-1 paper-card:last-child{
-          border-left:none;
-          border-top:1px solid rgba(0,0,0,.16);
-        }
+
 
       }
       @media (max-height: 800px){
@@ -326,9 +328,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
           </div>
         </paper-card>
-        <paper-card class="display-table-on-mobile flex-size-2">
+        <paper-card class="display-table-on-mobile flex-size-2 border-left">
 
-          <div class="card-content flexchild-vertical">
+          <div class="card-content flexchild-vertical ">
             <div class="title">Telefones</div>
             <div class="container flex-horizontal">
               <paper-input label="Telefone" class="flexchild" no-label-float></paper-input>
@@ -387,7 +389,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </paper-card>
       </div>
       <!--Dados Secundários-->
-      <div class="page page-2 display-table-on-mobile flex-vertical flex-size-12">
+      <div class="page page-2 display-table-on-mobile flex-vertical flex-size-12" >
 
 
         <paper-card class="display-table-on-mobile flex-horizontal">
@@ -440,7 +442,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </div>
 
             </div>
-            <div class="card-content flexchild-vertical border-top">
+            <div class="card-content flexchild-vertical border-top border-left">
               <div class="title">Consulta de Cadastro</div>
 
               <div class="container flex-horizontal">
@@ -499,7 +501,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
 
 
-            <div class="card-content flexchild-vertical border-top">
+            <div class="card-content flexchild-vertical border-top border-left">
               <div class="title">Consulta de Cadastro</div>
 
               <div class="container flex-horizontal">
@@ -524,7 +526,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </div>
 
             </div>
-            <div class="card-content flexchild-vertical border-top">
+            <div class="card-content flexchild-vertical border-top border-left">
               <div class="title">Consulta de Cadastro</div>
 
               <div class="container flex-horizontal">
@@ -577,7 +579,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-fab mini super-mini icon="clear"></paper-fab>
             </div>
           </div>
-          <div class="card-content flexchild-vertical border-top">
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -601,7 +603,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-fab mini super-mini icon="clear"></paper-fab>
             </div>
           </div>
-          <div class="card-content flexchild-vertical border-top">
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -625,7 +627,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-fab mini super-mini icon="clear"></paper-fab>
             </div>
           </div>
-          <div class="card-content flexchild-vertical border-top">
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -678,7 +680,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-fab mini super-mini icon="clear"></paper-fab>
             </div>
           </div>
-          <div class="card-content flexchild-vertical border-top">
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -702,7 +704,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-fab mini super-mini icon="clear"></paper-fab>
             </div>
           </div>
-          <div class="card-content flexchild-vertical border-top">
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -726,7 +728,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-fab mini super-mini icon="clear"></paper-fab>
             </div>
           </div>
-          <div class="card-content flexchild-vertical border-top">
+          <div class="card-content flexchild-vertical border-top border-left">
+            <div class="title">Consulta de Cadastro</div>
+
+            <div class="container flex-horizontal">
+              <paper-input label="Data" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+            </div>
+            <div class="container flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+          </div>
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -751,7 +777,83 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
 
           </div>
-          <div class="card-content flexchild-vertical border-top">
+
+        </paper-card>
+        <paper-card class="display-table-on-mobile flex-horizontal">
+
+          <div class="card-content flexchild-vertical border-top ">
+            <div class="title">Consulta de Cadastro</div>
+
+            <div class="container flex-horizontal">
+              <paper-input label="Data" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+            </div>
+            <div class="container flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+          </div>
+          <div class="card-content flexchild-vertical border-top border-left">
+            <div class="title">Consulta de Cadastro</div>
+
+            <div class="container flex-horizontal">
+              <paper-input label="Data" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+            </div>
+            <div class="container flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+          </div>
+          <div class="card-content flexchild-vertical border-top border-left">
+            <div class="title">Consulta de Cadastro</div>
+
+            <div class="container flex-horizontal">
+              <paper-input label="Data" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+            </div>
+            <div class="container flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+          </div>
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -776,7 +878,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
 
           </div>
-          <div class="card-content flexchild-vertical border-top">
+          <div class="card-content flexchild-vertical border-top border-left">
+            <div class="title">Consulta de Cadastro</div>
+
+            <div class="container flex-horizontal">
+              <paper-input label="Data" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+            </div>
+            <div class="container flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+            <div class="flex-horizontal">
+              <paper-input label="17/01/2018" class="flexchild" no-label-float></paper-input>
+              <paper-input label="Descrição" class="flexchild" no-label-float></paper-input>
+              <paper-fab mini super-mini icon="clear"></paper-fab>
+            </div>
+
+          </div>
+          <div class="card-content flexchild-vertical border-top border-left">
             <div class="title">Consulta de Cadastro</div>
 
             <div class="container flex-horizontal">
@@ -808,7 +935,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="page page-3 flex-vertical">
 
         <div class="display-table-on-mobile flex-horizontal width100">
-          <paper-card class="display-table-on-mobile flex-size-4">
+          <paper-card class="display-table-on-mobile flex-size-8">
 
 
             <div class="card-content flexchild-vertical">
@@ -856,7 +983,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </div>
             </div>
           </paper-card>
-          <paper-card class="display-table-on-mobile flex-size-2">
+          <paper-card class="display-table-on-mobile flex-size-4 border-left">
             <div class="card-content flexchild-vertical">
               <div class="title">Telefones</div>
               <div class="container flex-horizontal">
@@ -887,7 +1014,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
           </paper-card>
         </div>
-        <div class="display-table-on-mobile width100">
+        <div class="display-table-on-mobile width100 ">
           <paper-card class="display-table-on-mobile flex-horizontal flex-size-12">
             <div class="card-content flexchild-vertical border-top">
               <div class="title">Consulta de Cadastro</div>
@@ -914,7 +1041,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </div>
 
             </div>
-            <div class="card-content flexchild-vertical border-top">
+            <div class="card-content flexchild-vertical border-top border-left">
               <div class="title">Consulta de Cadastro</div>
 
               <div class="container flex-horizontal">
@@ -939,7 +1066,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </div>
 
             </div>
-            <div class="card-content flexchild-vertical border-top">
+            <div class="card-content flexchild-vertical border-top border-left">
               <div class="title">Consulta de Cadastro</div>
 
               <div class="container flex-horizontal">

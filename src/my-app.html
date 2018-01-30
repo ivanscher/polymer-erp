@@ -8,6 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
+<script src="../sw-precache-config.js"></script>
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
@@ -39,208 +40,244 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="lazy-import" href="my-view404.html">
 
 <dom-module id="my-app">
-  <template>
-    <style>
-      :host {
-        --app-primary-color: #4285f4;
-        --app-secondary-color: black;
+    <template>
+        <style>
+            :host {
+                --app-primary-color: #4285f4;
+                --app-secondary-color: black;
 
-        display: block;
-      }
+                display: block;
+            }
 
-      app-drawer {
-        --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
-        --app-drawer-content-container: {
-          color: #fff;
-          background-color: #0098DB;;
+            app-drawer {
+                --app-drawer-scrim-background: rgba(0, 0, 100, 0.8);
+                --app-drawer-content-container: {
+                    color: #fff;
+                    background-color: #0098DB;;
+                }
+            }
+
+            app-header paper-icon-button {
+                --paper-icon-button-ink-color: white;
+            }
+
+            app-header {
+                padding: 8px;
+                background-color: rgba(0, 0, 0, .16);
+            }
+
+            .avatar {
+                height: 64px;
+                width: 64px;
+                margin: 16px 0;
+                display: block;
+                border-radius: 80px;
+                box-sizing: border-box;
+                background-color: #DDD;
+                @apply(--shadow-elevation-3dp)
+            }
+
+            .contact-info .name {
+                @apply(--paper-font-body1);
+            }
+
+            .contact-info .email {
+                @apply(--paper-font-caption);
+            }
+
+            .drawer-list {
+                margin: 0 20px;
+            }
+
+            .drawer-list a {
+                display: block;
+
+                width: 100%;
+                text-decoration: none;
+                color: var(--app-secondary-color);
+                line-height: 40px;
+                color: white;
+            }
+
+            .drawer-list iron-collapse paper-item a {
+                padding: 0 16px;
+            }
+
+            .drawer-list a.iron-selected {
+                color: white;
+                font-weight: bold;
+            }
+
+            paper-icon-item,
+            paper-item {
+                cursor: pointer;
+            }
+
+
+        </style>
+
+
+        <app-location
+                route="{{route}}"
+                url-space-regex="^[[rootPath]]">
+        </app-location>
+
+        <app-route
+                route="{{route}}"
+                pattern="[[rootPath]]:page"
+                data="{{routeData}}"
+                tail="{{subroute}}">
+        </app-route>
+
+
+
+            <app-drawer-layout id="drawerLayout" slot="drawerLayout" fullbleed narrow="{{narrow}}">
+
+                <!--
+                <app-header reveals>
+                    <app-toolbar>
+                        <paper-icon-button icon="menu" on-click="drawerToggle"></paper-icon-button>
+                        <div main-title>My app</div>
+                        <paper-icon-button icon="search"></paper-icon-button>
+                        <paper-progress value="10" indeterminate bottom-item></paper-progress>
+                    </app-toolbar>
+                </app-header>
+                <!-- Drawer content -->
+                <app-drawer id="drawer" slot="drawer" swipe-open >
+                    <app-toolbar>ERP B15</app-toolbar>
+                    <app-header-layout has-scrolling-region>
+
+                        <app-header fixed slot="header">
+
+                            <iron-image class="avatar" sizing="contain"
+                                        src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
+                            <div class="contact-info">
+                                <div class="name">Jonathan</div>
+                                <div class="email">heyfromjonathan@gmail.com</div>
+                            </div>
+                        </app-header>
+                        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list"
+                                       role="navigation">
+                            <paper-menu>
+
+
+                                <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">Tem
+                                    Submenu
+                                </paper-item>
+                                <iron-collapse id="collapse" opened="{{opened}}">
+                                    <paper-menu class="menu-content">
+                                        <paper-item><a name="view1" href="[[rootPath]]view1">Lista</a></paper-item>
+                                        <paper-item><a name="view2" href="[[rootPath]]view2">Editar/Adicionar</a>
+                                        </paper-item>
+
+                                    </paper-menu>
+                                </iron-collapse>
+                                <paper-item><a name="view3" href="[[rootPath]]view3">View Three</a></paper-item>
+                                <paper-icon-item>
+                                    <iron-icon icon="inbox" slot="item-icon"></iron-icon>
+                                    Menu com icone
+                                </paper-icon-item>
+                            </paper-menu>
+
+                        </iron-selector>
+
+                    </app-header-layout>
+
+
+                </app-drawer>
+
+                <!-- Main content -->
+                <app-header-layout has-scrolling-region>
+                    <iron-pages
+                            selected="[[page]]"
+                            attr-for-selected="name"
+                            fallback-selection="view404"
+                            selected-attribute="visible"
+                            role="main">
+                        <my-view1 name="view1"></my-view1>
+                        <my-view2 name="view2"></my-view2>
+                        <my-view3 name="view3"></my-view3>
+                        <my-view404 name="view404"></my-view404>
+                    </iron-pages>
+                </app-header-layout>
+            </app-drawer-layout>
+
+    </template>
+
+    <script>
+        class MyApp extends Polymer.Element {
+            static get is() {
+                return 'my-app';
+            }
+
+            static get properties() {
+                return {
+                    page: {
+                        type: String,
+                        reflectToAttribute: true,
+                        observer: '_pageChanged',
+                    },
+                    routeData: Object,
+                    subroute: String,
+                    // This shouldn't be neccessary, but the Analyzer isn't picking up
+                    // Polymer.Element#rootPath
+                    rootPath: String
+                };
+            }
+
+            static get observers() {
+                return [
+                    '_routePageChanged(routeData.page)'
+                ];
+            }
+
+            _routePageChanged(page) {
+                // If no page was found in the route data, page will be an empty string.
+                // Default to 'view1' in that case.
+                this.page = page || 'view1';
+
+                // Close a non-persistent drawer when the page & route are changed.
+                if (!this.$.drawer.persistent) {
+                    this.$.drawer.close();
+                }
+            }
+
+            _pageChanged(page) {
+                // Load page import on demand. Show 404 page if fails
+                var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+                Polymer.importHref(
+                    resolvedPageUrl,
+                    null,
+                    this._showPage404.bind(this),
+                    true);
+            }
+
+            _showPage404() {
+                this.page = 'view404';
+            }
+
+            toggle() {
+                this.$.collapse.toggle();
+            }
+
+            drawerToggle() {
+
+                this.$.drawer.toggle();
+                /*
+                if (this.$.drawer.persistent) {
+
+                    this.$.drawer.persistent = false;
+                    this.$.drawerLayout.narrow = true;
+                }else{
+                    this.$.drawer.open();
+                    this.$.drawer.persistent = true;
+                    this.$.drawerLayout.narrow = false;
+                }*/
+            }
+
         }
-      }
-      app-drawer-layout:not([narrow]) [drawer-toggle] {
-        display: none;
-      }
-
-      app-header paper-icon-button {
-        --paper-icon-button-ink-color: white;
-      }
-      app-header{
-        padding: 8px;
-        background-color: rgba(0,0,0,.16);
-      }
-
-      .avatar {
-        height: 64px;
-        width: 64px;
-        margin: 16px 0;
-        display: block;
-        border-radius: 80px;
-        box-sizing: border-box;
-        background-color: #DDD;
-        @apply(--shadow-elevation-3dp)
-      }
-
-      .contact-info .name {
-        @apply(--paper-font-body1);
-      }
-      .contact-info .email {
-        @apply(--paper-font-caption);
-      }
-
-      .drawer-list {
-        margin: 0 20px;
-      }
-
-      .drawer-list a {
-        display: block;
-
-        width: 100%;
-        text-decoration: none;
-        color: var(--app-secondary-color);
-        line-height: 40px;
-        color: white;
-      }
-
-      .drawer-list iron-collapse paper-item a {
-        padding: 0 16px;
-      }
-      .drawer-list a.iron-selected {
-        color: white;
-        font-weight: bold;
-      }
-
-      paper-icon-item,
-      paper-item{
-        cursor: pointer;
-      }
 
 
-    </style>
-
-
-
-    <app-location
-        route="{{route}}"
-        url-space-regex="^[[rootPath]]">
-    </app-location>
-
-    <app-route
-        route="{{route}}"
-        pattern="[[rootPath]]:page"
-        data="{{routeData}}"
-        tail="{{subroute}}">
-    </app-route>
-
-    <app-drawer-layout fullbleed narrow="{{narrow}}">
-      <!-- Drawer content -->
-      <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-        <app-toolbar>ERP B18</app-toolbar>
-        <app-header-layout has-scrolling-region>
-
-          <app-header fixed slot="header">
-            <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
-            <div class="contact-info">
-              <div class="name">Jonathan</div>
-              <div class="email">heyfromjonathan@gmail.com</div>
-            </div>
-          </app-header>
-          <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <paper-menu>
-
-
-              <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse">Tem Submenu</paper-item>
-              <iron-collapse id="collapse" opened="{{opened}}">
-                <paper-menu class="menu-content">
-                  <paper-item><a name="view1" href="[[rootPath]]view1">Lista</a></paper-item>
-                  <paper-item><a name="view2" href="[[rootPath]]view2">Editar/Adicionar</a></paper-item>
-                  <paper-item><a name="view2" href="[[rootPath]]view3">Editar/Adicionar</a></paper-item>
-                </paper-menu>
-              </iron-collapse>
-              <paper-item><a name="view3" href="[[rootPath]]view4">View Three</a></paper-item>
-              <paper-icon-item>
-                <iron-icon icon="inbox" slot="item-icon"></iron-icon>
-                Menu com icone
-              </paper-icon-item>
-            </paper-menu>
-
-          </iron-selector>
-
-        </app-header-layout>
-
-
-      </app-drawer>
-
-      <!-- Main content -->
-      <app-header-layout has-scrolling-region>
-        <iron-pages
-            selected="[[page]]"
-            attr-for-selected="name"
-            fallback-selection="view404"
-            selected-attribute="visible"
-            role="main">
-          <my-view1 name="view1"></my-view1>
-          <my-view2 name="view2"></my-view2>
-          <my-view3 name="view3"></my-view3>
-          <my-view404 name="view404"></my-view404>
-        </iron-pages>
-      </app-header-layout>
-    </app-drawer-layout>
-  </template>
-
-  <script>
-    class MyApp extends Polymer.Element {
-      static get is() { return 'my-app'; }
-
-      static get properties() {
-        return {
-          page: {
-            type: String,
-            reflectToAttribute: true,
-            observer: '_pageChanged',
-          },
-          routeData: Object,
-          subroute: String,
-          // This shouldn't be neccessary, but the Analyzer isn't picking up
-          // Polymer.Element#rootPath
-          rootPath: String
-        };
-      }
-
-      static get observers() {
-        return [
-          '_routePageChanged(routeData.page)'
-        ];
-      }
-
-      _routePageChanged(page) {
-        // If no page was found in the route data, page will be an empty string.
-        // Default to 'view1' in that case.
-        this.page = page || 'view1';
-
-        // Close a non-persistent drawer when the page & route are changed.
-        if (!this.$.drawer.persistent) {
-          this.$.drawer.close();
-        }
-      }
-
-      _pageChanged(page) {
-        // Load page import on demand. Show 404 page if fails
-        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
-        Polymer.importHref(
-            resolvedPageUrl,
-            null,
-            this._showPage404.bind(this),
-            true);
-      }
-
-      _showPage404() {
-        this.page = 'view404';
-      }
-
-      toggle() {
-          this.$.collapse.toggle();
-      }
-
-    }
-
-    window.customElements.define(MyApp.is, MyApp);
-  </script>
+        window.customElements.define(MyApp.is, MyApp);
+    </script>
 </dom-module>
