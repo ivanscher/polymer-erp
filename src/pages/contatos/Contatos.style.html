@@ -1,0 +1,83 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../utils/shared-styles.html">
+<dom-module id="contatos-style">
+    <template>
+        <style include="shared-styles">
+            :host{
+                border:none;
+                padding: 0;
+                margin: 0;
+                background-color: #eee;
+            }
+            app-header {
+                position: fixed;
+                top: 64px;
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                width: 100%;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01488e+1,01579b+100 */
+                background: #01488e; /* Old browsers */
+                background: -moz-linear-gradient(45deg, #01488e 1%, #01579b 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(45deg, #01488e 1%,#01579b 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(45deg, #01488e 1%,#01579b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01488e', endColorstr='#01579b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+                color: #fff;
+            }
+            .section-title{
+                margin-left: 8px;
+            }
+            .page {
+                @apply(--layout-flex);
+
+                min-height: calc(100vh - 128px);
+            }
+
+            .avatar {
+                height: 100px;
+                width: 100px;
+                display: block;
+                margin: 0 auto;
+                border-radius: 80px;
+                box-sizing: border-box;
+                background-color: #DDD;
+                @apply(--shadow-elevation-3dp)
+            }
+
+            paper-fab[super-mini] {
+                --paper-fab-background: white;
+                color: var(--paper-red-700);
+                border: 1px solid rgba(0, 0, 0, .24);
+                width: 28px;
+                height: 28px;
+                padding: 5px;
+                @apply(--shadow-none);
+                margin-top: 12px;
+
+            }
+
+            paper-fab[super-mini].add {
+                color: var(--google-green-700);
+                margin-top: 0;
+            }
+            paper-textarea {
+                padding: 4px 16px;
+                background-color: var(--google-grey-100);
+            }
+
+            paper-dropdown-menu,
+            paper-input{
+                margin: 0 8px;
+            }
+
+
+
+            paper-card {
+             /*   @apply(--shadow-none);*/
+                margin-bottom: 8px;
+            }
+
+        </style>
+    </template>
+</dom-module>

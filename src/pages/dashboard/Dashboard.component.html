@@ -1,0 +1,44 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../contatos/Contatos.component.html">
+
+<link rel="import" href="Dashboard.style.html">
+
+<dom-module id="dashboard-page">
+    <template>
+        <style include="dashboard-style"></style>
+        <app-header condenses reveals effects="waterfall">
+            <app-toolbar>
+                <paper-icon-button icon="menu" onclick="startDrawer.toggle()"></paper-icon-button>
+                <div main-title>B15 - Geeks Interno</div>
+                <paper-icon-button icon="redo" id="button-logout"></paper-icon-button>
+                <paper-tooltip for="button-logout" offset="0" position="left">Sair</paper-tooltip>
+            </app-toolbar>
+
+        </app-header>
+
+        <app-drawer id="startDrawer" align="start">
+            <app-header fixed slot="header">
+                <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
+                <div class="contact-info">
+                    <div class="name">Jonathan</div>
+                    <div class="email">heyfromjonathan@gmail.com</div>
+                </div>
+            </app-header>
+        </app-drawer>
+
+        <app-drawer id="endDrawer" align="end"></app-drawer>
+
+        <section id="view">
+            <contatos-page></contatos-page>
+        </section>
+    </template>
+    <script src="Dashboard.component.js"></script>
+</dom-module>

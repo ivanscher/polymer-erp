@@ -1,0 +1,49 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../utils/shared-styles.html">
+<dom-module id="dashboard-style">
+    <template>
+        <style include="shared-styles">
+            :host{
+                border:none;
+                padding: 0;
+                margin: 0;
+                background-color: #eee;
+            }
+
+            #startDrawer {
+                --app-drawer-content-container: {
+                    box-shadow: 1px 0 2px 1px rgba(0,0,0,0.18);
+                }
+            }
+            #endDrawer {
+                --app-drawer-content-container: {
+                    box-shadow: -1px 0 2px 1px rgba(0,0,0,0.18);
+                }
+            }
+            app-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01488e+1,01579b+100 */
+                background: #01488e; /* Old browsers */
+                background: -moz-linear-gradient(45deg, #01488e 1%, #01579b 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(45deg, #01488e 1%,#01579b 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(45deg, #01488e 1%,#01579b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01488e', endColorstr='#01579b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                background: url(../../resources/login-bg.jpg) top no-repeat;
+                color: #fff;
+            }
+            app-header paper-icon-button {
+                --paper-icon-button-ink-color: white;
+            }
+            #view{
+                padding-top: 128px;
+            }
+            .section-title{
+                margin-left: 8px;
+            }
+
+        </style>
+    </template>
+</dom-module>
