@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dc10c5c-0bef-4a48-9241-3b3a59094c72" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bkp/my-view3.html" afterPath="$PROJECT_DIR$/src/bkp/my-view3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/my-app.html" afterPath="$PROJECT_DIR$/src/my-app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/shared-styles.html" afterPath="$PROJECT_DIR$/src/utils/shared-styles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +25,27 @@
         <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
-              <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+              <caret line="40" column="144" lean-forward="false" selection-start-line="40" selection-start-column="144" selection-end-line="40" selection-end-column="144" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/login/Login.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="122" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dashboard.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -36,8 +54,8 @@
       <file leaf-file-name="Contatos.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="245" column="18" lean-forward="false" selection-start-line="245" selection-start-column="18" selection-end-line="245" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="15" column="68" lean-forward="true" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#paper-card#0;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
@@ -47,11 +65,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="paper-tabs.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/paper-tabs/paper-tabs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Contatos.style.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+            <state relative-caret-position="326">
+              <caret line="85" column="52" lean-forward="false" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -69,7 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>no-label-float&gt;</find>
       <find>flex-vertical</find>
       <find>f5f5f5</find>
       <find>var</find>
@@ -99,6 +126,7 @@
       <find>self-stretch</find>
       <find>startDrawer</find>
       <find>app-header</find>
+      <find>bar</find>
     </findStrings>
     <replaceStrings>
       <replace>my-view3</replace>
@@ -434,12 +462,12 @@
       <workItem from="1517327109221" duration="13130000" />
       <workItem from="1517399119123" duration="416000" />
       <workItem from="1517399705017" duration="1440000" />
-      <workItem from="1517477129021" duration="11691000" />
+      <workItem from="1517477129021" duration="14058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58954000" />
+    <option name="totallyTimeSpent" value="61321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -496,7 +524,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/my-view2.html" />
     <entry file="file://$PROJECT_DIR$/src/my-view2.html" />
     <entry file="file://$PROJECT_DIR$/bower_components/paper-menu/paper-menu.html" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -709,14 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/login/Login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/color.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -815,10 +834,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/login/Login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="21" column="76" lean-forward="false" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+        <state relative-caret-position="306">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -826,15 +853,15 @@
     <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
-          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <caret line="40" column="144" lean-forward="false" selection-start-line="40" selection-start-column="144" selection-end-line="40" selection-end-column="144" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="245" column="18" lean-forward="false" selection-start-line="245" selection-start-column="18" selection-end-line="245" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="15" column="68" lean-forward="true" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
           <folding>
             <element signature="n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#paper-card#0;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
@@ -843,10 +870,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-tabs/paper-tabs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        <state relative-caret-position="326">
+          <caret line="85" column="52" lean-forward="false" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
           <folding />
         </state>
       </provider>
