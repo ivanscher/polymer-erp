@@ -1,0 +1,414 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="../../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../../bower_components/paper-tooltip/paper-tooltip.html">
+<link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../../bower_components/paper-badge/paper-badge.html">
+
+<link rel="import" href="../../../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+<link rel="import" href="../../../bower_components/paper-card/paper-card.html">
+
+<link rel="import" href="Contatos.style.html">
+
+<dom-module id="contatos-v2-page">
+    <template>
+        <style include="contatos-style"></style>
+        <app-header>
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">85 - Contatos</div>
+
+
+                <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
+                <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
+
+                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
+                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
+
+                <paper-icon-button icon="save" id="button-save"></paper-icon-button>
+                <paper-tooltip for="button-save" offset="0" position="top">Salvar</paper-tooltip>
+
+                <paper-icon-button icon="more-vert" onclick="endDrawer.toggle()"></paper-icon-button>
+            </app-toolbar>
+        </app-header>
+
+        <app-drawer id="endDrawer" align="end"></app-drawer>
+
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+            <paper-tabs selected="{{selected}}" >
+                <paper-tab>Dados Principais</paper-tab>
+                <paper-tab>CRM</paper-tab>
+                <paper-tab>Histórico</paper-tab>
+            </paper-tabs>
+            <iron-pages selected="{{selected}}">
+                <div>
+                    <div class="display-table-on-mobile width100 self-stretch">
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+                            <div class="card-content flexchild-vertical border-top flex-size-3">
+
+                                <div main-code class="bs-label bg-green">999999</div>
+                                <iron-image class="avatar" id="avatar" sizing="contain"
+                                            src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
+
+                                <paper-input label="Nome" class="flexchild flex-size-8"></paper-input>
+
+                                <paper-input label="Apelido"></paper-input>
+                                <paper-input label="Matriz"></paper-input>
+                            </div>
+                            <div class="card-content flexchild-vertical flex-size-8 border-left">
+
+                                <div main-code>Cadastro: 02/01/2018 | Última alteração: 06/02/2018</div>
+                                <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                    <paper-input label="CPF/CNPJ" class="flexchild"></paper-input>
+                                    <paper-input label="RG" class="flexchild"></paper-input>
+                                    <paper-input label="Inscrição Municipal" class="flexchild"></paper-input>
+                                </div>
+                                <div class=" flex-horizontal">
+                                    <paper-input label="Site" class="flexchild"></paper-input>
+                                    <paper-input label="E-mail" class="flexchild"></paper-input>
+                                </div>
+                                <div class=" flex-horizontal">
+                                    <paper-input label="NFe E-mail" class="flexchild"></paper-input>
+                                    <paper-input label="Obs NFe" class="flexchild"></paper-input>
+                                </div>
+
+                                <div class="display-table-on-mobile flex-horizontal">
+
+                                    <paper-input label="Profissão" class="flexchild"></paper-input>
+                                    <paper-input label="Sexo" class="flexchild"></paper-input>
+
+                                    <paper-input label="Data Nascimento" class="flexchild"></paper-input>
+                                    <paper-input label="Idade" class="flexchild"></paper-input>
+                                </div>
+                                <div class=" flex-horizontal">
+
+                                </div>
+
+                                <div class="container flex-horizontal display-table-on-mobile">
+                                    <paper-input label="Indicação" class="flexchild"></paper-input>
+
+                                </div>
+
+                            </div>
+                            <div class="card-content flexchild-vertical border-top flex-size-3 border-left">
+
+                                <div class="container flex-horizontal">
+                                    <paper-textarea label="Observação" class="flexchild" rows="9" always-float-label
+                                                    char-counter placeholder="Digite sua observação"></paper-textarea>
+                                </div>
+                            </div>
+                        </paper-card>
+                    </div>
+                    <div class="display-table-on-mobile width100 self-stretch">
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+                            <div class="card-content flexchild-vertical border-top flex-size-8">
+
+                                <div class="flex-horizontal width100 justified-space-between">
+                                    <div class="title">Endereços</div>
+                                    <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                </div>
+
+                                <div class="container flex-horizontal display-table-on-mobile">
+                                    <paper-input label="Tipo" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Cep" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Logradouro" class="flexchild flex-size-2"></paper-input>
+                                    <paper-input label="Número" class="flexchild flex-size-1"></paper-input>
+                                </div>
+                                <div class="container flex-horizontal display-table-on-mobile">
+                                    <paper-input label="Complemento" class="flexchild flex-size-2"></paper-input>
+                                    <paper-input label="Condomínio" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Bairro" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Municipio" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="UF" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="País" class="flexchild flex-size-1"></paper-input>
+
+                                    <paper-fab mini super-mini icon="clear" class="clear"></paper-fab>
+                                </div>
+
+
+                            </div>
+                            <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+
+                                <div class="flex-horizontal width100 justified-space-between">
+                                    <div class="title">Telefones</div>
+                                    <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                </div>
+
+                                <div class="phone">
+                                    <div class="container flex-horizontal">
+                                        <paper-input label="Tipo" class="flexchild"></paper-input>
+                                        <paper-input label="Telefone" class="flexchild"></paper-input>
+                                    </div>
+                                    <div class="container flex-horizontal">
+                                        <paper-input label="Descrição" class="flexchild"></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear"></paper-fab>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </paper-card>
+                    </div>
+                    <paper-tabs selected="{{selected2}}" scrollable>
+                        <paper-tab active>Consulta de Cadastro</paper-tab>
+                        <paper-tab>Grupos</paper-tab>
+                        <paper-tab>Contatos Relacionados</paper-tab>
+                        <paper-tab>Conduta</paper-tab>
+                        <paper-tab>Configurações Comerciais</paper-tab>
+
+                    </paper-tabs>
+                    <iron-pages selected="{{selected2}}">
+                        <div class="display-table-on-mobile width100 self-stretch">
+
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Consulta de Cadastro</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+
+                                    <div class="container flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Data" value="01/02/2018" class="flexchild" no-label-float></paper-input>
+                                        <paper-input label="Descrição" value="Descrição" class="flexchild" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                    <div class="container flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Data" value="01/02/2018" class="flexchild" no-label-float></paper-input>
+                                        <paper-input label="Descrição" value="Descrição" class="flexchild" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                </div>
+
+                            </paper-card>
+                        </div>
+                        <div class="display-table-on-mobile width100 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Grupos</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+
+                                    <div class="container flex-horizontal">
+                                        <paper-input label="Descrição" value="Casa" class="flexchild" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                    <div class="container flex-horizontal">
+                                        <paper-input label="Descrição" value="Casa" class="flexchild" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                        <div class="display-table-on-mobile width100 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+
+                                <div class="card-content flexchild-vertical border-top flex-size-8 border-left">
+
+
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Contatos Relacionados</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+
+                                    <div class="container flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Código" value="Codigo" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="Apelido" value="Apelido" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="Telefone" value="+55 (16) 3333-3333" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="E-mail" value="E-mail" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="Observação" value="Observação" class="flexchild" no-label-float>></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear  no-label-float"></paper-fab>
+                                    </div>
+                                    <div class="container flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Código" value="Codigo" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="Apelido" value="Apelido" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="Telefone" value="+55 (16) 3333-3333" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="E-mail" value="E-mail" class="flexchild" no-label-float>></paper-input>
+                                        <paper-input label="Observação" value="Observação" class="flexchild" no-label-float>></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear  no-label-float"></paper-fab>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                        <div class="display-table-on-mobile width100 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Conduta</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+                                    <div class="container flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Observação" class="flexchild"></paper-input>
+                                        <paper-input label="Restrição" class="flexchild"></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear"></paper-fab>
+                                    </div>
+
+                                </div>
+                            </paper-card>
+                        </div>
+                        <div class="display-table-on-mobile width100 self-stretch">
+
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+
+                                <div class="card-content flexchild-vertical border-top flex-size-8 border-left">
+
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Configurações Comerciais</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+
+                                    <div class="container flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Vendedor" class="flexchild"></paper-input>
+                                        <paper-input label="Assistente" class="flexchild"></paper-input>
+                                        <paper-input label="Limite de crédito" class="flexchild"></paper-input>
+                                        <paper-input label="Tabela" class="flexchild"></paper-input>
+                                        <paper-input label="Forma de pagto." class="flexchild"></paper-input>
+                                        <paper-input label="Transportadora" class="flexchild"></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear"></paper-fab>
+                                    </div>
+                                </div>
+
+
+                            </paper-card>
+                        </div>
+
+                    </iron-pages>
+                </div>
+                <div>
+                    <div class="display-table-on-mobile width100 self-stretch">
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+                            <div class="card-content flexchild-vertical border-top flex-size-3">
+
+                                <div main-code class="bs-label bg-red">999999</div>
+                                <iron-image class="avatar" id="avatar" sizing="contain"
+                                            src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
+
+                                <paper-input label="Nome" class="flexchild flex-size-8"></paper-input>
+
+                                <paper-input label="Apelido"></paper-input>
+                                <paper-input label="Matriz"></paper-input>
+                            </div>
+                            <div class="card-content flexchild-vertical flex-size-8 border-left">
+
+                                <div main-code>Cadastro: 02/01/2018 | Última alteração: 06/02/2018</div>
+                                <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                    <paper-input label="CPF/CNPJ" class="flexchild"></paper-input>
+                                    <paper-input label="RG" class="flexchild"></paper-input>
+                                    <paper-input label="Inscrição Municipal" class="flexchild"></paper-input>
+                                </div>
+                                <div class=" flex-horizontal">
+                                    <paper-input label="Site" class="flexchild"></paper-input>
+                                    <paper-input label="E-mail" class="flexchild"></paper-input>
+                                </div>
+                                <div class=" flex-horizontal">
+                                    <paper-input label="NFe E-mail" class="flexchild"></paper-input>
+                                    <paper-input label="Obs NFe" class="flexchild"></paper-input>
+                                </div>
+
+                                <div class="display-table-on-mobile flex-horizontal">
+
+                                    <paper-input label="Profissão" class="flexchild"></paper-input>
+                                    <paper-input label="Sexo" class="flexchild"></paper-input>
+
+                                    <paper-input label="Data Nascimento" class="flexchild"></paper-input>
+                                    <paper-input label="Idade" class="flexchild"></paper-input>
+                                </div>
+                                <div class=" flex-horizontal">
+
+                                </div>
+
+                                <div class="container flex-horizontal display-table-on-mobile">
+                                    <paper-input label="Indicação" class="flexchild"></paper-input>
+
+                                </div>
+
+                            </div>
+                            <div class="card-content flexchild-vertical border-top flex-size-3 border-left">
+
+                                <div class="container flex-horizontal">
+                                    <paper-textarea label="Observação" class="flexchild" rows="11" always-float-label
+                                                    char-counter placeholder="Digite sua observação"></paper-textarea>
+                                </div>
+                            </div>
+                        </paper-card>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="display-table-on-mobile width100 self-stretch">
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+                            <div class="card-content flexchild-vertical border-top flex-size-8">
+
+                                <div class="flex-horizontal width100 justified-space-between">
+                                    <div class="title">Endereços</div>
+                                    <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                </div>
+
+                                <div class="container flex-horizontal">
+                                    <paper-input label="Tipo" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Cep" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Logradouro" class="flexchild flex-size-2"></paper-input>
+                                    <paper-input label="Número" class="flexchild flex-size-1"></paper-input>
+                                </div>
+                                <div class="container flex-horizontal">
+                                    <paper-input label="Complemento" class="flexchild flex-size-2"></paper-input>
+                                    <paper-input label="Condomínio" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Bairro" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Municipio" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="UF" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="País" class="flexchild flex-size-1"></paper-input>
+
+                                    <paper-fab mini super-mini icon="clear" class="clear"></paper-fab>
+                                </div>
+
+
+                            </div>
+                            <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+
+                                <div class="flex-horizontal width100 justified-space-between">
+                                    <div class="title">Telefones</div>
+                                    <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                </div>
+
+                                <div class="phone">
+                                    <div class="container flex-horizontal">
+                                        <paper-input label="Tipo" class="flexchild"></paper-input>
+                                        <paper-input label="Telefone" class="flexchild"></paper-input>
+                                    </div>
+                                    <div class="container flex-horizontal">
+                                        <paper-input label="Descrição" class="flexchild"></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear"></paper-fab>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </paper-card>
+                    </div>
+                </div>
+            </iron-pages>
+
+
+
+
+
+        </div>
+    </template>
+    <script src="ContatosV2.component.js"></script>
+</dom-module>

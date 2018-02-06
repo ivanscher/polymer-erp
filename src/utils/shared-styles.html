@@ -121,6 +121,52 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       paper-button {
         cursor: pointer;
       }
+      paper-textarea,
+      paper-input{
+        --paper-input-container: {
+          border: none;
+          padding: 4px 0 0 0;
+
+        }
+        --paper-input-container-label: {
+          font-size: 14px;
+        };
+        --paper-input-container-input: {
+          font-size: 14px;
+        }
+
+        --paper-input-container-underline-focus: {
+          border-color: #0098db;
+        }
+        --paper-input-container-underline: {
+          border-color: rgba(0,0,0,.16);
+        }
+
+      }
+      .bs-label{
+        line-height: 1;
+        display: inline;
+        padding: .3em .4em .3em;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: baseline;
+        white-space: nowrap;
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-weight: 300;
+        font-size: 12px !important;
+        border-radius: .25em;
+      }
+      .bg-green{
+        background: var(--google-green-300);
+        color: white !important;
+      }
+      .bg-red{
+        background: var(--google-red-500);
+        color: white !important;
+      }
 
       @media (max-width: 1200px) {
         iron-list {
@@ -146,9 +192,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       }
       @media (max-width: 840px) {
-        div[main-title] {
+       /* div[main-title] {
           display: none;
-        }
+        }*/
 
         .display-table-on-mobile {
           display: table;
