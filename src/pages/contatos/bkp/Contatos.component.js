@@ -11,16 +11,7 @@ class Contatos extends Polymer.Element {
             // This shouldn't be neccessary, but the Analyzer isn't picking up
             // Polymer.Element#rootPath
             rootPath: String,
-            selected: {
-                type: Number,
-                value: 0
-            },
-            selected2:{
-                type: Number,
-                value: 0
-            }
         };
-
     }
 }
 

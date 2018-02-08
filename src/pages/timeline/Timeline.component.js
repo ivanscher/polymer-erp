@@ -2,9 +2,9 @@
  * Created by ivans on 30/01/2018.
  */
 
-class ContatosV2 extends Polymer.Element {
+class Timeline extends Polymer.Element {
     static get is() {
-        return 'contatos-v2-page';
+        return 'timeline-page';
     }
     static get properties() {
         return {
@@ -24,4 +24,4 @@ class ContatosV2 extends Polymer.Element {
     }
 }
 
-window.customElements.define(ContatosV2.is, ContatosV2);
+window.customElements.define(Timeline.is, Timeline);

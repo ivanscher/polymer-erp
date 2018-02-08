@@ -1,0 +1,36 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="Chat.style.html">
+
+<dom-module id="chat-page">
+    <template>
+        <style include="chat-style"></style>
+
+        <iron-list id="list" items="[[items]]" as="item" selection-enabled multi-selection>
+            <template>
+                <!--<div class$="[[getClassForItem(item, selected)]]" tabindex$="[[tabIndex]]">-->
+                <paper-card class=" item">
+                    <div class="wrapper flex-horizontal">
+
+                        <img src="[[item.image]]" alt="[[item.name]]" class="avatar">
+                        <div class="content ">
+                            <div class="card-content flexchild-vertical flex-size-9">
+                                <div class="primary">[[item.name]]</div>
+                                <div class="text">[[item.text]]</div>
+                            </div>
+                        </div>
+                    </div>
+                </paper-card>
+            </template>
+        </iron-list>
+
+
+        <paper-textarea label="Mensagem" class="flexchild" rows="2" always-float-label
+                        char-counter placeholder="Digite sua mensagem"></paper-textarea>
+        <paper-button id="button-send">
+            <iron-icon icon="send"></iron-icon>
+            Enviar
+        </paper-button>
+
+    </template>
+    <script src="Chat.component.js"></script>
+</dom-module>
