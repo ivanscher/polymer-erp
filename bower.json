@@ -28,10 +28,19 @@
     "paper-fab": "PolymerElements/paper-fab#^2.0.0",
     "paper-card": "PolymerElements/paper-card#^2.0.0",
     "paper-menu-button": "PolymerElements/paper-menu-button#^2.0.0",
-    "iron-collapse": "PolymerElements/iron-collapse#^2.0.0"
+    "iron-collapse": "PolymerElements/iron-collapse#^2.0.0",
+    "paper-select": "^0.2.6",
+    "paper-radio-group": "PolymerElements/paper-radio-group#^2.1.0",
+    "paper-dropdown": "https://github.com/pushkar8723/paper-dropdown.git#^2.0.0"
   },
   "resolutions": {
-    "polymer": "^2.0.0"
+    "polymer": "^2.0.0",
+    "iron-flex-layout": "^2.0.1",
+    "iron-selector": "^2.0.0",
+    "webcomponentsjs": "^1.0.0",
+    "paper-input": "^2.0.5",
+    "paper-item": "^2.0.0",
+    "iron-collapse": "^2.0.0"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0"
