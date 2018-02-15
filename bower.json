@@ -7,7 +7,7 @@
   "dependencies": {
     "app-layout": "PolymerElements/app-layout#^2.0.0",
     "app-route": "PolymerElements/app-route#^2.0.0",
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.1",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.3",
     "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^2.0.0",
     "iron-media-query": "PolymerElements/iron-media-query#^2.0.0",
     "iron-pages": "PolymerElements/iron-pages#^2.0.0",
@@ -31,7 +31,10 @@
     "iron-collapse": "PolymerElements/iron-collapse#^2.0.0",
     "paper-select": "^0.2.6",
     "paper-radio-group": "PolymerElements/paper-radio-group#^2.1.0",
-    "paper-dropdown": "https://github.com/pushkar8723/paper-dropdown.git#^2.0.0"
+    "paper-listbox": "PolymerElements/paper-listbox#^2.0.0",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^2.0.2",
+    "paper-badge": "PolymerElements/paper-badge#^2.0.0",
+    "paper-dropdown": "https://github.com/pushkar8723/paper-dropdown.git#2.0.0"
   },
   "resolutions": {
     "polymer": "^2.0.0",

@@ -28,7 +28,7 @@ class Contatos extends Polymer.Element {
             // the same name declared on properties here, the value is the value what will be list item value.
             dropdownValue: {
                 type: String,
-                value: 'Bike'
+                value: 'Masculino'
             }
         };
     }
