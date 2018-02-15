@@ -1,0 +1,54 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="Lists.style.html">
+
+<dom-module id="lists-page">
+    <template>
+        <style include="lists-style"></style>
+        <app-header class="page-header">
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">Lista de Contatos</div>
+                <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
+                <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
+
+                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
+                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
+
+
+            </app-toolbar>
+        </app-header>
+
+        <paper-fab mini icon="add"></paper-fab>
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+
+            <paper-input label="Buscar" class="card" no-label-float  >
+                <iron-icon icon="search" slot="prefix"></iron-icon>
+            </paper-input>
+
+
+            <iron-ajax url="http://localhost/polymer-erp/src/contatos.json" last-response="{{data}}" auto></iron-ajax>
+            <iron-list id="list" items="[[data]]" as="item" selection-enabled>
+                <template>
+                    <!--<div class$="[[getClassForItem(item, selected)]]" tabindex$="[[tabIndex]]">-->
+                    <div class="item" tabindex$="[[tabIndex]]" >
+                        <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
+                        <div class="pad">
+                            <div class="primary">[[item.name]]</div>
+                            <div class="shortText">[[item.nickname]]</div>
+                            <div class="shortText">[[item.phone]]</div>
+                            <div class="shortText">[[item.email]]</div>
+                            <div class="shortText">CPF: [[item.cpf]]</div>
+                            <div class="shortText">RG: [[item.rg]]</div>
+
+
+                        </div>
+
+                        <iron-icon icon$="[[iconForItem(item)]]" class$="[[colorForItem(item)]]"></iron-icon>
+                        <div class="code">[[item.index]]</div>
+                    </div>
+                </template>
+            </iron-list>
+        </div>
+    </template>
+    <script src="Lists.component.js"></script>
+</dom-module>

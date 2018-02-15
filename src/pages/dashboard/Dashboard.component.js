@@ -16,6 +16,11 @@ class Dashboard extends Polymer.Element {
             // This shouldn't be neccessary, but the Analyzer isn't picking up
             // Polymer.Element#rootPath
             rootPath: String,
+            page: {
+                type: String,
+                reflectToAttribute: true,
+                observer: '_pageChanged',
+            },
         };
     }
 
@@ -32,6 +37,22 @@ class Dashboard extends Polymer.Element {
         } = this.$;
 
         buttonMenu.addEventListener('click', (e) => { menuDrawer.toggle(); })   
+    }
+
+    _routePageChanged(page) {
+        // If no page was found in the route data, page will be an empty string.
+        // Default to 'view1' in that case.
+        this.page = page || 'contatos';
+
+    }
+    _pageChanged(page) {
+        // Load page import on demand. Show 404 page if fails
+        var resolvedPageUrl = this.resolveUrl(page + '.html');
+        Polymer.importHref(
+            resolvedPageUrl,
+            null,
+            null,
+            true);
     }
 }
 

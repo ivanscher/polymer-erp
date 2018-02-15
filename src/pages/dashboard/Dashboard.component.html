@@ -30,6 +30,7 @@
 <link rel="import" href="../../../bower_components/paper-card/paper-card.html">
 
 <link rel="import" href="../contatos/Contatos.component.html">
+<link rel="import" href="../lists/Lists.component.html">
 <link rel="import" href="../timeline/Timeline.component.html">
 
 <link rel="import" href="Dashboard.style.html">
@@ -67,8 +68,8 @@
 
                         <iron-collapse id="collapse" opened="{{opened}}">
                             <paper-menu class="menu-content">
-                                <paper-item><a href="[[rootPath]]dashboard">Contato</a></paper-item>
-                                <paper-item><a href="[[rootPath]]login">Login</a></paper-item>
+                                <paper-item><a href="[[rootPath]]contatos">Contato</a></paper-item>
+                                <paper-item><a href="[[rootPath]]lista">Listar</a></paper-item>
                             </paper-menu>
                         </iron-collapse>
 
@@ -87,7 +88,13 @@
         </app-drawer>
 
         <section id="view">
-            <contatos-page></contatos-page>
+
+            <contatos-page name="contatos"></contatos-page>
+
+            <!--
+ <lists-page name="lista"></lists-page>
+
+            -->
         </section>
     </template>
     <script src="Dashboard.component.js"></script>

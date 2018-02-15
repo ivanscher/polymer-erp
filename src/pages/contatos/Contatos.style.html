@@ -10,36 +10,6 @@
                 background-color: #eee;
 
             }
-            app-header {
-                position: fixed;
-                top: 64px;
-                left: 0;
-                width: 100%;
-                z-index: 999;
-                width: 100%;
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01488e+1,01579b+100 */
-                background: #01488e; /* Old browsers */
-                background: -moz-linear-gradient(45deg, #01488e 1%, #01579b 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(45deg, #01488e 1%,#01579b 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(45deg, #01488e 1%,#01579b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01488e', endColorstr='#01579b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0098db+0,01488e+100 */
-                background: #0098db; /* Old browsers */
-                background: -moz-linear-gradient(left, #0098db 0%, #01488e 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(left, #0098db 0%,#01488e 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to right, #0098db 0%,#01488e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0098db', endColorstr='#01488e',GradientType=1 ); /* IE6-9 */
-
-                color: #fff;
-            }
-            .section-title{
-                margin-left: 8px;
-            }
-            .page {
-                @apply(--layout-flex);
-
-                min-height: calc(100vh - 128px);
-            }
 
             .avatar {
                 margin: 16px auto 0;
@@ -89,11 +59,7 @@
             }
 
 
-            .page{
-                width: 84%;
-                max-width: 1360px;
-                margin: 0 auto;
-            }
+
             paper-card{
                 @apply(--shadow-elevation-12d);
                 margin-bottom: 16px;
@@ -123,9 +89,7 @@
                     display: block;
                     border-right: none;
                 }
-                .page{
-                    width: 100%;
-                }
+
                 app-toolbar paper-icon-button{display: none}
                 app-toolbar paper-icon-button:first-child,
                 app-toolbar paper-icon-button:last-child{
