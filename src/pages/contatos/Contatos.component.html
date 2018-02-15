@@ -56,8 +56,8 @@
 
                                 <paper-input label="Nome" class="flexchild flex-size-8"></paper-input>
 
-                                <paper-input label="Apelido"></paper-input>
-                                <paper-dropdown label="Sexo" value="{{dropdownValue}}">
+                                <paper-input label="Apelido" class="flexchild"></paper-input>
+                                <paper-dropdown label="Sexo" value="{{dropdownValue}}" class="flexchild">
                                     <paper-item>Masculino</paper-item>
                                     <paper-item>Feminino</paper-item>
                                     <paper-item>Outros</paper-item>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="card-content flexchild-vertical flex-size-8 border-left">
 
-                                <div main-code>Cadastro: 02/01/2018 | Última alteração: 06/02/2018</div>
+                                <div main-code><span>Cadastro: 02/01/2018</span><span>Última alteração: 06/02/2018</span></div>
                                 <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
                                     <paper-input label="CPF/CNPJ" class="flexchild"></paper-input>
                                     <paper-input label="RG" class="flexchild"></paper-input>
@@ -94,10 +94,16 @@
 
                                 </div>
 
+
                                 <div class="container flex-horizontal display-table-on-mobile">
                                     <paper-input label="Indicação" class="flexchild"></paper-input>
-
+                                    <paper-radio-group selected="c" allow-empty-selection id="paperRadioValue" class="flexchild">
+                                        <paper-radio-button name="a">Valor A</paper-radio-button>
+                                        <paper-radio-button name="b">Valor B</paper-radio-button>
+                                        <paper-radio-button name="c">Valor C</paper-radio-button>
+                                    </paper-radio-group>
                                 </div>
+
 
                             </div>
                             <div class="card-content flexchild-vertical border-top flex-size-3 border-left">
@@ -151,16 +157,6 @@
                                     </div>
 
                                     <div class="container flex-horizontal">
-                                        <paper-radio-group selected="c" allow-empty-selection id="paperRadioValue">
-                                            <paper-radio-button name="a">Valor A</paper-radio-button>
-                                            <paper-radio-button name="b">Valor B</paper-radio-button>
-                                            <paper-radio-button name="c">Valor C</paper-radio-button>
-                                        </paper-radio-group>
-                                    </div>
-
-
-
-                                    <div class="container flex-horizontal">
                                         <paper-input label="Descrição" class="flexchild"></paper-input>
                                         <paper-fab mini super-mini icon="clear" class="clear"></paper-fab>
                                     </div>
@@ -181,7 +177,7 @@
                         <div class="display-table-on-mobile width100 self-stretch">
 
                             <paper-card class="display-table-on-mobile flex-horizontal">
-                                <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+                                <div class="card-content flexchild-vertical flex-size-4 ">
 
                                     <div class="flex-horizontal width100 justified-space-between">
                                         <div class="title">Consulta de Cadastro</div>
@@ -204,7 +200,7 @@
                         </div>
                         <div class="display-table-on-mobile width100 self-stretch">
                             <paper-card class="display-table-on-mobile flex-horizontal">
-                                <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+                                <div class="card-content flexchild-vertical flex-size-4 ">
 
                                     <div class="flex-horizontal width100 justified-space-between">
                                         <div class="title">Grupos</div>
@@ -225,7 +221,7 @@
                         <div class="display-table-on-mobile width100 self-stretch">
                             <paper-card class="display-table-on-mobile flex-horizontal">
 
-                                <div class="card-content flexchild-vertical border-top flex-size-8 border-left">
+                                <div class="card-content flexchild-vertical flex-size-8">
 
 
                                     <div class="flex-horizontal width100 justified-space-between">
@@ -254,7 +250,7 @@
                         </div>
                         <div class="display-table-on-mobile width100 self-stretch">
                             <paper-card class="display-table-on-mobile flex-horizontal">
-                                <div class="card-content flexchild-vertical border-top flex-size-4 border-left">
+                                <div class="card-content flexchild-vertical flex-size-4">
                                     <div class="flex-horizontal width100 justified-space-between">
                                         <div class="title">Conduta</div>
                                         <paper-fab mini super-mini icon="add" class="add"></paper-fab>
@@ -272,7 +268,7 @@
 
                             <paper-card class="display-table-on-mobile flex-horizontal">
 
-                                <div class="card-content flexchild-vertical border-top flex-size-8 border-left">
+                                <div class="card-content flexchild-vertical flex-size-8">
 
                                     <div class="flex-horizontal width100 justified-space-between">
                                         <div class="title">Configurações Comerciais</div>

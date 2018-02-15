@@ -115,11 +115,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         border-left: 1px solid rgba(0, 0, 0, .16);
       }
 
-      .border-top {
-        border-top: 1px solid rgba(0, 0, 0, .16);
-      }
+
       paper-button {
         cursor: pointer;
+      }
+      paper-radio-button{
+        font-size: 14px;
+        border-color: rgba(0,0,0,.16);
+        color: var(--primary-text-color);
       }
       paper-textarea,
       paper-input{
@@ -127,20 +130,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           border: none;
           padding: 4px 0 0 0;
 
-        }
+        };
         --paper-input-container-label: {
           font-size: 14px;
         };
         --paper-input-container-input: {
           font-size: 14px;
-        }
+        };
 
         --paper-input-container-underline-focus: {
           border-color: #0098db;
-        }
+        };
         --paper-input-container-underline: {
           border-color: rgba(0,0,0,.16);
-        }
+        };
 
       }
       .bs-label{
@@ -178,6 +181,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       @media (max-width: 1200px) {
+        .border-top {
+          border-top: 1px solid rgba(0, 0, 0, .16);
+        }
         iron-list {
           height: auto;
         }

@@ -4,6 +4,87 @@
     <template>
         <style include="shared-styles">
 
+
+
+            .timeline ul {
+                padding: 16px;
+                margin: 0;
+                list-style: none;
+                position: relative;
+                background-color: white;
+                -webkit-border-radius: 0 0 8px 8px;
+                border-radius: 0 0 8px 8px;
+            }
+            .timeline ul:before {
+                 content: ' ';
+                 height: 100%;
+                 width: 1px;
+                 background-color: #e7e7e7;
+                 position: absolute;
+                 top: 0;
+                 left: 25px;
+                 z-index: 0;
+            }
+
+            .timeline li {
+                @apply(--layout-horizontal);
+                @apply(--layout-self-stretch);
+                @apply(--layout-between-aligned);
+            }
+            .timeline li paper-card{
+                padding:8px 16px;
+                margin: 1em 16px;
+                vertical-align: top;
+                width: calc(100% - 70px);
+                -webkit-border-radius: 0 0 8px 8px;
+                border-radius: 0 0 8px 8px;
+                background-color: #eee;
+            }
+            .timeline li div{
+
+
+                margin: 1em 0;
+                vertical-align: top;
+            }
+
+            .timeline .bullet {
+                width: 16px;
+                height: 16px;
+                /*box-sizing: border-box;*/
+                border-radius: 50%;
+                background: white;
+                z-index: 1;
+                margin-right: 1em;
+                border: 2px solid #0098db;
+            }
+
+
+
+            .timeline .time {
+                font-size: 0.75em;
+                padding-top: 0.25em;
+                width: 70px;
+            }
+
+
+            .timeline h3 {
+                font-size: 0.9em;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .timeline h4 {
+                margin: 0;
+                font-size: 0.7em;
+                font-weight: 400;
+            }
+
+            .timeline .people img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
         </style>
     </template>
 </dom-module>

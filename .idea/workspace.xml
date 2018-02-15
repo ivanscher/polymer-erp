@@ -2,32 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dc10c5c-0bef-4a48-9241-3b3a59094c72" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bkp/consulta-cadastro.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bkp/contatos.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bkp/my-icons.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bkp/my-view1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bkp/my-view2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bkp/my-view3.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.js" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" afterPath="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/.bower.json" afterPath="$PROJECT_DIR$/owner_components/paper-menu/.bower.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/.gitignore" afterPath="$PROJECT_DIR$/owner_components/paper-menu/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/.travis.yml" afterPath="$PROJECT_DIR$/owner_components/paper-menu/.travis.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/owner_components/paper-menu/CONTRIBUTING.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/README.md" afterPath="$PROJECT_DIR$/owner_components/paper-menu/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/bower.json" afterPath="$PROJECT_DIR$/owner_components/paper-menu/bower.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/demo/index.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/demo/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/desktop.ini" afterPath="$PROJECT_DIR$/owner_components/paper-menu/desktop.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/hero.svg" afterPath="$PROJECT_DIR$/owner_components/paper-menu/hero.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/index.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/paper-menu-shared-styles.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/paper-menu-shared-styles.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/paper-menu.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/paper-menu.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/paper-submenu.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/paper-submenu.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/test/index.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/test/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/test/paper-menu.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/test/paper-menu.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ower_components/paper-menu/test/paper-submenu.html" afterPath="$PROJECT_DIR$/owner_components/paper-menu/test/paper-submenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/chat/Chat.style.html" afterPath="$PROJECT_DIR$/src/pages/chat/Chat.style.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" afterPath="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/timeline/Timeline.style.html" afterPath="$PROJECT_DIR$/src/pages/timeline/Timeline.style.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/shared-styles.html" afterPath="$PROJECT_DIR$/src/utils/shared-styles.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,31 +23,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Dashboard.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html">
+      <file leaf-file-name="Contatos.style.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="75" column="125" lean-forward="false" selection-start-line="75" selection-start-column="125" selection-end-line="75" selection-end-column="125" />
+            <state relative-caret-position="272">
+              <caret line="100" column="36" lean-forward="false" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+              <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashboard.style.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html">
+      <file leaf-file-name="Timeline.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="68">
+              <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-app.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/my-app.html">
+      <file leaf-file-name="Timeline.style.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+            <state relative-caret-position="408">
+              <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -75,19 +57,38 @@
       <file leaf-file-name="shared-styles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="32" />
+            <state relative-caret-position="242">
+              <caret line="185" column="9" lean-forward="false" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashboard.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.js">
+      <file leaf-file-name="Chat.style.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/chat/Chat.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contatos.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="268" column="87" lean-forward="false" selection-start-line="268" selection-start-column="87" selection-end-line="268" selection-end-column="87" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#paper-card#0;n#div#0;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#paper-card#0;n#div#1;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#paper-card#0;n#div#2;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#paper-card#0;n#div#3;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+                <element signature="n#paper-card#0;n#div#4;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,10 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>paper-menu-button</find>
-      <find>self</find>
-      <find>paper-button</find>
-      <find>--layout-self-start</find>
       <find>padding</find>
       <find>padd</find>
       <find>media</find>
@@ -134,6 +131,10 @@
       <find>drop</find>
       <find>serx</find>
       <find>inpu</find>
+      <find>paper-dropdown</find>
+      <find>paper-input-container</find>
+      <find>radio</find>
+      <find>border-top</find>
     </findStrings>
     <replaceStrings>
       <replace>my-view3</replace>
@@ -163,21 +164,21 @@
         <option value="$PROJECT_DIR$/src/my-app.html" />
         <option value="$PROJECT_DIR$/src/pages/contatos/ContatosV2.component.js" />
         <option value="$PROJECT_DIR$/src/pages/contatos/ContatosV2.component.html" />
-        <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" />
         <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.component.js" />
-        <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.style.html" />
         <option value="$PROJECT_DIR$/src/pages/chat/chat.json" />
-        <option value="$PROJECT_DIR$/src/utils/shared-styles.html" />
         <option value="$PROJECT_DIR$/src/pages/chat/Chat.component.js" />
-        <option value="$PROJECT_DIR$/src/pages/chat/Chat.style.html" />
         <option value="$PROJECT_DIR$/src/pages/chat/Chat.component.html" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.component.js" />
-        <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
-        <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.js" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" />
+        <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" />
+        <option value="$PROJECT_DIR$/src/utils/shared-styles.html" />
+        <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
+        <option value="$PROJECT_DIR$/src/pages/chat/Chat.style.html" />
+        <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
+        <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.style.html" />
       </list>
     </option>
   </component>
@@ -262,6 +263,112 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timeline" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contatos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polymer-erp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chat" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,12 +485,12 @@
       <workItem from="1518089262138" duration="8358000" />
       <workItem from="1518621413752" duration="845000" />
       <workItem from="1518638507374" duration="1252000" />
-      <workItem from="1518643839845" duration="7259000" />
+      <workItem from="1518643839845" duration="13198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90350000" />
+    <option name="totallyTimeSpent" value="96289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
@@ -440,7 +547,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower_components/paper-styles/typography.html" />
     <entry file="file://$PROJECT_DIR$/bower_components/paper-fab/paper-fab.html" />
     <entry file="file://$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-behavior.html" />
     <entry file="file://$PROJECT_DIR$/bower_components/app-layout/app-drawer-layout/app-drawer-layout.html" />
@@ -507,21 +613,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/iron-icons/iron-icons.html" />
-    <entry file="file://$PROJECT_DIR$/bower_components/paper-input/paper-input.html" />
-    <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.component.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -537,38 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="105" column="97" lean-forward="false" selection-start-line="105" selection-start-column="97" selection-end-line="105" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="71" column="26" lean-forward="false" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/chat/Chat.style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -605,14 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/login/Login.style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bkp/my-view1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -629,26 +680,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/my-app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/login/Login.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="138" column="17" lean-forward="true" selection-start-line="138" selection-start-column="17" selection-end-line="138" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -669,10 +704,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/my-app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="75" column="125" lean-forward="false" selection-start-line="75" selection-start-column="125" selection-end-line="75" selection-end-column="125" />
+        <state relative-caret-position="170">
+          <caret line="19" column="74" lean-forward="false" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-input/paper-input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/paper-dropdown/paper-dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/login/Login.style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="185" column="9" lean-forward="false" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="268" column="87" lean-forward="false" selection-start-line="268" selection-start-column="87" selection-end-line="268" selection-end-column="87" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#paper-card#0;n#div#0;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#1;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#2;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#3;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+            <element signature="n#paper-card#0;n#div#4;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/chat/Chat.style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="100" column="36" lean-forward="false" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+          <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
       </provider>
