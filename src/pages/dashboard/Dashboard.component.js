@@ -19,6 +19,10 @@ class Dashboard extends Polymer.Element {
         };
     }
 
+    toggle() {
+        this.$.collapse.toggle();
+    }
+
     ready() {
         super.ready();
         

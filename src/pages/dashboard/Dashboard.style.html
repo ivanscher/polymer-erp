@@ -9,7 +9,35 @@
                 margin: 0;
                 background-color: #eee;
             }
+            paper-item.collapse-menu iron-icon{
+                float: right;
+            }
+            img.b15{
+                margin-top: 7px;
+            }
+            div.head{
+                background: url(../../resources/login-bg.jpg) top no-repeat;
+                background-size: cover;
+                padding: 8px;
+                color: white;
+            }
+            hr.separated{
+                opacity: .25;
+            }
+            .geek-blue{
+                color: #0098db;
+            }
+            iron-selector paper-item a{
+                width: 100%;
+                text-decoration: none;
 
+                color: var(--paper-menu-color, --primary-text-color);
+                font-size: 15px;
+            }
+            iron-selector iron-collapse{
+                margin-bottom: 0.5em;
+                border-bottom: 1px solid rgba(0,0,0,.1);
+            }
             #menuDrawer{
                 z-index: 9999;
             }
