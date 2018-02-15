@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3dc10c5c-0bef-4a48-9241-3b3a59094c72" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/shared-styles.html" afterPath="$PROJECT_DIR$/src/utils/shared-styles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,17 +28,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Contatos.style.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Contatos.style.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state relative-caret-position="191">
+              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Contatos.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Contatos.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -59,8 +58,8 @@
       <file leaf-file-name="shared-styles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="118" column="24" lean-forward="false" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+            <state relative-caret-position="148">
+              <caret line="124" column="12" lean-forward="false" selection-start-line="124" selection-start-column="12" selection-end-line="124" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -78,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bar</find>
       <find>app-header</find>
       <find>iron-image</find>
       <find>no-label-float</find>
@@ -108,6 +106,7 @@
       <find>dropdow</find>
       <find>paper-dropdown-menu</find>
       <find>paper-menu-button</find>
+      <find>paper-fab[super-mini]</find>
     </findStrings>
     <replaceStrings>
       <replace>my-view3</replace>
@@ -154,9 +153,9 @@
         <option value="$PROJECT_DIR$/src/pages/lists/Lists.component.html" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" />
-        <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
         <option value="$PROJECT_DIR$/src/utils/shared-styles.html" />
         <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
+        <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
       </list>
     </option>
   </component>
@@ -441,12 +440,12 @@
       <workItem from="1518089262138" duration="8358000" />
       <workItem from="1518621413752" duration="845000" />
       <workItem from="1518638507374" duration="1252000" />
-      <workItem from="1518643839845" duration="25782000" />
+      <workItem from="1518643839845" duration="25948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108873000" />
+    <option name="totallyTimeSpent" value="109039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
@@ -761,22 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="118" column="24" lean-forward="false" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -797,6 +780,22 @@
             <element signature="n#paper-card#0;n#div#3;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
             <element signature="n#paper-card#0;n#div#4;n#iron-pages#0;n#div#0;n#iron-pages#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="124" column="12" lean-forward="false" selection-start-line="124" selection-start-column="12" selection-end-line="124" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
