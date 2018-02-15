@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3dc10c5c-0bef-4a48-9241-3b3a59094c72" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/chat/Chat.style.html" afterPath="$PROJECT_DIR$/src/pages/chat/Chat.style.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" afterPath="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" afterPath="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/timeline/Timeline.style.html" afterPath="$PROJECT_DIR$/src/pages/timeline/Timeline.style.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/shared-styles.html" afterPath="$PROJECT_DIR$/src/utils/shared-styles.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,9 +22,8 @@
       <file leaf-file-name="Contatos.style.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="100" column="36" lean-forward="false" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
-              <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+            <state relative-caret-position="270">
+              <caret line="117" column="12" lean-forward="false" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -37,8 +32,8 @@
       <file leaf-file-name="Timeline.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="341">
+              <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -47,8 +42,8 @@
       <file leaf-file-name="Timeline.style.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="313">
+              <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -57,8 +52,8 @@
       <file leaf-file-name="shared-styles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="185" column="9" lean-forward="false" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+            <state relative-caret-position="72">
+              <caret line="127" column="17" lean-forward="false" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -105,7 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>padding</find>
       <find>padd</find>
       <find>media</find>
       <find>layout-around</find>
@@ -134,10 +128,12 @@
       <find>paper-dropdown</find>
       <find>paper-input-container</find>
       <find>radio</find>
+      <find>&lt;/h4&gt;</find>
       <find>border-top</find>
     </findStrings>
     <replaceStrings>
       <replace>my-view3</replace>
+      <replace>&lt;/p&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -173,11 +169,11 @@
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.js" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.style.html" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" />
-        <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" />
         <option value="$PROJECT_DIR$/src/utils/shared-styles.html" />
         <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.component.html" />
         <option value="$PROJECT_DIR$/src/pages/chat/Chat.style.html" />
         <option value="$PROJECT_DIR$/src/pages/contatos/Contatos.style.html" />
+        <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.component.html" />
         <option value="$PROJECT_DIR$/src/pages/timeline/Timeline.style.html" />
       </list>
     </option>
@@ -485,12 +481,12 @@
       <workItem from="1518089262138" duration="8358000" />
       <workItem from="1518621413752" duration="845000" />
       <workItem from="1518638507374" duration="1252000" />
-      <workItem from="1518643839845" duration="13198000" />
+      <workItem from="1518643839845" duration="14609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96289000" />
+    <option name="totallyTimeSpent" value="97700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
@@ -752,22 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="185" column="9" lean-forward="false" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -793,19 +773,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/shared-styles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="127" column="17" lean-forward="false" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/contatos/Contatos.style.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="100" column="36" lean-forward="false" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
-          <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+        <state relative-caret-position="270">
+          <caret line="117" column="12" lean-forward="false" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/timeline/Timeline.style.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="313">
+          <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
           <folding />
         </state>
       </provider>
