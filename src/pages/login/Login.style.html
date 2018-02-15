@@ -14,6 +14,7 @@
                 background: url(../../resources/login-bg.jpg) top no-repeat;
                 background-size: cover;
 
+
             }
             h1  {
                 color: white;
@@ -33,11 +34,20 @@
                 --paper-input-container-focus-color: var(--paper-light-blue-100);
                 --paper-input-container-invalid-color: var(--paper-red-400);
                 --paper-input-container-input-color: var(--paper-light-blue-50);
+
+                --paper-input-container: {
+                    border: none;
+                    padding: 4px 0 0 0;
+
+                };
+
+                --paper-input-container-underline: {
+                    border-color: white;
+                };
+
+
             }
-            .sing-up-container{
-                position: fixed;
-                bottom: 16px;
-            }
+
             .sing-up-container p{
                 color: var(--paper-light-blue-100);
             }
