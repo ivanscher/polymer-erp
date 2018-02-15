@@ -1,6 +1,4 @@
 <link rel="import" href="../../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../../bower_components/paper-radio-group/paper-radio-group.html">
-<link rel="import" href="../../../bower_components/paper-dropdown/paper-dropdown.html">
 <link rel="import" href="../chat/Chat.component.html">
 
 <link rel="import" href="Contatos.style.html">
@@ -57,11 +55,15 @@
                                 <paper-input label="Nome" class="flexchild flex-size-8"></paper-input>
 
                                 <paper-input label="Apelido" class="flexchild"></paper-input>
-                                <paper-dropdown label="Sexo" value="{{dropdownValue}}" class="flexchild">
-                                    <paper-item>Masculino</paper-item>
-                                    <paper-item>Feminino</paper-item>
-                                    <paper-item>Outros</paper-item>
-                                </paper-dropdown>
+
+                                <paper-dropdown-menu label="Sexo">
+                                    <paper-listbox slot="dropdown-content" selected="1">
+                                        <paper-item>Masculino</paper-item>
+                                        <paper-item>Feminino</paper-item>
+                                        <paper-item>Outros</paper-item>
+                                    </paper-listbox>
+                                </paper-dropdown-menu>
+
                             </div>
                             <div class="card-content flexchild-vertical flex-size-8 border-left">
 
