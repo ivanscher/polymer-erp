@@ -22,6 +22,13 @@ class Lists extends Polymer.Element {
         };
 
     }
+    colorForItem(item) {
+        return item ? (item.status == 0 ? 'blue' : 'red') : '';
+    }
+    iconForItem(item) {
+        return item ? (item.status == 0 ? 'check' : 'clear') : '';
+    }
+
     ready() {
         super.ready();
         this.$.add.addEventListener('click', this.openBy.bind(this), false);
