@@ -22,6 +22,13 @@ class Lists extends Polymer.Element {
         };
 
     }
+    ready() {
+        super.ready();
+        this.$.add.addEventListener('click', this.openBy.bind(this), false);
+    }
+    openBy() {
+        this.$.actions.open();
+    }
 }
 
 window.customElements.define(Lists.is, Lists);

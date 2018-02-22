@@ -42,6 +42,8 @@
 <link rel="import" href="../contatos/Contatos.component.html">
 <link rel="import" href="../lists/Lists.component.html">
 <link rel="import" href="../timeline/Timeline.component.html">
+<link rel="import" href="../drag/Drag.component.html">
+<link rel="import" href="../chat/Chat.component.html">
 
 <link rel="import" href="Dashboard.style.html">
 
@@ -82,8 +84,9 @@
             </iron-collapse>
 
 
-            <paper-item><a href="[[rootPath]]dashboard"><iron-icon icon="label" slot="item-icon" class="geek-blue"></iron-icon> Contato</a></paper-item>
-            <paper-item><a href="[[rootPath]]login"><iron-icon icon="label" slot="item-icon"></iron-icon> Login</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]chat"><iron-icon icon="label" slot="item-icon" class="geek-blue"></iron-icon> Chat</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]timeline"><iron-icon icon="label" slot="item-icon"></iron-icon> Timeline</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]drag"><iron-icon icon="label" slot="item-icon"></iron-icon> Drag</a></paper-item>
 
             <hr class="separated">
             <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
@@ -104,6 +107,9 @@
            <iron-pages selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="contatos" selected-attribute="visible" role="main">
              <contatos-page name="contatos"></contatos-page>
              <lists-page name="lista"></lists-page>
+             <drag-page name="drag"></drag-page>
+             <timeline-page name="timeline"></timeline-page>
+             <chat-page name="chat"></chat-page>
            </iron-pages>
 
     </section>

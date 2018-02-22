@@ -1,0 +1,24 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="Drag.style.html">
+
+<dom-module id="drag-page">
+    <template>
+        <style include="drag-style"></style>
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+            <h1>DRAGE PAGE</h1>
+        </div>
+
+
+        <div id="sidenav">
+            <iron-image class="avatar" id="avatar" sizing="contain"
+                        src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg" draggable="true"></iron-image>
+            <a href="#about" draggable="true">About</a>
+            <a href="#services" draggable="true">Services</a>
+            <a href="#clients" draggable="true">Clients</a>
+            <a href="#contact" draggable="true">Contact</a>
+        </div>
+    </template>
+    <script src="Drag.component.js"></script>
+</dom-module>

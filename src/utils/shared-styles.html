@@ -214,11 +214,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         width: 84%;
         max-width: 1360px;
         margin: 0 auto;
+
+      }
+      app-header{
+        z-index: 2;
+        position: relative;
       }
       app-header.page-header {
         position: fixed;
         top: 64px;
         left: 0;
+
         width: 100%;
         z-index: 999;
         width: 100%;
@@ -240,6 +246,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .section-title{
         margin-left: 8px;
       }
+
+      [draggable] {
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        /* Required to make elements draggable in old WebKit */
+        -khtml-user-drag: element;
+        -webkit-user-drag: element;
+      }
+
       @media (max-width: 1200px) {
         .border-top {
           border-top: 1px solid rgba(0, 0, 0, .16);
