@@ -2,6 +2,8 @@
  * Created by ivans on 30/01/2018.
  */
 
+let dragSrcEl;
+let itens;
 class Drag extends Polymer.Element {
     static get is() {
         return 'drag-page';
@@ -10,9 +12,7 @@ class Drag extends Polymer.Element {
         return {
             // This shouldn't be neccessary, but the Analyzer isn't picking up
             // Polymer.Element#rootPath
-            rootPath: String,
-            itens: Array,
-            dragSrcEl: Object
+            rootPath: String
         };
     }
 
@@ -20,7 +20,7 @@ class Drag extends Polymer.Element {
         // Target (this) element is the source node.
         this.style.opacity = '0.4';
 
-        this.dragSrcEl = this;
+        dragSrcEl = this;
 
         e.dataTransfer.effectAllowed = 'move';
         e.dataTransfer.setData('text/html', this.innerHTML);
@@ -49,11 +49,11 @@ class Drag extends Polymer.Element {
         }
 
 console.log(this)
-console.log(this.dragSrcEl)
+console.log(dragSrcEl)
         // Don't do anything if dropping the same column we're dragging.
-        if (this.dragSrcEl != this) {
+        if (dragSrcEl != this) {
             // Set the source column's HTML to the HTML of the columnwe dropped on.
-            this.dragSrcEl.innerHTML = this.innerHTML;
+            dragSrcEl.innerHTML = this.innerHTML;
             this.innerHTML = e.dataTransfer.getData('text/html');
         }
 
@@ -66,20 +66,20 @@ console.log(this.dragSrcEl)
     }
     handleDragEnd(e) {
         // this/e.target is the source node.
-        /*
-        for(let i=0; i<this.itens.length; i++){
-         this.itens[i].classList.remove('over');
+
+        for(let i=0; i<itens.length; i++){
+         itens[i].classList.remove('over');
         };
-        */
+         /*
         for(let i=0; i<Polymer.dom(this.$.sidenav).children.length; i++){
             Polymer.dom(this.$.sidenav).children[i].classList.remove('over');
-        };
+        };*/
     }
 
     ready() {
         super.ready();
 
-        this.itens = Polymer.dom(this.$.sidenav).children;
+        itens = Polymer.dom(this.$.sidenav).children;
 
         for(let i=0; i<Polymer.dom(this.$.sidenav).children.length; i++){
             console.log(i)
