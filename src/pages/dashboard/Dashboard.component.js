@@ -40,14 +40,28 @@ class Dashboard extends Polymer.Element {
       menuDrawer,
     } = this.$;
 
-    buttonMenu.addEventListener('click', (e) => { menuDrawer.toggle(); })   
+    console.log();
+
+    let menu = Polymer.dom(this.$.menu).querySelectorAll('.menu');
+      for(let i=0; i<menu.length; i++) {
+
+          menu[i].addEventListener('click', (e) => {
+
+              menuDrawer.toggle();
+          })
+      }
+    buttonMenu.addEventListener('click', (e) => {
+      menuDrawer.toggle();
+    })
   }
 
   _routePageChanged(page) {
+
     this.page = page || 'contatos';
   }
 
   _pageChanged(page) {
+
     // Load page import on demand. Show 404 page if fails
     var resolvedPageUrl = this.resolveUrl(page + '.html');
     Polymer.importHref(
@@ -55,6 +69,8 @@ class Dashboard extends Polymer.Element {
       null,
       null,
       true);
+
+
   }
 }
 

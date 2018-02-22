@@ -71,22 +71,22 @@
           </div>
         </div>
 
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list"
+        <iron-selector id="menu" selected="[[page]]" attr-for-selected="name" class="drawer-list"
                                                                     role="navigation">
-          <paper-menu>
+          <paper-menu >
             <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu"><a>Tem Submenu <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon></a></paper-item>
 
             <iron-collapse id="collapse" opened="{{opened}}">
               <paper-menu class="menu-content">
-                <paper-item><a href="[[dashboardPath]]contatos">Contato</a></paper-item>
-                <paper-item><a href="[[dashboardPath]]lista">Listar</a></paper-item>
+                <paper-item><a href="[[dashboardPath]]contatos" class="menu">Contato</a></paper-item>
+                <paper-item><a href="[[dashboardPath]]lista" class="menu">Listar</a></paper-item>
               </paper-menu>
             </iron-collapse>
 
 
-            <paper-item><a href="[[dashboardPath]]chat"><iron-icon icon="label" slot="item-icon" class="geek-blue"></iron-icon> Chat</a></paper-item>
-            <paper-item><a href="[[dashboardPath]]timeline"><iron-icon icon="label" slot="item-icon"></iron-icon> Timeline</a></paper-item>
-            <paper-item><a href="[[dashboardPath]]drag"><iron-icon icon="label" slot="item-icon"></iron-icon> Drag</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="label" slot="item-icon" class="geek-blue"></iron-icon> Chat</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Timeline</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]drag" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Drag</a></paper-item>
 
             <hr class="separated">
             <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
