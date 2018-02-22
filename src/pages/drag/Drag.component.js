@@ -18,7 +18,7 @@ class Drag extends Polymer.Element {
 
     handleDragStart(e) {
         // Target (this) element is the source node.
-        this.style.opacity = '0.4';
+        this.style.opacity = '0.7';
 
         dragSrcEl = this;
 
@@ -41,21 +41,15 @@ class Drag extends Polymer.Element {
         this.classList.add('over');
     }
 
-    handleDrop(e) {
-        // this/e.target is current target element.
-
-        if (e.stopPropagation) {
-            e.stopPropagation(); // Stops some browsers from redirecting.
-        }
-
-console.log(this)
-console.log(dragSrcEl)
-        // Don't do anything if dropping the same column we're dragging.
-        if (dragSrcEl != this) {
-            // Set the source column's HTML to the HTML of the columnwe dropped on.
-            dragSrcEl.innerHTML = this.innerHTML;
-            this.innerHTML = e.dataTransfer.getData('text/html');
-        }
+    allowDrop(ev) {
+        ev.preventDefault();
+    }
+    handleDrop(ev) {
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text");
+        console.log(data)
+        console.log(this)
+        ev.target.appendChild(dragSrcEl.cloneNode(true));
 
         return false;
     }
@@ -64,16 +58,14 @@ console.log(dragSrcEl)
         this.style.opacity = '1';
         this.classList.remove('over');  // this / e.target is previous target element.
     }
+
     handleDragEnd(e) {
         // this/e.target is the source node.
 
         for(let i=0; i<itens.length; i++){
          itens[i].classList.remove('over');
         };
-         /*
-        for(let i=0; i<Polymer.dom(this.$.sidenav).children.length; i++){
-            Polymer.dom(this.$.sidenav).children[i].classList.remove('over');
-        };*/
+
     }
 
     ready() {
@@ -82,16 +74,13 @@ console.log(dragSrcEl)
         itens = Polymer.dom(this.$.sidenav).children;
 
         for(let i=0; i<Polymer.dom(this.$.sidenav).children.length; i++){
-            console.log(i)
 
             Polymer.dom(this.$.sidenav).children[i].addEventListener('dragstart', this.handleDragStart, false);
-            Polymer.dom(this.$.sidenav).children[i].addEventListener('dragenter', this.handleDragEnter, false);
-            Polymer.dom(this.$.sidenav).children[i].addEventListener('dragover', this.handleDragOver, false);
             Polymer.dom(this.$.sidenav).children[i].addEventListener('dragleave', this.handleDragLeave, false);
-            Polymer.dom(this.$.sidenav).children[i].addEventListener('drop', this.handleDrop, false);
-            Polymer.dom(this.$.sidenav).children[i].addEventListener('dragend', this.handleDragEnd, false);
 
         }
+        this.$.droparea.addEventListener('drop', this.handleDrop, false);
+        this.$.droparea.addEventListener('dragover', this.allowDrop, false);
     }
 }
 
