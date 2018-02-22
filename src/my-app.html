@@ -8,60 +8,61 @@
 <link rel="import" href="my-view404.html">
 
 <dom-module id="my-app">
-    <template>
-        <app-location route="{{route}}"></app-location>
+  <template>
+    <app-location route="{{route}}"></app-location>
 
-        <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
+    <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
 
-        </app-route>
-        <iron-pages  selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="view404"  selected-attribute="visible" role="main">
-            <login-page name="login"></login-page>
-            <dashboard-page name="dashboard"></dashboard-page>
-            <my-view404 name="view404"></my-view404>
-        </iron-pages>
-    </template>
-    <script>
-        class MyApp extends Polymer.Element {
-            static get is() {
-                return 'my-app';
-            }
-            static get properties() {
-                return {
-                    page: {
-                        type: String,
-                        reflectToAttribute: true,
-                        observer: '_pageChanged',
-                    },
-                    routeData: Object,
-                    subroute: String
-                };
-            }
-            static get observers() {
-                return [
-                    '_routePageChanged(routeData.page)'
-                ];
-            }
-            _routePageChanged(page) {
-                // If no page was found in the route data, page will be an empty string.
-                // Default to 'view1' in that case.
-                this.page = page || 'login';
+    </app-route>
+    <iron-pages  selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="view404"  selected-attribute="visible" role="main">
+      <login-page name="login"></login-page>
+      <dashboard-page name="dashboard" route="{{subroute}}"></dashboard-page>
+      <my-view404 name="view404"></my-view404>
+    </iron-pages>
+  </template>
+  <script>
+class MyApp extends Polymer.Element {
+  static get is() {
+    return 'my-app';
+  }
 
-            }
-            _pageChanged(page) {
-                // Load page import on demand. Show 404 page if fails
-                var resolvedPageUrl = this.resolveUrl(page + '.html');
-                Polymer.importHref(
-                    resolvedPageUrl,
-                    null,
-                    this._showPage404.bind(this),
-                    true);
-            }
+  static get properties() {
+    return {
+      page: {
+        type: String,
+        reflectToAttribute: true,
+        observer: '_pageChanged',
+      },
+      routeData: Object,
+      subroute: String
+    };
+  }
+  static get observers() {
+    return [
+      '_routePageChanged(routeData.page)'
+    ];
+  }
+  _routePageChanged(page) {
+    // If no page was found in the route data, page will be an empty string.
+    // Default to 'view1' in that case.
+    this.page = page || 'login';
 
-            _showPage404() {
-                this.page = 'view404';
-            }
-        }
+  }
+  _pageChanged(page) {
+    // Load page import on demand. Show 404 page if fails
+    var resolvedPageUrl = this.resolveUrl(page + '.html');
+    Polymer.importHref(
+      resolvedPageUrl,
+      null,
+      this._showPage404.bind(this),
+      true);
+  }
 
-        window.customElements.define(MyApp.is, MyApp);
-    </script>
+  _showPage404() {
+    this.page = 'view404';
+  }
+}
+
+window.customElements.define(MyApp.is, MyApp);
+  </script>
 </dom-module>

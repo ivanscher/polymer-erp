@@ -3,57 +3,59 @@
  */
 
 class Dashboard extends Polymer.Element {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    static get is() {
-        return 'dashboard-page';
-    }
+  static get is() {
+    return 'dashboard-page';
+  }
 
-    static get properties() {
-        return {
-            // This shouldn't be neccessary, but the Analyzer isn't picking up
-            // Polymer.Element#rootPath
-            rootPath: String,
-            page: {
-                type: String,
-                reflectToAttribute: true,
-                observer: '_pageChanged',
-            },
-        };
-    }
+  static get properties() {
+    return {
+      // This shouldn't be neccessary, but the Analyzer isn't picking up
+      // Polymer.Element#rootPath
+      rootPath: String,
+      page: {
+        type: String,
+        reflectToAttribute: true,
+        observer: '_pageChanged',
+      },
+      dashboardPath: {
+        type: String, 
+        value: '/dashboard/',
+      }
+    };
+  }
 
-    toggle() {
-        this.$.collapse.toggle();
-    }
+  toggle() {
+    this.$.collapse.toggle();
+  }
 
-    ready() {
-        super.ready();
-        
-        const {
-            buttonMenu,
-            menuDrawer,
-        } = this.$;
+  ready() {
+    super.ready();
 
-        buttonMenu.addEventListener('click', (e) => { menuDrawer.toggle(); })   
-    }
+    const {
+      buttonMenu,
+      menuDrawer,
+    } = this.$;
 
-    _routePageChanged(page) {
-        // If no page was found in the route data, page will be an empty string.
-        // Default to 'view1' in that case.
-        this.page = page || 'contatos';
+    buttonMenu.addEventListener('click', (e) => { menuDrawer.toggle(); })   
+  }
 
-    }
-    _pageChanged(page) {
-        // Load page import on demand. Show 404 page if fails
-        var resolvedPageUrl = this.resolveUrl(page + '.html');
-        Polymer.importHref(
-            resolvedPageUrl,
-            null,
-            null,
-            true);
-    }
+  _routePageChanged(page) {
+    this.page = page || 'contatos';
+  }
+
+  _pageChanged(page) {
+    // Load page import on demand. Show 404 page if fails
+    var resolvedPageUrl = this.resolveUrl(page + '.html');
+    Polymer.importHref(
+      resolvedPageUrl,
+      null,
+      null,
+      true);
+  }
 }
 
 window.customElements.define(Dashboard.is, Dashboard);

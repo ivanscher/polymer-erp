@@ -35,6 +35,10 @@
 <link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu-light.html">
 <link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 
+<link rel="import" href="../../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
+
 <link rel="import" href="../contatos/Contatos.component.html">
 <link rel="import" href="../lists/Lists.component.html">
 <link rel="import" href="../timeline/Timeline.component.html">
@@ -42,66 +46,67 @@
 <link rel="import" href="Dashboard.style.html">
 
 <dom-module id="dashboard-page">
-    <template>
-        <style include="dashboard-style"></style>
-        <app-header condenses reveals effects="waterfall">
-            <app-toolbar>
-                <paper-icon-button icon="menu" id="buttonMenu"></paper-icon-button>
-                <div main-title>
-                    <img src="http://beta.spartandesign.com.br/b15/wp-content/uploads/2017/12/Logo_b15_home_footer.png" alt="B15" width="50" class="b15">
-                </div>
-            </app-toolbar>
+  <template>
+    <style include="dashboard-style"></style>
+    <app-header condenses reveals effects="waterfall">
+      <app-toolbar>
+        <paper-icon-button icon="menu" id="buttonMenu"></paper-icon-button>
+        <div main-title>
+          <img src="http://beta.spartandesign.com.br/b15/wp-content/uploads/2017/12/Logo_b15_home_footer.png" alt="B15" width="50" class="b15">
+        </div>
+      </app-toolbar>
 
-        </app-header>
+    </app-header>
 
-        <app-drawer id="menuDrawer" align="start">
-            <div>
-                <div class="head">
-                    <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
-                    <div class="contact-info">
+    <app-drawer id="menuDrawer" align="start">
+      <div>
+        <div class="head">
+          <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
+          <div class="contact-info">
 
-                        <div class="name">Jonathan</div>
-                        <div class="email">heyfromjonathan@gmail.com</div>
-                    </div>
-                </div>
+            <div class="name">Jonathan</div>
+            <div class="email">heyfromjonathan@gmail.com</div>
+          </div>
+        </div>
 
-                <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list"
-                               role="navigation">
-                    <paper-menu>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list"
+                                                                    role="navigation">
+          <paper-menu>
+            <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu"><a>Tem Submenu <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon></a></paper-item>
 
-
-                        <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu"><a>Tem Submenu <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon></a></paper-item>
-
-                        <iron-collapse id="collapse" opened="{{opened}}">
-                            <paper-menu class="menu-content">
-                                <paper-item><a href="[[rootPath]]contatos">Contato</a></paper-item>
-                                <paper-item><a href="[[rootPath]]lista">Listar</a></paper-item>
-                            </paper-menu>
-                        </iron-collapse>
+            <iron-collapse id="collapse" opened="{{opened}}">
+              <paper-menu class="menu-content">
+                <paper-item><a href="[[dashboardPath]]contatos">Contato</a></paper-item>
+                <paper-item><a href="[[dashboardPath]]lista">Listar</a></paper-item>
+              </paper-menu>
+            </iron-collapse>
 
 
-                        <paper-item><a href="[[rootPath]]dashboard"><iron-icon icon="label" slot="item-icon" class="geek-blue"></iron-icon> Contato</a></paper-item>
-                        <paper-item><a href="[[rootPath]]login"><iron-icon icon="label" slot="item-icon"></iron-icon> Login</a></paper-item>
+            <paper-item><a href="[[rootPath]]dashboard"><iron-icon icon="label" slot="item-icon" class="geek-blue"></iron-icon> Contato</a></paper-item>
+            <paper-item><a href="[[rootPath]]login"><iron-icon icon="label" slot="item-icon"></iron-icon> Login</a></paper-item>
 
-                        <hr class="separated">
-                        <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
-                    </paper-menu>
+            <hr class="separated">
+            <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
+          </paper-menu>
 
-                </iron-selector>
+        </iron-selector>
 
-            </div>
+      </div>
 
-        </app-drawer>
+    </app-drawer>
 
-        <section id="view">
+    <section id="view">
 
-            <contatos-page name="contatos"></contatos-page>
+      <app-route
+             route="{{route}}"
+             pattern="/:page"
+             data="{{routeData}}"></app-route>
+           <iron-pages selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="contatos" selected-attribute="visible" role="main">
+             <contatos-page name="contatos"></contatos-page>
+             <lists-page name="lista"></lists-page>
+           </iron-pages>
 
-            <!--
- <lists-page name="lista"></lists-page>
-
-            -->
-        </section>
-    </template>
-    <script src="Dashboard.component.js"></script>
+    </section>
+  </template>
+  <script src="Dashboard.component.js"></script>
 </dom-module>
