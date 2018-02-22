@@ -66,7 +66,11 @@ console.log(this.dragSrcEl)
     }
     handleDragEnd(e) {
         // this/e.target is the source node.
-
+        /*
+        for(let i=0; i<this.itens.length; i++){
+         this.itens[i].classList.remove('over');
+        };
+        */
         for(let i=0; i<Polymer.dom(this.$.sidenav).children.length; i++){
             Polymer.dom(this.$.sidenav).children[i].classList.remove('over');
         };
