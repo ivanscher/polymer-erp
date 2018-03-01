@@ -14,6 +14,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="shared-styles">
   <template>
     <style>
+      .justified-end{
+        @apply(--layout-end-justified);
+      }
       .justified-space-between{
         @apply(--layout-justified)
       }
@@ -174,6 +177,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         };
 
       }
+      paper-tabs
+      {
+        color: #01488e;
+        --paper-tabs-selection-bar:#0098db;
+        --paper-tabs-selection-bar-color: #0098db;
+        --paper-tab-ink: #0098db;
+      }
       .bs-label{
         line-height: 1;
         display: inline;
@@ -283,7 +293,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
       }
+      div[main-code] span{
+        display: inline-block;
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      div[main-code] span:last-child{
+        padding-right: 0;
+        border-right: none;
+      }
+      label{
+        font-size: 14px;
+        line-height: 52px;
+        margin: 8px 8px 0 8px;
+        color: rgba(0,0,0,.54);
+      }
+      div[main-code]{
+        font-size: 12px;
+        color: rgba(0,0,0,.54);
+        text-align: right;
+      }
       @media (max-width: 840px) {
+        div[main-code]{
+          text-align: left;
+        }
+        div[main-code] span{
+          display: block;
+          border-right: none;
+        }
        /* div[main-title] {
           display: none;
         }*/

@@ -1,0 +1,377 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="Itens.style.html">
+<dom-module id="itens-page">
+    <template>
+        <style include="itens-style"></style>
+
+        <app-header class="page-header">
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">98 - Itens</div>
+                <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
+                <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
+
+                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
+                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
+
+                <paper-icon-button icon="save" id="button-save"></paper-icon-button>
+                <paper-tooltip for="button-save" offset="0" position="top">Salvar</paper-tooltip>
+
+
+                <!-- Paper Button Menu // Component responsible to create a action of drop the new menu with the options // see example on the browser. -->
+                <paper-menu-button horizontal-align="right">
+                    <paper-icon-button icon="more-vert" slot="dropdown-trigger" alt="menu"></paper-icon-button>
+                    <paper-listbox slot="dropdown-content">
+                        <paper-item>Label da Ação</paper-item>
+                        <paper-item>Metodo com Nome longo</paper-item>
+                        <paper-item>Item3</paper-item>
+                    </paper-listbox>
+                </paper-menu-button>
+            </app-toolbar>
+        </app-header>
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+            <paper-tabs selected="{{selected}}">
+                <paper-tab>Dados Principais</paper-tab>
+                <paper-tab>Estoque</paper-tab>
+                <paper-tab>Relatórios</paper-tab>
+            </paper-tabs>
+            <iron-pages selected="{{selected}}">
+                <div>
+                    <div class="display-table-on-mobile width100 self-stretch">
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+                            <div class="card-content flexchild-vertical flex-size-8">
+
+                                <div class="flex-horizontal justified-end">
+                                    <div main-code><span>Código: 9999</span><span>Cadastro: 02/01/2018</span><span>Última alteração: 06/02/2018</span></div>
+                                    <paper-toggle-button checked></paper-toggle-button>
+                                </div>
+
+                                <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                    <paper-input label="Nome" class="flexchild"></paper-input>
+                                    <paper-input label="Descrição Comercial" class="flexchild"></paper-input>
+                                    <paper-input label="Tipo" class="flexchild"></paper-input>
+                                </div>
+
+                                <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                    <paper-input label="Compra" class="flexchild"></paper-input>
+                                    <paper-input label="Lucro Comercial" class="flexchild"></paper-input>
+                                    <paper-input label="Venda" class="flexchild"></paper-input>
+
+                                    <label class="flex-horizontal">
+                                        <paper-toggle-button checked></paper-toggle-button>
+                                        Usar Composição?</label>
+
+                                    <label class="flex-horizontal">
+                                        <paper-toggle-button checked></paper-toggle-button>
+                                        Usar Lucro %?</label>
+
+                                </div>
+                                <div class="flex-horizontal display-table-on-mobile">
+                                    <paper-input label="Referência" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Código de barras"
+                                                 class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Unidade" class="flexchild flex-size-1"></paper-input>
+                                    <paper-input label="Local do Estoque" class="flexchild flex-size-1"></paper-input>
+
+                                </div>
+
+                                <div class=" flex-horizontal display-table-on-mobile">
+                                    <div class="flex-size-3">
+                                        <paper-dropdown-menu label="Linha">
+                                            <paper-listbox slot="dropdown-content" selected="1">
+                                                <paper-item>Linha 1</paper-item>
+                                                <paper-item>Linha 2</paper-item>
+                                                <paper-item>Outros</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="flex-size-3">
+                                        <paper-dropdown-menu label="Grupo">
+                                            <paper-listbox slot="dropdown-content" selected="1">
+                                                <paper-item>Grupo 1</paper-item>
+                                                <paper-item>Grupo 2</paper-item>
+                                                <paper-item>Outros</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="flex-size-3">
+                                        <paper-dropdown-menu label="SubGrupo">
+                                            <paper-listbox slot="dropdown-content" selected="1">
+                                                <paper-item>SubGrupo 1</paper-item>
+                                                <paper-item>SubGrupo 2</paper-item>
+                                                <paper-item>Outros</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                    <div class="flex-size-3">
+                                        <paper-dropdown-menu label="Unidade">
+                                            <paper-listbox slot="dropdown-content" selected="1">
+                                                <paper-item>Unidade 1</paper-item>
+                                                <paper-item>Unidade 2</paper-item>
+                                                <paper-item>Outros</paper-item>
+                                            </paper-listbox>
+                                        </paper-dropdown-menu>
+                                    </div>
+                                </div>
+
+                                <div class="flex-horizontal display-table-on-mobile">
+                                    <paper-input label="NCM" class="flexchild flex-size-2"></paper-input>
+                                    <paper-input label="Aplicação" class="flexchild flex-size-1"></paper-input>
+                                </div>
+
+                            </div>
+                            <div class="card-content flexchild-vertical border-top flex-size-3 border-left">
+
+                                <div class="container flex-horizontal">
+                                    <paper-textarea label="Observação" class="flexchild" rows="11" always-float-label
+                                                    char-counter placeholder="Digite sua observação"></paper-textarea>
+                                </div>
+                            </div>
+
+                        </paper-card>
+                    </div>
+
+                    <paper-tabs selected="{{selected2}}" scrollable>
+                        <paper-tab active>Fornecedores</paper-tab>
+                        <paper-tab>Características</paper-tab>
+                        <paper-tab>Qualidade</paper-tab>
+                        <paper-tab>Fase</paper-tab>
+                        <paper-tab>Composição</paper-tab>
+
+                    </paper-tabs>
+                    <iron-pages selected="{{selected2}}">
+                        <div class="display-table-on-mobile flex-size-4 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical flex-size-4">
+                                <div class="flex-horizontal flex-size-4 justified-space-between">
+                                    <div class="title">Fornecedores</div>
+                                    <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                </div>
+                                <div class="card-content flexchild-vertical flex-size-4">
+
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Referência" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Nome" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Descrição" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Código" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Referência" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Nome" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Descrição" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Código" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                        <div class="display-table-on-mobile width100 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical flex-size-4">
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Características</div>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Obs. Compra" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Obs. Venda" class="flexchild flex-size-1" no-label-float></paper-input>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Peso" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Densidade" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Embalagem" class="flexchild flex-size-1" no-label-float></paper-input>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Un. Capacidade" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Capacidade" class="flexchild flex-size-1" no-label-float></paper-input>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Procedimento" class="flexchild flex-size-3" no-label-float></paper-input>
+                                        <paper-input label="Número POP" class="flexchild flex-size-2" no-label-float></paper-input>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Garantia (dias)" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Garantia (descrição)" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Validade (meses)" class="flexchild flex-size-1" no-label-float></paper-input>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Perfil Contábil" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Config. C.Fiscal" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Origem" class="flexchild flex-size-1" no-label-float></paper-input>
+                                        <paper-input label="Código ANP" class="flexchild flex-size-1" no-label-float></paper-input>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                        <div class="display-table-on-mobile width100 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical flex-size-4">
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Qualidade</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+                                    <div class="flexchild-vertical flex-size-4">
+
+                                        <div class="flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Descrição" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-input label="Especificação" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-input label="Limites" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                        </div>
+                                        <div class="flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Descrição" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-input label="Especificação" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-input label="Limites" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                        </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+
+                        <div class="display-table-on-mobile width100 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical flex-size-4">
+                                    <div class="flex-horizontal flex-size-4 justified-space-between">
+                                        <div class="title">Fase</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+                                    <div class="flexchild-vertical flex-size-4">
+
+                                        <div class="flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Ordem" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Descrição" class="flexchild flex-size-3" no-label-float></paper-input>
+                                            <paper-input label="Equipamento" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Ferramenta" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Serviço" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                        </div>
+                                        <div class="flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Ordem" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Descrição" class="flexchild flex-size-3" no-label-float></paper-input>
+                                            <paper-input label="Equipamento" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Ferramenta" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Serviço" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                        </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+
+                        <div class="display-table-on-mobile width100 self-stretch">
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical flex-size-4">
+                                    <div class="flex-horizontal width100 justified-space-between">
+                                        <div class="title">Composição</div>
+                                        <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                    </div>
+                                    <div class="flexchild-vertical flex-size-4">
+
+                                        <div class="flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Ordem" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-input label="Descrição" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Equipamento" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Ferramenta" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Serviço" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                        </div>
+                                        <div class="flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Ordem" class="flexchild flex-size-1" no-label-float></paper-input>
+                                            <paper-input label="Descrição" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Equipamento" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Ferramenta" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-input label="Serviço" class="flexchild flex-size-2" no-label-float></paper-input>
+                                            <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                        </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                    </iron-pages>
+                </div>
+                <div>
+                    <div class="display-table-on-mobile width100 self-stretch">
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+
+                                <div class="card-content flexchild-vertical flex-size-8">
+                                    <div class="title">Estoque mínimo</div>
+                                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Qtde. Mínima no Estoque" class="flexchild"></paper-input>
+                                        <paper-input label="Qtd. de Reposição" class="flexchild"></paper-input>
+                                        <paper-input label="Tempo Médio Reposição (Dias)" class="flexchild"></paper-input>
+                                        <paper-input label="Consumo Médio" class="flexchild"></paper-input>
+                                        <paper-input label="Resultado" disabled class="flexchild disabled"></paper-input>
+                                    </div>
+
+                                </div>
+
+                        </paper-card>
+
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+
+                            <div class="card-content flexchild-vertical flex-size-8">
+
+                                <div class="flex-horizontal flex-size-4 justified-space-between">
+                                    <div class="title">Estoque</div>
+                                    <paper-fab mini super-mini icon="add" class="add"></paper-fab>
+                                </div>
+                                <div class="flexchild-vertical flex-size-4">
+
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Tipo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Lote Empresa" class="flexchild flex-size-3" no-label-float></paper-input>
+                                        <paper-input label="Saldo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Médio" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Real" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Anterior" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Tipo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Lote Empresa" class="flexchild flex-size-3" no-label-float></paper-input>
+                                        <paper-input label="Saldo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Médio" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Real" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Anterior" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Tipo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Lote Empresa" class="flexchild flex-size-3" no-label-float></paper-input>
+                                        <paper-input label="Saldo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Médio" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Real" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Anterior" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                    <div class="flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Tipo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Lote Empresa" class="flexchild flex-size-3" no-label-float></paper-input>
+                                        <paper-input label="Saldo" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Médio" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Real" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-input label="Custo Anterior" class="flexchild flex-size-2" no-label-float></paper-input>
+                                        <paper-fab mini super-mini icon="clear" class="clear no-label-float"></paper-fab>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </paper-card>
+                    </div>
+                </div>
+                <div>
+                    <div class="display-table-on-mobile width100 self-stretch">
+                        <paper-card class="display-table-on-mobile flex-horizontal">
+                            relatorios
+                        </paper-card>
+                    </div>
+                </div>
+            </iron-pages>
+        </div>
+    </template>
+    <script src="Itens.component.js"></script>
+</dom-module>
