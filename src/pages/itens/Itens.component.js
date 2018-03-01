@@ -13,13 +13,16 @@ class Itens extends Polymer.Element {
             rootPath: String,
             selected: {
                 type: Number,
-                value: 0
+                value: 0,
+
             },
             selected2:{
                 type: Number,
                 value: 0
-            },
+            }
+
         };
+
     }
 }
 

@@ -386,9 +386,24 @@
                 </div>
                 <div>
                     <div class="display-table-on-mobile width100 self-stretch">
-                        <paper-card class="display-table-on-mobile flex-horizontal">
-                            relatorios
+
+
+
+                        <paper-card class="display-table-on-mobile flex-vertical" heading="Titulo do Relatório 2">
+
+                            <iron-ajax url="http://localhost/polymer-erp/src/contatos.json" last-response="{{data}}" auto></iron-ajax>
+                            <paper-datatable data="{{data}}" selectable multi-selection class="width100">
+                                <paper-datatable-column header="index" property="index" type="String"  sortable tooltip="The total amount "></paper-datatable-column>
+                                <paper-datatable-column header="name" property="name" type="String"  editable sortable sorted ></paper-datatable-column>
+                                <paper-datatable-column header="nickname" property="nickname" type="String"  editable sortable sorted ></paper-datatable-column>
+                                <paper-datatable-column header="cpf" property="cpf" type="String"  sortable></paper-datatable-column>
+                                <paper-datatable-column header="rg" property="rg" type="String"  sortable></paper-datatable-column>
+                                <paper-datatable-column header="email" property="email" type="String"  editable sortable sorted ></paper-datatable-column>
+                                <paper-datatable-column header="phone" property="phone" type="String"  editable sortable sorted ></paper-datatable-column>
+                            </paper-datatable>
+
                         </paper-card>
+
                     </div>
                 </div>
             </iron-pages>
