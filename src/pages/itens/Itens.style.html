@@ -26,6 +26,21 @@
                 margin-top: 26px;
 
             }
+            .card-content{
+                padding: 16px;
+            }
+
+            .card-content .card-content{
+                padding: 0 16px;
+            }
+/*
+            .card-content .card-content:first-child{
+                padding-left: 0;
+            }*/
+
+            .card-content .card-content:last-child{
+                padding-right: 0;
+            }
             paper-fab[super-mini].no-label-float{
                 margin-top: 10px;
             }
@@ -68,7 +83,9 @@
             }
 
             @media (max-width: 840px){
-
+                .card-content .card-content{
+                    padding: 0 0;
+                }
 
                 app-toolbar paper-icon-button{display: none}
                 app-toolbar paper-icon-button:first-child,
