@@ -36,7 +36,8 @@
     "paper-badge": "PolymerElements/paper-badge#^2.0.0",
     "paper-dropdown": "https://github.com/pushkar8723/paper-dropdown.git#2.0.0",
     "paper-dialog": "PolymerElements/paper-dialog#^2.1.0",
-    "paper-toggle-button": "PolymerElements/paper-toggle-button#^2.0.0"
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#^2.0.0",
+    "mp-slider": "^2.0.2"
   },
   "resolutions": {
     "polymer": "^2.0.0",
