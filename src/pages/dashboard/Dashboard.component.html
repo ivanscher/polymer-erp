@@ -48,6 +48,7 @@
 <link rel="import" href="../drag/Drag.component.html">
 <link rel="import" href="../chat/Chat.component.html">
 <link rel="import" href="../itens/Itens.component.html">
+<link rel="import" href="../prescricao/Prescricao.component.html">
 
 <link rel="import" href="Dashboard.style.html">
 
@@ -92,6 +93,7 @@
             <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Timeline</a></paper-item>
             <paper-item><a href="[[dashboardPath]]drag" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Drag</a></paper-item>
             <paper-item><a href="[[dashboardPath]]itens" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Itens</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]prescricao" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Prescrição</a></paper-item>
 
             <hr class="separated">
             <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
@@ -116,6 +118,7 @@
              <timeline-page name="timeline"></timeline-page>
              <chat-page name="chat"></chat-page>
              <itens-page name="itens"></itens-page>
+             <prescricao-page name="prescricao"></prescricao-page>
            </iron-pages>
 
     </section>

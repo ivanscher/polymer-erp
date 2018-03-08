@@ -183,12 +183,51 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         };
 
       }
+      paper-input.disabled{
+        pointer-events: none;
+
+        --paper-input-container-underline: {
+          border-color: rgba(0,0,0,0.1);
+        };
+      }
       paper-input.bolder{
         --paper-input-container-label: {
           font-weight: bold !important;
         };
         --paper-input-container-input: {
           font-weight: bold !important;
+        };
+      }
+      paper-input.size16{
+        --paper-input-container-label: {
+          font-size: 16px;
+        };
+        --paper-input-container-input: {
+          font-size: 16px;
+        };
+      }
+      paper-input.size18{
+        --paper-input-container-label: {
+          font-size: 18px;
+        };
+        --paper-input-container-input: {
+          font-size: 18px;
+        };
+      }
+      paper-input.size20{
+        --paper-input-container-label: {
+          font-size: 20px;
+        };
+        --paper-input-container-input: {
+          font-size: 20px;
+        };
+      }
+      paper-input.size22{
+        --paper-input-container-label: {
+          font-size: 22px;
+        };
+        --paper-input-container-input: {
+          font-size: 22px;
         };
       }
       paper-input.size24{
@@ -302,6 +341,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           display: table;
           width: 99.9%;
           padding: 0;
+        }
+        .force-flex-horizontal{
+          display: flex !important;
         }
 
         .border-left {

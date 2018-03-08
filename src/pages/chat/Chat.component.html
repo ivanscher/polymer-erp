@@ -14,8 +14,17 @@
                         <img src="[[item.image]]" alt="[[item.name]]" class="avatar">
                         <div class="content ">
                             <div class="card-content flexchild-vertical flex-size-9">
+                                <paper-menu-button  horizontal-align="right" id="action-button">
+                                    <paper-icon-button icon="more-vert" slot="dropdown-trigger" alt="menu"></paper-icon-button>
+                                    <paper-listbox slot="dropdown-content">
+                                        <paper-item>Encaminhar</paper-item>
+                                        <paper-item>Responder</paper-item>
+                                        <paper-item>Deletar</paper-item>
+                                    </paper-listbox>
+                                </paper-menu-button>
                                 <div class="primary">[[item.name]]</div>
                                 <div class="text">[[item.text]]</div>
+
                             </div>
                         </div>
                     </div>
