@@ -43,25 +43,55 @@
                 <div class="card-content flexchild-vertical flex-size-8 border-left">
                     <div class="title">Dados Principais</div>
 
+
                     <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
-                        <paper-input label="Paciente" class="flexchild"></paper-input>
-                        <paper-input label="Médico" class="flexchild"></paper-input>
-                    </div>
-                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
-                        <paper-input label="Data" class="flexchild"></paper-input>
-                        <paper-input label="Validade" class="flexchild"></paper-input>
+                        <paper-dropdown-menu label="Buscar Prescrição" class="flexchild flex-size-4">
+                            <paper-listbox slot="dropdown-content" selected="1">
+                                <paper-item>Nome, validade: 03/08/20</paper-item>
+                            </paper-listbox>
+                        </paper-dropdown-menu>
+
+                        <paper-input label="Data" class="flexchild" type="date">
+                        </paper-input>
+                        <paper-input label="Validade" class="flexchild" type="date">
+                        </paper-input>
                     </div>
 
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Paciente" class="flexchild flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+
+                        <paper-input label="Médico" class="flexchild  flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchM" alt="search" title="search">
+
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addM" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+                    </div>
 
                 </div>
-                <div class="card-content flexchild-vertical border-top flex-size-3 border-left">
-
+                <div class="card-content flexchild-vertical flex-size-4 border-left">
                     <div class="container flex-horizontal">
-                        <paper-textarea label="Observação" class="flexchild" rows="4" always-float-label
+                        <paper-textarea label="Observação" class="flexchild" rows="5" always-float-label
                                         char-counter placeholder="Digite sua observação"></paper-textarea>
                     </div>
                 </div>
             </paper-card>
+            <paper-dialog id="actions" modal>
+                <h2>Dialog Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="buttons">
+                    <paper-button>More Info...</paper-button>
+                    <paper-button dialog-dismiss>Decline</paper-button>
+                    <paper-button dialog-confirm autofocus>Accept</paper-button>
+                </div>
+            </paper-dialog>
             <!--
              <paper-card class=" flex-horizontal force-flex-horizontal">
 

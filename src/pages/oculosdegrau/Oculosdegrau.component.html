@@ -1,0 +1,51 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="../../../bower_components/ud-stepper/ud-stepper.html">
+<link rel="import" href="../prescricao/PrescricaoPart.component.html">
+<link rel="import" href="Oculosdegrau.style.html">
+
+<dom-module id="oculosdegrau-page">
+    <template>
+        <style include="oculosdegrau-style"></style>
+        <app-header class="page-header">
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">210 Oculos de grau</div>
+                <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
+                <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
+
+                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
+                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
+
+                <paper-icon-button icon="save" id="button-save"></paper-icon-button>
+                <paper-tooltip for="button-save" offset="0" position="top">Salvar</paper-tooltip>
+
+            </app-toolbar>
+        </app-header>
+
+        <app-drawer id="endDrawer" align="end"></app-drawer>
+
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+            <ud-stepper linear>
+                <ud-step title="Prescrição" editable>
+                    <div slot="content"><prescricaopart-page></prescricaopart-page></div>
+                </ud-step>
+                <ud-step title="Armação">
+                    <div slot="content">Step 2 Content</div>
+                </ud-step>
+                <ud-step title="Lentes">
+                    <div slot="content">Step 3 Content</div>
+                </ud-step>
+                <ud-step title="Valores">
+                    <div slot="content">Step 4 Content</div>
+                </ud-step>
+            </ud-stepper>
+
+
+        </div>
+    </template>
+    <script src="Oculosdegrau.component.js"></script>
+</dom-module>

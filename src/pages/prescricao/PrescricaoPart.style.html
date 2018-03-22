@@ -1,6 +1,6 @@
 <link rel="import" href="../../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../utils/shared-styles.html">
-<dom-module id="contatos-style">
+<dom-module id="prescricaopart-style">
     <template>
         <style include="shared-styles">
             :host{
@@ -8,46 +8,40 @@
                 padding: 0;
                 margin: 0;
                 background-color: #eee;
-
             }
-.page{
-    padding-top: 64px;
-}
-            .avatar {
-                margin: 16px auto 0;
+            .page{
+                min-height: auto;
             }
-
-
-            paper-textarea {
-                padding: 4px 16px;
-                background-color: var(--google-grey-100);
-            }
-
             paper-dropdown-menu,
             paper-dropdown-menu-light,
             paper-input{
                 margin: 0 8px;
             }
-
-
-
             paper-card{
                 @apply(--shadow-elevation-12d);
                 margin-bottom: 16px;
                 -webkit-border-radius: 0 0 8px 8px;
                 border-radius: 0 0 8px 8px;
             }
-
-            @media (max-width: 840px){
-
-
-                app-toolbar paper-icon-button{display: none}
-                app-toolbar paper-icon-button:first-child,
-                app-toolbar paper-icon-button:last-child{
-                    display: block;
-                }
+            [main-code]{
+                margin-top: 7px;
             }
-
+            .align-left{
+                text-align: left !important;
+            }
+            #button-send {
+                margin-top: 16px;
+                margin-bottom: 16px;
+                clear: left;
+                float: right;
+                font-size: 14px;
+                padding: 8px 16px;
+                /*background-color: #0098db;
+                color: white;*/
+            }
+[type="date"]{
+    margin-top: 5px;
+}
         </style>
     </template>
 </dom-module>

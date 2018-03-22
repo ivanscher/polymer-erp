@@ -238,6 +238,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           font-size: 24px;
         };
       }
+      paper-fab[super-mini]:focus,
+      paper-fab[super-mini] {
+        background: white;
+        --paper-fab-background: white;
+        color: var(--paper-red-700);
+        border: 1px solid rgba(0, 0, 0, .24);
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        @apply(--shadow-none);
+        margin-top: 26px;
+
+      }
+      paper-fab[super-mini].no-label-float{
+        margin-top: 10px;
+      }
+
+      paper-fab[super-mini].add {
+        color: var(--google-green-700);
+        margin-top: 0;
+      }
       paper-tabs
       {
         color: #01488e;

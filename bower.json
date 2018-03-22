@@ -38,7 +38,8 @@
     "paper-dialog": "PolymerElements/paper-dialog#^2.1.0",
     "paper-toggle-button": "PolymerElements/paper-toggle-button#^2.0.0",
     "mp-slider": "^2.0.2",
-    "bwt-datatable": "^2.1.0"
+    "bwt-datatable": "^2.1.0",
+    "ud-stepper": "urdeveloper/ud-stepper#^0.3.0"
   },
   "resolutions": {
     "polymer": "^2.0.0",

@@ -1,0 +1,201 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="PrescricaoPart.style.html">
+
+<dom-module id="prescricaopart-page">
+    <template>
+        <style include="prescricaopart-style"></style>
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+
+            <paper-card class="display-table-on-mobile flex-horizontal">
+
+                <div class="card-content flexchild-vertical flex-size-8 border-left">
+                    <div class="title">Dados Principais</div>
+
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-dropdown-menu label="Buscar Prescrição" class="flexchild flex-size-4">
+                            <paper-listbox slot="dropdown-content" selected="1">
+                                <paper-item>Nome, validade: 03/08/20</paper-item>
+                            </paper-listbox>
+                        </paper-dropdown-menu>
+
+                        <paper-input label="Data" class="flexchild" type="date">
+                        </paper-input>
+                        <paper-input label="Validade" class="flexchild" type="date">
+                        </paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Paciente" class="flexchild flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+
+                        <paper-input label="Médico" class="flexchild  flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchM" alt="search" title="search">
+
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addM" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+                    </div>
+
+                </div>
+                <div class="card-content flexchild-vertical flex-size-4 border-left">
+                    <div class="container flex-horizontal">
+                        <paper-textarea label="Observação" class="flexchild" rows="5" always-float-label
+                                        char-counter placeholder="Digite sua observação"></paper-textarea>
+                    </div>
+                </div>
+            </paper-card>
+            <paper-dialog id="actions" modal>
+                <h2>Dialog Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="buttons">
+                    <paper-button>More Info...</paper-button>
+                    <paper-button dialog-dismiss>Decline</paper-button>
+                    <paper-button dialog-confirm autofocus>Accept</paper-button>
+                </div>
+            </paper-dialog>
+
+
+            <paper-tabs selected="{{selected2}}" >
+                <paper-tab active>Olho Direito</paper-tab>
+                <paper-tab>Olho Esquerdo</paper-tab>
+                <paper-tab>Dist. Interpupilar</paper-tab>
+            </paper-tabs>
+            <iron-pages selected="{{selected2}}">
+                <div class="display-table-on-mobile width100 self-stretch">
+                    <paper-card class="display-table-on-mobile flex-horizontal">
+
+                        <div class="card-content flexchild-vertical flex-size-2 border-left ">
+
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="&nbsp" class="flexchild size16 flex-size-3 disabled" value="Longe" ></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" value="&nbsp" disabled always-float-label></paper-input>
+                                <paper-input label="Esferico" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="&nbsp" class="flexchild size16 flex-size-3 disabled" value="Médio" ></paper-input>
+                                <paper-input label="Adição" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="&nbsp" class="flexchild size16 flex-size-3 disabled" value="Perto" ></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-dropdown-menu label="Base">
+                                    <paper-listbox slot="dropdown-content" selected="1">
+                                        <paper-item>Nasal</paper-item>
+                                        <paper-item>Temporal</paper-item>
+                                        <paper-item>Superior</paper-item>
+                                        <paper-item>Inferior</paper-item>
+                                    </paper-listbox>
+                                </paper-dropdown-menu>
+                            </div>
+
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="Cilindrico" class="flexchild size16" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="Eixo" class="flexchild  size16" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="Primas" class="flexchild  size16" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+                            <paper-button id="button-send">Copiar Prescrição OD</paper-button>
+                        </div>
+                    </paper-card>
+                </div>
+                <div class="display-table-on-mobile width100 self-stretch">
+                    <paper-card class="display-table-on-mobile flex-horizontal">
+
+                        <div class="card-content flexchild-vertical flex-size-2 border-left">
+
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="&nbsp" class="flexchild size16 flex-size-3 disabled" value="Longe" ></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" value="&nbsp" disabled always-float-label></paper-input>
+                                <paper-input label="Esferico" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="&nbsp" class="flexchild size16 flex-size-3 disabled" value="Médio" ></paper-input>
+                                <paper-input label="Adição" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="&nbsp" class="flexchild size16 flex-size-3 disabled" value="Perto" ></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="&nbsp" class="flexchild size18 flex-size-3" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-dropdown-menu label="Base">
+                                    <paper-listbox slot="dropdown-content" selected="1">
+                                        <paper-item>Nasal</paper-item>
+                                        <paper-item>Temporal</paper-item>
+                                        <paper-item>Superior</paper-item>
+                                        <paper-item>Inferior</paper-item>
+                                    </paper-listbox>
+                                </paper-dropdown-menu>
+                            </div>
+
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="Cilindrico" class="flexchild size16" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="Eixo" class="flexchild  size16" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="Primas" class="flexchild  size16" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                        </div>
+                    </paper-card>
+                </div>
+                <div class="display-table-on-mobile width100 self-stretch">
+                    <paper-card class="display-table-on-mobile flex-horizontal">
+
+                        <div class="card-content flexchild-vertical flex-size-8 border-left">
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="-" class="flexchild size16 disabled" value="Longe" ></paper-input>
+                                <paper-input label="DI" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="OD" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="OE" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="-" class="flexchild size16 disabled" value="Médio" ></paper-input>
+                                <paper-input label="DI" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="OD" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="OE" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                            <div class="contain-three-inputs flex-horizontal">
+                                <paper-input label="-" class="flexchild size16 disabled" value="Perto" ></paper-input>
+                                <paper-input label="DI" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="OD" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                                <paper-input label="OE" class="flexchild size18" type="number" value="0.00" always-float-label></paper-input>
+                            </div>
+
+                        </div>
+                    </paper-card>
+                </div>
+            </iron-pages>
+
+        </div>
+    </template>
+    <script src="PrescricaoPart.component.js"></script>
+</dom-module>

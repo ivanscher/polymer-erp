@@ -2,9 +2,9 @@
  * Created by ivans on 08/03/2018.
  */
 
-class Prescricao extends Polymer.Element {
+class PrescricaoPart extends Polymer.Element {
     static get is() {
-        return 'prescricao-page';
+        return 'prescricaopart-page';
     }
     static get properties() {
         return {
@@ -36,4 +36,4 @@ class Prescricao extends Polymer.Element {
     }
 }
 
-window.customElements.define(Prescricao.is, Prescricao);
+window.customElements.define(PrescricaoPart.is, PrescricaoPart);
