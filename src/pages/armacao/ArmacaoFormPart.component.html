@@ -1,0 +1,110 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="ArmacaoFormPart.style.html">
+
+<dom-module id="armacaoformpart-page">
+    <template>
+        <style include="armacaoformpart-style"></style>
+        <app-header class="page-header">
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">Armação</div>
+
+                <paper-icon-button icon="save" id="button-save"></paper-icon-button>
+                <paper-tooltip for="button-save" offset="0" position="top">Salvar</paper-tooltip>
+
+            </app-toolbar>
+        </app-header>
+
+        <app-drawer id="endDrawer" align="end"></app-drawer>
+
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+            <paper-card class="display-table-on-mobile flex-horizontal">
+
+                <div class="card-content flexchild-vertical flex-size-8 border-left">
+                    <div class="title">Dados Principais</div>
+
+
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Código" class="flexchild flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+
+                        <paper-input label="Tipo" class="flexchild  flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchT" alt="search" title="search">
+
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addT" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+
+                        <paper-input label="Modelo" class="flexchild  flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchM" alt="search" title="search">
+
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addM" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+
+                        <paper-input label="Cor" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Diagonal" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Ponte" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Tamanho" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Alt. Vertical" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Material" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Tipo Mont." class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Tipo Mont. OD" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Tipo Mont. OE" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+
+                    </div>
+
+                </div>
+
+                <div class="card-content flexchild-vertical flex-size-4 border-left">
+                    <div class="container flex-horizontal">
+                        <paper-textarea label="Descrição" class="flexchild" rows="7" always-float-label
+                                        char-counter placeholder="Digite sua Descrição"></paper-textarea>
+                    </div>
+                </div>
+            </paper-card>
+            <paper-dialog id="actions" modal>
+
+                <div class="buttons">
+                    <paper-button>More Info...</paper-button>
+                    <paper-button dialog-dismiss>Decline</paper-button>
+                    <paper-button dialog-confirm autofocus>Accept</paper-button>
+                </div>
+            </paper-dialog>
+
+            <paper-card class="display-table-on-mobile flex-horizontal">
+
+                <div class="card-content flexchild-vertical flex-size-8 border-left">
+                    <div class="title">Valores</div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+
+                        <paper-input label="Armação" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Desconto -%" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Desconto -R$" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+                        <paper-input label="Total" class="flexchild flex-size-1 size16" type="number" step=".25" value="0.00" always-float-label></paper-input>
+
+                    </div>
+                </div>
+            </paper-card>
+    </template>
+    <script src="ArmacaoFormPart.component.js"></script>
+</dom-module>

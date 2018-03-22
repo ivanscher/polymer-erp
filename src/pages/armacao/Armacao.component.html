@@ -1,0 +1,56 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="Armacao.style.html">
+
+<dom-module id="armacao-page">
+    <template>
+        <style include="armacao-style"></style>
+        <app-header class="page-header">
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">Armação</div>
+
+                <paper-button>Óculos Próprio</paper-button>
+                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
+                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
+
+            </app-toolbar>
+        </app-header>
+
+        <app-drawer id="endDrawer" align="end"></app-drawer>
+
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+
+
+                <paper-input label="Buscar" class="card" no-label-float  >
+                    <iron-icon icon="search" slot="prefix"></iron-icon>
+                </paper-input>
+
+
+                <iron-ajax url="http://192.168.1.168:8081/src/armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                <iron-list id="list" items="[[data]]" as="item" selection-enabled>
+                    <template>
+                        <div class="item" tabindex$="[[tabIndex]]">
+                            <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
+                            <div class="pad justified-start">
+                                <div class="primary">
+                                    [[item.name]]
+                                    <div class="shortText">[[item.descricao]]</div>
+                                </div>
+                            </div>
+                            <div class="justified-space-around flex-vertical">
+                                <div class="code">[[item.index]]</div>
+                                <div class="primary price">[[item.preco]]</div>
+                            </div>
+
+                        </div>
+                    </template>
+                </iron-list>
+
+        </div>
+    </template>
+    <script src="Armacao.component.js"></script>
+</dom-module>

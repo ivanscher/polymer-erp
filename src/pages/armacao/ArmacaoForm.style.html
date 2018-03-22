@@ -1,6 +1,6 @@
 <link rel="import" href="../../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../utils/shared-styles.html">
-<dom-module id="oculosdegrau-style">
+<dom-module id="armacaoform-style">
     <template>
         <style include="shared-styles">
             :host{
@@ -11,9 +11,6 @@
             }
             .page{
                 padding-top: 64px;
-            }
-            #content{
-                margin: 0;
             }
             paper-dropdown-menu,
             paper-dropdown-menu-light,
@@ -37,11 +34,14 @@
                 margin-bottom: 16px;
                 clear: left;
                 float: right;
+                font-size: 14px;
                 padding: 8px 16px;
-                background-color: #0098db;
-                color: white;
+                /*background-color: #0098db;
+                color: white;*/
             }
-
+            [type="date"]{
+                margin-top: 5px;
+            }
         </style>
     </template>
 </dom-module>
