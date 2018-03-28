@@ -1,0 +1,129 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../utils/shared-styles.html">
+<dom-module id="listsgridinfo-style">
+    <template>
+        <style include="shared-styles">
+            :host{
+                border:none;
+                padding: 0;
+                margin: 0;
+                background-color: #eee;
+                display: block;
+                @apply --paper-font-common-base;
+            }
+            .page{
+                padding-top: 64px;
+                min-height: auto;
+            }
+            iron-list {
+                background-color: white;
+                padding-top: 0px;
+                height: calc(100vh - 192px);
+                --iron-list-items-container: {
+                    width: calc(100% - 16px);
+                    margin: 0 auto;
+                    border-bottom: 1px solid #ddd;
+                };
+            }
+            paper-fab{
+                position: fixed;
+                z-index: 999;
+                bottom: 16px;
+                right: 16px;
+                --paper-fab-background: #0098DB;
+                height: 56px;
+                width: 56px;
+            }
+            .photoContainer {
+                width: calc(25% - 16px);
+            }
+
+            .photoContent {
+                width: auto;
+            }
+
+            .photoContent {
+                @apply --layout;
+                background-color: #fff;
+                position: relative;
+                margin: 8px;
+                padding: 8px;
+                border: 1px solid #fff;
+            }
+            .photoContent:hover{
+                cursor: pointer;
+                border: 1px solid #ddd;
+            }
+
+            .photoContent > iron-image {
+width: 90%;
+                display: block;
+                margin: 10px auto;
+                height: auto;
+                min-height: 166px;
+            }
+
+            .photoContent > .detail {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #0098DB ;
+                color: white;
+                font-size: 20px;
+                font-weight: 100;
+                padding: 20px;
+                opacity: 0;
+                transition: opacity 0.1s;
+            }
+            paper-input.card{
+                padding: 8px;
+                margin: 8px;
+                border-radius: 2px;
+            }
+
+            paper-input iron-icon{
+                margin-right: 10px;
+            }
+
+            .primary{
+                text-align: center;
+                font-size: 18px;
+                margin: 0px;
+                padding: 5px;
+                background-color: white;
+            }
+            .shortText{
+                background-color: white;
+                color: grey;
+                font-size: 12px;
+                margin: 12px 0;
+                text-align: center;
+            }
+            .price{
+                font-size: 24px;
+                color:  #0098db;
+            }
+            @media (max-width: 990px) {
+                .photoContainer {
+                    width: 50%;
+                }
+
+                .photoContent {
+                    width: auto;
+                }
+            }
+
+            @media (max-width: 640px) {
+
+                .photoContent > iron-image{
+                    width: 100%;
+                    min-height: 120px;
+                }
+                .photoContent > .detail {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </template>
+</dom-module>
