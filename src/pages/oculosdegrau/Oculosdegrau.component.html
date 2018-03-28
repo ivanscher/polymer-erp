@@ -2,7 +2,7 @@
 
 <link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
-<link rel="import" href="../../../bower_components/ud-stepper/ud-stepper.html">
+<link rel="import" href="../../../owner_components/ud-stepper/ud-stepper.html">
 <link rel="import" href="../prescricao/PrescricaoPart.component.html">
 <link rel="import" href="../armacao/ArmacaoFormPart.component.html">
 <link rel="import" href="../lentes/Lentes.component.html">
@@ -32,7 +32,7 @@
 
 
         <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
-            <ud-stepper linear>
+            <ud-stepper linear >
                 <ud-step title="Prescrição" editable optional>
                     <div slot="content">
                         <prescricaopart-page></prescricaopart-page>
@@ -53,10 +53,7 @@
                         <valores-page></valores-page>
                     </div>
                 </ud-step>
-
             </ud-stepper>
-
-
         </div>
     </template>
     <script src="Oculosdegrau.component.js"></script>
