@@ -169,6 +169,33 @@
       .vertical-step ::slotted(ud-step:not([selected])) {
         display: none;
       }
+      @media (max-width: 840px) {
+        :host(:not([vertical])) .header:not(:last-of-type)::after{
+          display: none;
+        }
+        .header,
+        .header-container {
+          float: left;
+          display: inline-block;
+        }
+        .header .label{
+          display: block;
+          text-align: center;
+          padding: 18px;
+        }
+        .step-number{
+          margin: 0 auto;
+        }
+        .label-text{
+          padding: 0;
+        }
+        .header .label div{
+          width: auto;
+          text-align: center;
+          display: block;
+
+        }
+      }
     </style>
     <iron-selector id="selector" class="header-container" selectable=".header.selectable" selected-class="selected" selected="{{selected}}"
       on-iron-activate="_handleStepActivate" selected-attribute="selected">
