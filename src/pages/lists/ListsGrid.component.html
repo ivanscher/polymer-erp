@@ -1,0 +1,64 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="ListsGrid.style.html">
+
+<dom-module id="listsgrid-page">
+    <template>
+        <style include="listsgrid-style"></style>
+        <app-header class="page-header">
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">Lista de Fotos</div>
+                <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
+                <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
+
+                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
+                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
+
+
+            </app-toolbar>
+        </app-header>
+
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+
+            <paper-input label="Buscar" class="card" no-label-float  >
+                <iron-icon icon="search" slot="prefix"></iron-icon>
+            </paper-input>
+
+
+            <iron-ajax url="http://192.168.1.163:8081/src/armacao.json  " last-response="{{data}}" auto></iron-ajax>
+            <iron-list id="list" items="[[data]]" as="item" selection-enabled grid>
+                <template>
+
+                    <div class="photoContainer">
+                        <div class="photoContent" tabindex$="[[tabIndex]]">
+                            <iron-image sizing="cover"
+                                        src="[[item.image]]">
+                            </iron-image>
+                            <div class="detail">[[item.name]]</div>
+                        </div>
+                    </div>
+                </template>
+            </iron-list>
+
+
+
+        </div>
+
+        <paper-fab mini icon="add" id="add"></paper-fab>
+        <paper-dialog id="actions" modal>
+            <h2>Dialog Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="buttons">
+                <paper-button>More Info...</paper-button>
+                <paper-button dialog-dismiss>Decline</paper-button>
+                <paper-button dialog-confirm autofocus>Accept</paper-button>
+            </div>
+        </paper-dialog>
+    </template>
+    <script src="ListsGrid.component.js"></script>
+</dom-module>

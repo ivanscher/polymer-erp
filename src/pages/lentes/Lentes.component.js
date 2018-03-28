@@ -1,5 +1,5 @@
 /**
- * Created by ivans on 08/03/2018.
+ * Created by ivans on 28/03/2018.
  */
 
 class Lentes extends Polymer.Element {
@@ -26,17 +26,8 @@ class Lentes extends Polymer.Element {
 
     ready() {
         super.ready();
-        this.$.addP.addEventListener('click', this.openBy.bind(this), false);
-        this.$.addM.addEventListener('click', this.openBy.bind(this), false);
-        this.$.searchP.addEventListener('click', this.openBy.bind(this), false);
-        this.$.searchM.addEventListener('click', this.openBy.bind(this), false);
+    }
 
-        this.$.addT.addEventListener('click', this.openBy.bind(this), false);
-        this.$.searchT.addEventListener('click', this.openBy.bind(this), false);
-    }
-    openBy() {
-        this.$.actions.open();
-    }
 
 }
 

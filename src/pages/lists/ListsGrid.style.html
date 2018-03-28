@@ -1,0 +1,96 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../utils/shared-styles.html">
+<dom-module id="listsgrid-style">
+    <template>
+        <style include="shared-styles">
+            :host{
+                border:none;
+                padding: 0;
+                margin: 0;
+                background-color: #eee;
+                display: block;
+                @apply --paper-font-common-base;
+            }
+            .page{
+                min-height: auto;
+            }
+            iron-list {
+                padding-top: 0px;
+                height: calc(100vh - 142px);
+                --iron-list-items-container: {
+                    width: calc(100% - 16px);
+                    margin: 0 auto;
+                    border-bottom: 1px solid #ddd;
+                };
+            }
+            paper-fab{
+                position: fixed;
+                z-index: 999;
+                bottom: 16px;
+                right: 16px;
+                --paper-fab-background: #0098DB;
+                height: 56px;
+                width: 56px;
+            }
+            .photoContent {
+                @apply --layout;
+                background-color: #ddd;
+                position: relative;
+                width: 266px;
+                height: 266px;
+                margin: 8px;
+            }
+            .photoContent:hover .detail{
+                opacity: 1;
+            }
+
+            .photoContent > iron-image {
+                @apply --layout-flex;
+            }
+
+            .photoContent > .detail {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #0098DB ;
+                color: white;
+                font-size: 20px;
+                font-weight: 100;
+                padding: 20px;
+                opacity: 0;
+                transition: opacity 0.1s;
+            }
+            paper-input.card{
+                padding: 8px;
+                margin: 8px;
+                border-radius: 2px;
+            }
+
+            paper-input iron-icon{
+                margin-right: 10px;
+            }
+
+            @media (max-width: 800px) {
+                .photoContainer {
+                    width: calc(50% - 16px);
+                }
+
+                .photoContent {
+                    width: auto;
+                }
+            }
+
+            @media (max-width: 400px) {
+
+                .photoContainer {
+                    width: 100%;
+                }
+
+                .photoContent > .detail {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </template>
+</dom-module>

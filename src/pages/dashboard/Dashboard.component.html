@@ -45,6 +45,7 @@
 
 <link rel="import" href="../contatos/Contatos.component.html">
 <link rel="import" href="../lists/Lists.component.html">
+<link rel="import" href="../lists/ListsGrid.component.html">
 <link rel="import" href="../timeline/Timeline.component.html">
 <link rel="import" href="../drag/Drag.component.html">
 <link rel="import" href="../chat/Chat.component.html">
@@ -102,6 +103,7 @@
             <paper-item><a href="[[dashboardPath]]prescricao" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Prescrição</a></paper-item>
             <paper-item><a href="[[dashboardPath]]armacao" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Armação</a></paper-item>
             <paper-item><a href="[[dashboardPath]]armacaoform" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Armação Formulário</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]listagrid" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> List Grid</a></paper-item>
 
             <hr class="separated">
             <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
@@ -122,6 +124,7 @@
            <iron-pages selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="contatos" selected-attribute="visible" role="main">
              <contatos-page name="contatos"></contatos-page>
              <lists-page name="lista"></lists-page>
+             <listsgrid-page name="listagrid"></listsgrid-page>
              <drag-page name="drag"></drag-page>
              <timeline-page name="timeline"></timeline-page>
              <chat-page name="chat"></chat-page>
