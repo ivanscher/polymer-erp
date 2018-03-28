@@ -5,6 +5,8 @@
 <link rel="import" href="../../../bower_components/ud-stepper/ud-stepper.html">
 <link rel="import" href="../prescricao/PrescricaoPart.component.html">
 <link rel="import" href="../armacao/ArmacaoFormPart.component.html">
+<link rel="import" href="../lentes/Lentes.component.html">
+<link rel="import" href="../valores/Valores.component.html">
 <link rel="import" href="Oculosdegrau.style.html">
 
 <dom-module id="oculosdegrau-page">
@@ -42,10 +44,14 @@
                     </div>
                 </ud-step>
                 <ud-step title="Lentes" editable>
-                    <div slot="content">Step 3 Content</div>
+                    <div slot="content">
+                        <lentes-page></lentes-page>
+                    </div>
                 </ud-step>
                 <ud-step title="Finalizar" editable>
-                    <div slot="content">Step 4 Content</div>
+                    <div slot="content">
+                        <valores-page></valores-page>
+                    </div>
                 </ud-step>
 
             </ud-stepper>

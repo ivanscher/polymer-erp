@@ -1,0 +1,113 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
+<link rel="import" href="Valores.style.html">
+
+<dom-module id="valores-page">
+    <template>
+        <style include="valores-style"></style>
+
+        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+
+            <paper-card class="display-table-on-mobile flex-horizontal">
+
+                <div class="card-content flexchild-vertical flex-size-8 border-left">
+                    <div class="title">Resumo da Compra</div>
+
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Armação" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Desconto" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="% - R$" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Total" class="flexchild size16" type="number"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Lente OD" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Desconto" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="% - R$" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Total" class="flexchild size16" type="number"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="LOD Tratamentos" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Desconto" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="% - R$" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Total" class="flexchild size16" type="number"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Lente OE" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Desconto" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="% - R$" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Total" class="flexchild size16" type="number"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="LOE Tratamentos" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Desconto" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="% - R$" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Total" class="flexchild size16" type="number"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="SubTotal" class="flexchild size18" type="number"></paper-input>
+                        <paper-input label="Desconto" class="flexchild size18" type="number"></paper-input>
+                        <paper-input label="% - R$" class="flexchild size18" type="number"></paper-input>
+                        <paper-input label="Total" class="flexchild size18" type="number"></paper-input>
+                    </div>
+
+
+
+                </div>
+
+            </paper-card>
+
+
+            <paper-card class="display-table-on-mobile flex-horizontal">
+
+                <div class="card-content flexchild-vertical flex-size-8 border-left">
+                    <div class="title">Evelope</div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Número" class="flexchild size16" type="number"></paper-input>
+                        <paper-input label="Status" class="flexchild size16" type="number"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Laboratório" class="flexchild flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+
+                        <paper-input label="Responsável" class="flexchild  flex-size-2">
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchM" alt="search" title="search">
+
+                            </paper-icon-button>
+                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addM" title="add ">
+                            </paper-icon-button>
+                        </paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Emissão" class="flexchild size16" type="date"></paper-input>
+                        <paper-input label="Prevista" class="flexchild size16" type="date"></paper-input>
+                    </div>
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                        <paper-input label="Avisado" class="flexchild size16"></paper-input>
+                        <paper-input label="Pronto" class="flexchild size16"></paper-input>
+                        <paper-input label="Entregue" class="flexchild size16"></paper-input>
+                    </div>
+
+                </div>
+
+            </paper-card>
+
+
+        </div>
+    </template>
+    <script src="Valores.component.js"></script>
+</dom-module>

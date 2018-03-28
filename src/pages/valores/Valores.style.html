@@ -1,0 +1,48 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../utils/shared-styles.html">
+<dom-module id="valores-style">
+    <template>
+        <style include="shared-styles">
+            :host{
+                border:none;
+                padding: 0;
+                margin: 0;
+                background-color: #eee;
+            }
+            .page{
+                padding-top: 0px;
+                min-height: auto;
+            }
+            paper-dropdown-menu,
+            paper-dropdown-menu-light,
+            paper-input{
+                margin: 0 8px;
+            }
+            paper-card{
+                @apply(--shadow-elevation-12d);
+                margin-bottom: 16px;
+                -webkit-border-radius: 0 0 8px 8px;
+                border-radius: 0 0 8px 8px;
+            }
+            [main-code]{
+                margin-top: 7px;
+            }
+            .align-left{
+                text-align: left !important;
+            }
+            #button-send {
+                margin-top: 16px;
+                margin-bottom: 16px;
+                clear: left;
+                float: right;
+                font-size: 14px;
+                padding: 8px 16px;
+                /*background-color: #0098db;
+                color: white;*/
+            }
+            [type="date"]{
+                margin-top: 5px;
+            }
+        </style>
+    </template>
+</dom-module>
