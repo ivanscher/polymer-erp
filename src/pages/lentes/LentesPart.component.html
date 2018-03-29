@@ -2,49 +2,20 @@
 
 <link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
-<link rel="import" href="Lentes.style.html">
-<link rel="import" href="LentesPart.component.html">
+<link rel="import" href="LentesPart.style.html">
 
-<dom-module id="lentes-page">
+<dom-module id="lentespart-page">
     <template>
-        <style include="lentes-style"></style>
-        <app-header class="page-header">
-            <app-toolbar>
-                <paper-icon-button icon="arrow-back"></paper-icon-button>
-                <div spacer main-title class="section-title">Lentes</div>
-                <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
-                <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
-
-                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
-                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
-
-                <paper-icon-button icon="save" id="button-save"></paper-icon-button>
-                <paper-tooltip for="button-save" offset="0" position="top">Salvar</paper-tooltip>
-
-
-                <!-- Paper Button Menu // Component responsible to create a action of drop the new menu with the options // see example on the browser. -->
-                <paper-menu-button  horizontal-align="right">
-                    <paper-icon-button icon="more-vert" slot="dropdown-trigger" alt="menu"></paper-icon-button>
-                    <paper-listbox slot="dropdown-content">
-                        <paper-item>Label da Ação</paper-item>
-                        <paper-item>Metodo com Nome longo</paper-item>
-                        <paper-item>Item3</paper-item>
-                    </paper-listbox>
-                </paper-menu-button>
-            </app-toolbar>
-        </app-header>
-
-        <app-drawer id="endDrawer" align="end"></app-drawer>
-
+        <style include="lentespart-style"></style>
 
         <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
 
 
-            <paper-tabs selected="{{selected2}}" >
+            <paper-tabs selected="{{selected3}}" >
                 <paper-tab active>Lente Olho Direito</paper-tab>
                 <paper-tab>Lente Olho Esquerdo</paper-tab>
             </paper-tabs>
-            <iron-pages selected="{{selected2}}">
+            <iron-pages selected="{{selected3}}">
                 <div class="display-table-on-mobile width100 self-stretch">
                     <paper-card class="display-table-on-mobile flex-horizontal">
 
@@ -135,5 +106,5 @@
             </iron-pages>
         </div>
     </template>
-    <script src="Lentes.component.js"></script>
+    <script src="LentesPart.component.js"></script>
 </dom-module>
