@@ -1,7 +1,6 @@
 /**
  * Created by ivans on 30/01/2018.
  */
-
 class Dashboard extends Polymer.Element {
   constructor() {
     super();
@@ -44,9 +43,7 @@ class Dashboard extends Polymer.Element {
 
     let menu = Polymer.dom(this.$.menu).querySelectorAll('.menu');
       for(let i=0; i<menu.length; i++) {
-
           menu[i].addEventListener('click', (e) => {
-
               menuDrawer.toggle();
           })
       }
@@ -56,12 +53,10 @@ class Dashboard extends Polymer.Element {
   }
 
   _routePageChanged(page) {
-
     this.page = page || 'contatos';
   }
 
   _pageChanged(page) {
-
     // Load page import on demand. Show 404 page if fails
     var resolvedPageUrl = this.resolveUrl(page + '.html');
     Polymer.importHref(
@@ -69,8 +64,6 @@ class Dashboard extends Polymer.Element {
       null,
       null,
       true);
-
-
   }
 }
 
