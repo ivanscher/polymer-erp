@@ -9,7 +9,8 @@
 <link rel="import" href="../../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../../../bower_components/iron-list/iron-list.html">
-
+<link rel="import" href="../../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../../bower_components/paper-dialog-behavior/paper-dialog-behavior.html">
 <link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
 
@@ -43,6 +44,8 @@
 <link rel="import" href="../../../bower_components/app-route/app-route.html">
 <link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
 
+<link rel="import" href="../../../bower_components/iron-swipeable-pages/iron-swipeable-pages.html">
+
 <link rel="import" href="../contatos/Contatos.component.html">
 <link rel="import" href="../lists/Lists.component.html">
 <link rel="import" href="../lists/ListsGrid.component.html">
@@ -56,6 +59,7 @@
 <link rel="import" href="../armacao/ArmacaoForm.component.html">
 <link rel="import" href="../oculosdegrau/Oculosdegrau.component.html">
 <link rel="import" href="../lentes/Lentes.component.html">
+<link rel="import" href="../vendas/Vendas.component.html">
 
 
 <link rel="import" href="Dashboard.style.html">
@@ -108,6 +112,7 @@
             <paper-item><a href="[[dashboardPath]]listagrid" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> List Grid</a></paper-item>
             <paper-item><a href="[[dashboardPath]]listsgridinfo" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> List Grid Info</a></paper-item>
             <paper-item><a href="[[dashboardPath]]lentes" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Lentes</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]vendas" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Vendas</a></paper-item>
 
             <hr class="separated">
             <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
@@ -139,6 +144,7 @@
              <armacao-page name="armacao"></armacao-page>
              <armacaoform-page name="armacaoform"></armacaoform-page>
              <lentes-page name="lentes"></lentes-page>
+             <vendas-page name="vendas"></vendas-page>
            </iron-pages>
 
     </section>
