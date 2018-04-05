@@ -99,6 +99,129 @@
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0098db', endColorstr='#01488e',GradientType=1 ); /* IE6-9 */
             }
 
+            .code{
+                text-align: right;
+            }
+            .price{
+                color: #0098db;
+                text-align: right;
+            }
+            paper-button{
+                font-size: 16px;
+                text-transform: none;
+            }
+
+            iron-list {
+                padding-top: 0px;
+                height: calc(100vh - 192px);
+                --iron-list-items-container: {
+                    width: calc(100% - 16px);
+                    margin: 0 auto;
+                    border-bottom: 1px solid #ddd;
+                };
+            }
+            paper-fab{
+                position: fixed;
+                z-index: 999;
+                bottom: 16px;
+                right: 16px;
+                --paper-fab-background: #0098DB;
+                height: 56px;
+                width: 56px;
+            }
+            iron-list iron-icon.blue{
+                color: #0098DB;
+            }
+            iron-list iron-icon.red{
+                color: #EB5757;
+            }
+            iron-list iron-icon{
+                margin-right: 10px;
+            }
+            .item {
+                @apply --layout-horizontal;
+                padding: 0 20px;
+                background-color: white;
+                border-bottom: 1px solid #ddd;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+            .avatar {
+                width: 150px;
+                border-radius: 0px;
+                box-sizing: border-box;
+                background-color: #fff;
+                box-shadow: none;
+                max-width: 25%;
+            }
+            .pad {
+                padding: 0 16px;
+                @apply(--layout-flex);
+                @apply(--layout-horizontal);
+                @apply(--layout-around-justified);
+            }
+            .pad div{
+                @apply(--layout-self-center)
+            }
+            .primary {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .code,
+            .shortText, .longText {
+                font-size: 14px;
+                color: rgba(0,0,0,.54);
+            }
+            .longText {
+                color: gray;
+                display: none;
+            }
+            .item.expanded:hover .shortText::after {
+                content: '';
+            }
+            .item.expanded .longText {
+                display: block;
+            }
+            .item.expanded:hover .longText::after {
+                content: ' [–]';
+            }
+            .spacer {
+                @apply --layout-flex;
+            }
+            paper-input.card{
+                padding: 8px;
+                margin: 8px;
+                border-radius: 2px;
+            }
+
+            paper-input iron-icon{
+                margin-right: 10px;
+            }
+            @media (max-width: 1200px) {
+                .pad {
+                    @apply --layout-vertical);
+                }
+                .pad div{
+                    @apply(--layout-self-start)
+                }
+
+            }
+            @media (max-width: 840px) {
+                paper-toolbar .bottom.title {
+                    font-size: 14px;
+                }
+                iron-list{
+                    --iron-list-items-container: {
+                        width: 100% ;
+                    }
+                }
+            }
+            paper-input.card{
+                margin-top: 0;
+                background-color: white;
+                @apply(--shadow-elevation-1dp)
+            }
+
         </style>
     </template>
 </dom-module>

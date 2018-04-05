@@ -19,6 +19,7 @@
             </div>
         </paper-dialog>
 
+
                 <iron-swipeable-pages edge-swipe-sensitivity="35" selected="0" threshold="0.1">
                     <div page="page1">
 <div class="page">
@@ -62,22 +63,23 @@
                                 <paper-card class="display-table-on-mobile flex-horizontal">
                                     <div class="card-content flexchild-vertical flex-size-12 border-left">
                                         <div class="title">Dados Pedidos</div>
+                                        <div main-code class="bs-label " style="    right: 110px;">Nº 9999</div>
                                         <div main-code class="bs-label bg-green">Orçamento</div>
                                         <div class="contain-three-inputs flex-horizontal">
                                             <paper-input label="Emitente" class="flexchild size16 flex-size-3" ></paper-input>
                                             <paper-input label="Vendedor" class="flexchild size16 flex-size-3" ></paper-input>
                                             <paper-input label="Digitador" class="flexchild size16 flex-size-3" ></paper-input>
                                             <paper-input label="Emissão" class="flexchild size16 flex-size-3" ></paper-input>
+                                            <paper-input label="Entregar" class="flexchild size16 flex-size-3" ></paper-input>
                                         </div>
-
+                                        <!--
                                         <div class="contain-three-inputs flex-horizontal">
                                             <paper-input label="Operação" class="flexchild size16 flex-size-3" ></paper-input>
                                             <paper-input label="Emissão" class="flexchild size16 flex-size-3" ></paper-input>
                                             <paper-input label="Entregue" class="flexchild size16 flex-size-3" ></paper-input>
                                             <paper-input label="Finalizado" class="flexchild size16 flex-size-3" ></paper-input>
-
-
                                         </div>
+                                        -->
                                         <div class="contain-three-inputs flex-horizontal">
                                         <paper-textarea label="Observação" class="flexchild" rows="2" always-float-label
                                                         char-counter placeholder="Digite sua observação"></paper-textarea>
@@ -85,13 +87,98 @@
                                                         char-counter placeholder="Digite sua observação"></paper-textarea>
                                         </div>
 
+                                        <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Tabela de Preço" class="flexchild flex-size-2">
+                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
+                                                </paper-icon-button>
+
+                                                </paper-icon-button>
+                                            </paper-input>
+
+                                            <paper-input label="Cancelamento" class="flexchild  flex-size-2">
+                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchM" alt="search" title="search"></paper-icon-button>
+                                                </paper-icon-button>
+                                            </paper-input>
+                                        </div>
+                                        <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Código de Barras" class="flexchild flex-size-2">
+
+                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="content-copy" alt="add" id="barcode" title="barcode">
+                                                </paper-icon-button>
+                                            </paper-input>
+                                        </div>
                                     </div>
 
                                 </paper-card>
                             </div>
-                            <div>Carrinho</div>
-                            <div>Total</div>
+                            <div>
+
+                                <paper-input label="Buscar" class="card" no-label-float  >
+                                    <iron-icon icon="search" slot="prefix"></iron-icon>
+                                </paper-input>
+
+
+                                <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                                <iron-list id="list" items="[[data]]" as="item" selection-enabled>
+                                    <template>
+                                        <div class="item" tabindex$="[[tabIndex]]">
+                                            <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
+                                            <div class="pad justified-start">
+                                                <div class="primary">
+                                                    [[item.name]]
+                                                    <div class="shortText">[[item.descricao]]</div>
+                                                </div>
+                                            </div>
+                                            <div class="justified-space-around flex-vertical">
+                                                <div class="code">[[item.index]]</div>
+                                                <div class="primary price">[[item.preco]]</div>
+                                            </div>
+
+                                        </div>
+                                    </template>
+                                </iron-list>
+                                <paper-fab mini icon="add" id="add"></paper-fab>
+
+                            </div>
+                            <div>
+
+                                <paper-card class="display-table-on-mobile flex-horizontal">
+                                    <div class="card-content flexchild-vertical flex-size-12 border-left">
+                                        <div class="title">Total</div>
+                                        <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                            <paper-input label="Cliente" class="flexchild flex-size-2">
+                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
+                                                </paper-icon-button>
+                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
+                                                </paper-icon-button>
+                                            </paper-input>
+
+                                        </div>
+                                        <div class="contain-three-inputs flex-horizontal">
+                                            <paper-input label="Produtos" class="flexchild size16 flex-size-3" ></paper-input>
+                                            <paper-input label="Serviços" class="flexchild size16 flex-size-3" ></paper-input>
+                                        </div>
+                                        <div class="contain-three-inputs flex-horizontal">
+                                            <paper-input label="Desconto %" class="flexchild size16 flex-size-3" ></paper-input>
+                                            <paper-input label="Desconto" class="flexchild size16 flex-size-3" ></paper-input>
+                                        </div>
+
+                                        <div class="contain-three-inputs flex-horizontal">
+                                            <paper-input label="Tipo Frete" class="flexchild size16 flex-size-3" ></paper-input>
+                                            <paper-input label="Frete" class="flexchild size16 flex-size-3" ></paper-input>
+                                        </div>
+
+                                        <div class="contain-three-inputs flex-horizontal">
+                                            <paper-input label="Índice" class="flexchild size16 flex-size-3" ></paper-input>
+                                            <paper-input label="Total" class="flexchild size16 flex-size-3" ></paper-input>
+                                        </div>
+
+                                    </div>
+
+                                </paper-card>
+                            </div>
                         </iron-pages>
+
 </div>
                     </div>
                     <div page="page2">
@@ -99,6 +186,8 @@
                     </div>
 
                 </iron-swipeable-pages>
+
+
 
     </template>
     <script src="Vendas.component.js"></script>
