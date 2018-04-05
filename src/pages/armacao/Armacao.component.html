@@ -21,34 +21,48 @@
 
         <app-drawer id="endDrawer" align="end"></app-drawer>
 
+        <iron-swipeable-pages edge-swipe-sensitivity="35" selected="0" threshold="0.1">
+            <div page="page1">
+                <div metabar>
+                    <div class="done"></div>
+                </div>
+                <div class="page">
+                    <div class=" display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
 
-        <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
+                        <paper-input label="Buscar" class="card" no-label-float>
+                            <iron-icon icon="search" slot="prefix"></iron-icon>
+                        </paper-input>
 
 
-                <paper-input label="Buscar" class="card" no-label-float  >
-                    <iron-icon icon="search" slot="prefix"></iron-icon>
-                </paper-input>
+                        <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                        <iron-list id="list" items="[[data]]" as="item" selection-enabled>
+                            <template>
+                                <div class="item" tabindex$="[[tabIndex]]">
+                                    <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
+                                    <div class="pad justified-start">
+                                        <div class="primary">
+                                            [[item.name]]
+                                            <div class="shortText">[[item.descricao]]</div>
+                                        </div>
+                                    </div>
+                                    <div class="justified-space-around flex-vertical">
+                                        <div class="code">[[item.index]]</div>
+                                        <div class="primary price">[[item.preco]]</div>
+                                    </div>
 
-
-                <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
-                <iron-list id="list" items="[[data]]" as="item" selection-enabled>
-                    <template>
-                        <div class="item" tabindex$="[[tabIndex]]">
-                            <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
-                            <div class="pad justified-start">
-                                <div class="primary">
-                                    [[item.name]]
-                                    <div class="shortText">[[item.descricao]]</div>
                                 </div>
-                            </div>
-                            <div class="justified-space-around flex-vertical">
-                                <div class="code">[[item.index]]</div>
-                                <div class="primary price">[[item.preco]]</div>
-                            </div>
+                            </template>
+                        </iron-list>
+                    </div>
+                </div>
+            </div>
+            <div page="page2">
+                <div class="page">
+                <h2>Meta de Vendas</h2>
+                </div>
+            </div>
 
-                        </div>
-                    </template>
-                </iron-list>
+        </iron-swipeable-pages>
 
         </div>
     </template>

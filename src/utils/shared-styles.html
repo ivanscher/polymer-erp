@@ -264,6 +264,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin-top: 26px;
 
       }
+      .noshadow{
+        @apply(--shadow-none);
+      }
       paper-fab[super-mini].no-label-float{
         margin-top: 10px;
       }
@@ -312,7 +315,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-color: #DDD;
         @apply(--shadow-elevation-3dp)
       }
+      paper-tab.havebadge{
+        overflow: visible;
+        padding: 0 20px;
+      }
+      paper-tab.havebadge [main-code]{
+        margin: 0;
+        top: 0;
 
+        font-size: 10px !important;
+        line-height: 10px;
+        right: -18px;
+      }
+
+      .pl0{padding-left: 0;}
+      paper-item.negative{
+        background-color: white;
+        color: #01488e;
+        border-radius: 4px;
+        @apply(--shadow-elevation-2dp)
+      }
       .page {
         @apply(--layout-flex);
         min-height: calc(100vh - 128px);
@@ -320,6 +342,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         max-width: 1360px;
         margin: 0 auto;
 
+      }
+      iron-swipeable-pages{
+        height: calc(100vh - 64px);
+      }
+
+      iron-swipeable-pages > * {
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */
+        cursor: default;
+      }
+      div[metabar]{
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 8px;
+        background: var(--paper-orange-500);
+      }
+      div[metabar] .done{
+        height: 70vh;
+        width: 8px;
+        right: 0;
+        position: fixed;
+        bottom: 0;
+        background: var(--paper-green-500);
+        pointer-events: none;
       }
       app-header{
         z-index: 2;

@@ -12,23 +12,8 @@
                 height: 100vh;
             }
 
-            div[metabar]{
-                position: fixed;
-                z-index: 999;
-                top: 0;
-                right: 0;
-                height: 100vh;
-                width: 8px;
-                background: var(--paper-orange-500);
-            }
-            div[metabar] .done{
-                height: 70vh;
-                width: 8px;
-                right: 0;
-                position: fixed;
-                bottom: 0;
-                background: var(--paper-green-500);
-                pointer-events: none;
+            .page{
+                padding-top: 64px;
             }
             paper-dropdown-menu,
             paper-dropdown-menu-light,
@@ -44,6 +29,7 @@
             [main-code]{
                 margin-top: 7px;
             }
+
             .align-left{
                 text-align: left !important;
             }
@@ -60,44 +46,12 @@
             [type="date"]{
                 margin-top: 5px;
             }
-            /*
-            iron-swipeable-pages > div:nth-child(1) div[metabar] .done,
-            iron-swipeable-pages > div:nth-child(1) div[metabar]{
-                right: 0;
-            }
-            iron-swipeable-pages > div:nth-child(2) div[metabar] .done,
-            iron-swipeable-pages > div:nth-child(2) div[metabar]{
-                left: -5px;
-            }
-            .page1{
-                padding-right:5px;
-            }
-            .page2{
-                padding-left:5px;
-            }*/
-            iron-swipeable-pages{
-                height: calc(100vh - 64px);
-            }
 
-            iron-swipeable-pages > * {
-                -webkit-user-select: none;  /* Chrome all / Safari all */
-                -moz-user-select: none;     /* Firefox all */
-                -ms-user-select: none;      /* IE 10+ */
-                user-select: none;          /* Likely future */
-                cursor: default;
-            }
+
             paper-textarea{
                 padding: 6px
             }
 
-            iron-swipeable-pages > div:nth-child(2) {
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0098db+0,01488e+100 */
-                background: #0098db; /* Old browsers */
-                background: -moz-linear-gradient(left, #0098db 0%, #01488e 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(left, #0098db 0%,#01488e 100%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(to right, #0098db 0%,#01488e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0098db', endColorstr='#01488e',GradientType=1 ); /* IE6-9 */
-            }
 
             .code{
                 text-align: right;
@@ -121,13 +75,17 @@
                 };
             }
             paper-fab{
-                position: fixed;
+                position: absolute;
                 z-index: 999;
-                bottom: 16px;
+                bottom: -28px;
                 right: 16px;
                 --paper-fab-background: #0098DB;
                 height: 56px;
                 width: 56px;
+                @apply(--shadow-elevation-3dp)
+            }
+            paper-fab#undo{
+                right: 82px;
             }
             iron-list iron-icon.blue{
                 color: #0098DB;
@@ -197,6 +155,9 @@
             paper-input iron-icon{
                 margin-right: 10px;
             }
+            .barcode{
+                max-width: 84%
+            }
             @media (max-width: 1200px) {
                 .pad {
                     @apply --layout-vertical);
@@ -207,6 +168,9 @@
 
             }
             @media (max-width: 840px) {
+                .barcode{
+                    max-width: 60%
+                }
                 paper-toolbar .bottom.title {
                     font-size: 14px;
                 }

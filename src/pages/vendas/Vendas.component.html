@@ -7,11 +7,37 @@
     <template>
         <style include="vendas-style"></style>
 
+        <app-header class="page-header">
+            <app-toolbar>
+                <paper-icon-button icon="arrow-back"></paper-icon-button>
+                <div spacer main-title class="section-title">1324 - Vendas</div>
 
+
+                <paper-item>Total R$ 2.000,00</paper-item>
+                <paper-item class="negative pl0">
+                    <paper-icon-button icon="check" id="button-save"></paper-icon-button>
+                    Finalizar
+                </paper-item>
+
+
+                <!-- Paper Button Menu // Component responsible to create a action of drop the new menu with the options // see example on the browser. -->
+                <paper-menu-button horizontal-align="right">
+                    <paper-icon-button icon="more-vert" slot="dropdown-trigger" alt="menu"></paper-icon-button>
+                    <paper-listbox slot="dropdown-content">
+                        <paper-item>Label da Ação</paper-item>
+                        <paper-item>Metodo com Nome longo</paper-item>
+                        <paper-item>Item3</paper-item>
+                    </paper-listbox>
+                </paper-menu-button>
+            </app-toolbar>
+        </app-header>
         <paper-dialog id="actions" modal>
             <h2>Dialog Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <div class="buttons">
                 <paper-button>More Info...</paper-button>
                 <paper-button dialog-dismiss>Decline</paper-button>
@@ -20,172 +46,307 @@
         </paper-dialog>
 
 
-                <iron-swipeable-pages edge-swipe-sensitivity="35" selected="0" threshold="0.1">
-                    <div page="page1">
-<div class="page">
-                        <div metabar>
-                            <div class="done"></div>
-                        </div>
-                        <paper-tabs selected="{{selected2}}" >
-                            <paper-tab>Dados Principais</paper-tab>
-                            <paper-tab>Carrinho</paper-tab>
-                            <paper-tab>Total</paper-tab>
-                        </paper-tabs>
-                        <iron-pages selected="{{selected2}}">
-                            <div>
-                                <paper-card class="display-table-on-mobile flex-horizontal">
-                                    <div class="card-content flexchild-vertical flex-size-12 border-left">
-                                        <div class="title">Dados Principais</div>
-                                        <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
-                                            <paper-input label="Cliente" class="flexchild flex-size-2">
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
-                                                </paper-icon-button>
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
-                                                </paper-icon-button>
-                                            </paper-input>
 
-                                            <paper-input label="Convenio" class="flexchild  flex-size-2">
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchM" alt="search" title="search"></paper-icon-button>
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addM" title="add ">
-                                                </paper-icon-button>
-                                            </paper-input>
-                                        </div>
-                                        <div class="contain-three-inputs flex-horizontal">
-                                            <paper-input label="E-mail" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="CPF" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Telefone" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Endereço" class="flexchild size16 flex-size-3" ></paper-input>
-                                        </div>
+                <div class="page">
 
+                    <paper-tabs selected="{{selected2}}">
+                        <paper-tab>Carrinho</paper-tab>
+                        <paper-tab>Dados Principais</paper-tab>
+
+                        <!--<paper-tab>Total</paper-tab>-->
+                    </paper-tabs>
+                    <iron-pages selected="{{selected2}}">
+
+                        <div>
+
+                            <paper-card class="display-table-on-mobile flex-horizontal noshadow"
+                                        style="position: relative; margin-bottom: 48px;">
+                                <div class="card-content flexchild-vertical flex-size-12 ">
+                                    <div class="title">Venda Rápida</div>
+                                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile barcode">
+                                        <paper-input label="Código de Barras" class="flexchild flex-size-2">
+                                            <iron-icon icon="view-array" slot="prefix"></iron-icon>
+
+                                        </paper-input>
                                     </div>
-
-                                </paper-card>
-                                <paper-card class="display-table-on-mobile flex-horizontal">
-                                    <div class="card-content flexchild-vertical flex-size-12 border-left">
-                                        <div class="title">Dados Pedidos</div>
-                                        <div main-code class="bs-label " style="    right: 110px;">Nº 9999</div>
-                                        <div main-code class="bs-label bg-green">Orçamento</div>
-                                        <div class="contain-three-inputs flex-horizontal">
-                                            <paper-input label="Emitente" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Vendedor" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Digitador" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Emissão" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Entregar" class="flexchild size16 flex-size-3" ></paper-input>
-                                        </div>
-                                        <!--
-                                        <div class="contain-three-inputs flex-horizontal">
-                                            <paper-input label="Operação" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Emissão" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Entregue" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Finalizado" class="flexchild size16 flex-size-3" ></paper-input>
-                                        </div>
-                                        -->
-                                        <div class="contain-three-inputs flex-horizontal">
-                                        <paper-textarea label="Observação" class="flexchild" rows="2" always-float-label
-                                                        char-counter placeholder="Digite sua observação"></paper-textarea>
-                                        <paper-textarea label="Observação Interna" class="flexchild" rows="2" always-float-label
-                                                        char-counter placeholder="Digite sua observação"></paper-textarea>
-                                        </div>
-
-                                        <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
-                                            <paper-input label="Tabela de Preço" class="flexchild flex-size-2">
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
-                                                </paper-icon-button>
-
-                                                </paper-icon-button>
-                                            </paper-input>
-
-                                            <paper-input label="Cancelamento" class="flexchild  flex-size-2">
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchM" alt="search" title="search"></paper-icon-button>
-                                                </paper-icon-button>
-                                            </paper-input>
-                                        </div>
-                                        <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
-                                            <paper-input label="Código de Barras" class="flexchild flex-size-2">
-
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="content-copy" alt="add" id="barcode" title="barcode">
-                                                </paper-icon-button>
-                                            </paper-input>
-                                        </div>
-                                    </div>
-
-                                </paper-card>
-                            </div>
-                            <div>
-
-                                <paper-input label="Buscar" class="card" no-label-float  >
-                                    <iron-icon icon="search" slot="prefix"></iron-icon>
-                                </paper-input>
-
-
-                                <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
-                                <iron-list id="list" items="[[data]]" as="item" selection-enabled>
-                                    <template>
-                                        <div class="item" tabindex$="[[tabIndex]]">
-                                            <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
-                                            <div class="pad justified-start">
-                                                <div class="primary">
-                                                    [[item.name]]
-                                                    <div class="shortText">[[item.descricao]]</div>
-                                                </div>
-                                            </div>
-                                            <div class="justified-space-around flex-vertical">
-                                                <div class="code">[[item.index]]</div>
-                                                <div class="primary price">[[item.preco]]</div>
-                                            </div>
-
-                                        </div>
-                                    </template>
-                                </iron-list>
+                                </div>
                                 <paper-fab mini icon="add" id="add"></paper-fab>
+                                <paper-fab mini icon="undo" id="undo"></paper-fab>
 
-                            </div>
-                            <div>
+                            </paper-card>
 
-                                <paper-card class="display-table-on-mobile flex-horizontal">
-                                    <div class="card-content flexchild-vertical flex-size-12 border-left">
-                                        <div class="title">Total</div>
-                                        <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
-                                            <paper-input label="Cliente" class="flexchild flex-size-2">
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
-                                                </paper-icon-button>
-                                                <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
-                                                </paper-icon-button>
-                                            </paper-input>
-
+                            <!--
+                            <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                            <iron-list id="list" items="[[data]]" as="item" selection-enabled  style="height: calc(60vh - 184px);">
+                                <template>
+                                    <div class="item" tabindex$="[[tabIndex]]">
+                                        <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
+                                        <div class="pad justified-start">
+                                            <div class="primary">
+                                                [[item.name]]
+                                                <div class="shortText">[[item.descricao]]</div>
+                                            </div>
                                         </div>
-                                        <div class="contain-three-inputs flex-horizontal">
-                                            <paper-input label="Produtos" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Serviços" class="flexchild size16 flex-size-3" ></paper-input>
-                                        </div>
-                                        <div class="contain-three-inputs flex-horizontal">
-                                            <paper-input label="Desconto %" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Desconto" class="flexchild size16 flex-size-3" ></paper-input>
-                                        </div>
-
-                                        <div class="contain-three-inputs flex-horizontal">
-                                            <paper-input label="Tipo Frete" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Frete" class="flexchild size16 flex-size-3" ></paper-input>
-                                        </div>
-
-                                        <div class="contain-three-inputs flex-horizontal">
-                                            <paper-input label="Índice" class="flexchild size16 flex-size-3" ></paper-input>
-                                            <paper-input label="Total" class="flexchild size16 flex-size-3" ></paper-input>
+                                        <div class="justified-space-around flex-vertical">
+                                            <div class="code">[[item.index]]</div>
+                                            <div class="primary price">[[item.preco]]</div>
                                         </div>
 
                                     </div>
+                                </template>
+                            </iron-list>
+                            -->
 
-                                </paper-card>
-                            </div>
-                        </iron-pages>
+                            <paper-tabs selected="{{selected4}}" scrollable>
+                                <paper-tab active>Itens no Carrinho</paper-tab>
+                                <paper-tab>Sugestões</paper-tab>
+                                <paper-tab class="havebadge">Histórico
+                                    <div main-code class="bs-label bg-red">2</div>
+                                </paper-tab>
+                            </paper-tabs>
+                            <iron-pages selected="{{selected4}}">
+                                <div class="display-table-on-mobile width100 self-stretch">
+                                    <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                                    <iron-list id="list" items="[[data]]" as="item" selection-enabled
+                                               style="height: calc(100vh - 384px);">
+                                        <template>
+                                            <div class="item" tabindex$="[[tabIndex]]">
+                                                <iron-image class="avatar" sizing="contain"
+                                                            src="[[item.image]]"></iron-image>
+                                                <div class="pad justified-start">
+                                                    <div class="primary">
+                                                        [[item.name]]
+                                                        <div class="shortText">[[item.descricao]]</div>
+                                                    </div>
+                                                </div>
+                                                <div class="justified-space-around flex-vertical">
+                                                    <div class="code">[[item.index]]</div>
+                                                    <div class="primary price">[[item.preco]]</div>
+                                                </div>
 
-</div>
-                    </div>
-                    <div page="page2">
-                        Meta
-                    </div>
+                                            </div>
+                                        </template>
+                                    </iron-list>
+                                </div>
 
-                </iron-swipeable-pages>
+                                <div class="display-table-on-mobile width100 self-stretch">
+                                    <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                                    <iron-list id="list" items="[[data]]" as="item" selection-enabled
+                                               style="height: calc(100vh - 384px);">
+                                        <template>
+                                            <div class="item" tabindex$="[[tabIndex]]">
+                                                <iron-image class="avatar" sizing="contain"
+                                                            src="[[item.image]]"></iron-image>
+                                                <div class="pad justified-start">
+                                                    <div class="primary">
+                                                        [[item.name]]
+                                                        <div class="shortText">[[item.descricao]]</div>
+                                                    </div>
+                                                </div>
+                                                <div class="justified-space-around flex-vertical">
+                                                    <div class="code">[[item.index]]</div>
+                                                    <div class="primary price">[[item.preco]]</div>
+                                                </div>
+
+                                            </div>
+                                        </template>
+                                    </iron-list>
+                                </div>
+                                <div class="display-table-on-mobile width100 self-stretch">
+                                    <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                                    <iron-list id="list" items="[[data]]" as="item" selection-enabled
+                                               style="height: calc(100vh - 384px);">
+                                        <template>
+                                            <div class="item" tabindex$="[[tabIndex]]">
+                                                <iron-image class="avatar" sizing="contain"
+                                                            src="[[item.image]]"></iron-image>
+                                                <div class="pad justified-start">
+                                                    <div class="primary">
+                                                        [[item.name]]
+                                                        <div class="shortText">[[item.descricao]]</div>
+                                                    </div>
+                                                </div>
+                                                <div class="justified-space-around flex-vertical">
+                                                    <div class="code">[[item.index]]</div>
+                                                    <div class="primary price">[[item.preco]]</div>
+                                                </div>
+
+                                            </div>
+                                        </template>
+                                    </iron-list>
+                                </div>
+
+
+                            </iron-pages>
+
+                        </div>
+                        <div>
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical flex-size-12 border-left">
+                                    <div class="title">Dados Principais</div>
+                                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Cliente" class="flexchild flex-size-2">
+                                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search"
+                                                               id="searchP" alt="search" title="search">
+                                            </paper-icon-button>
+                                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add"
+                                                               id="addP" title="add ">
+                                            </paper-icon-button>
+                                        </paper-input>
+
+                                        <paper-input label="Convenio" class="flexchild  flex-size-2">
+                                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search"
+                                                               id="searchM" alt="search"
+                                                               title="search"></paper-icon-button>
+                                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add"
+                                                               id="addM" title="add ">
+                                            </paper-icon-button>
+                                        </paper-input>
+                                    </div>
+                                    <div class="contain-three-inputs flex-horizontal">
+                                        <paper-input label="E-mail" class="flexchild size16 flex-size-3"></paper-input>
+                                        <paper-input label="CPF" class="flexchild size16 flex-size-3"></paper-input>
+                                        <paper-input label="Telefone"
+                                                     class="flexchild size16 flex-size-3"></paper-input>
+                                        <paper-input label="Endereço"
+                                                     class="flexchild size16 flex-size-3"></paper-input>
+                                    </div>
+
+                                </div>
+
+                            </paper-card>
+                            <paper-card class="display-table-on-mobile flex-horizontal">
+                                <div class="card-content flexchild-vertical flex-size-12 border-left">
+                                    <div class="title">Dados Pedidos</div>
+                                    <div main-code class="bs-label " style="    right: 110px;">Nº 9999</div>
+                                    <div main-code class="bs-label bg-green">Orçamento</div>
+                                    <div class="contain-three-inputs flex-horizontal">
+                                        <paper-input label="Emitente"
+                                                     class="flexchild size16 flex-size-3"></paper-input>
+                                        <paper-input label="Vendedor"
+                                                     class="flexchild size16 flex-size-3"></paper-input>
+                                        <paper-input label="Digitador"
+                                                     class="flexchild size16 flex-size-3"></paper-input>
+                                        <paper-input label="Emissão" class="flexchild size16 flex-size-3"></paper-input>
+                                        <paper-input label="Entregar"
+                                                     class="flexchild size16 flex-size-3"></paper-input>
+                                    </div>
+
+                                    <div class="contain-three-inputs flex-horizontal">
+                                        <paper-textarea label="Observação" class="flexchild" rows="2" always-float-label
+                                                        char-counter
+                                                        placeholder="Digite sua observação"></paper-textarea>
+                                        <paper-textarea label="Observação Interna" class="flexchild" rows="2"
+                                                        always-float-label
+                                                        char-counter
+                                                        placeholder="Digite sua observação"></paper-textarea>
+                                    </div>
+
+                                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Tabela de Preço" class="flexchild flex-size-2">
+                                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search"
+                                                               id="searchP" alt="search" title="search">
+                                            </paper-icon-button>
+
+                                            </paper-icon-button>
+                                        </paper-input>
+
+                                        <paper-input label="Cancelamento" class="flexchild  flex-size-2">
+                                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="search"
+                                                               id="searchM" alt="search"
+                                                               title="search"></paper-icon-button>
+                                            </paper-icon-button>
+                                        </paper-input>
+                                    </div>
+                                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                        <paper-input label="Código de Barras" class="flexchild flex-size-2">
+
+                                            <paper-icon-button slot="suffix" onclick="clearInput()" icon="content-copy"
+                                                               alt="add" id="barcode" title="barcode">
+                                            </paper-icon-button>
+                                        </paper-input>
+                                    </div>
+                                </div>
+
+
+                            </paper-card>
+                            <paper-tabs selected="{{selected3}}" scrollable>
+                                <paper-tab active class="havebadge">CRM
+                                    <div main-code class="bs-label bg-red">2</div>
+                                </paper-tab>
+                                <paper-tab class="havebadge">Financeiro
+                                    <div main-code class="bs-label bg-red">2</div>
+                                </paper-tab>
+                            </paper-tabs>
+                            <iron-pages selected="{{selected3}}">
+                                <div class="display-table-on-mobile width100 self-stretch">
+                                    <chat-page></chat-page>
+                                </div>
+                                <div class="display-table-on-mobile width100 self-stretch">
+                                    <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                                    <iron-list id="list" items="[[data]]" as="item" selection-enabled
+                                               style="height: calc(50vh - 184px);">
+                                        <template>
+                                            <div class="item" tabindex$="[[tabIndex]]">
+                                                <iron-image class="avatar" sizing="contain"
+                                                            src="[[item.image]]"></iron-image>
+                                                <div class="pad justified-start">
+                                                    <div class="primary">
+                                                        [[item.name]]
+                                                        <div class="shortText">[[item.descricao]]</div>
+                                                    </div>
+                                                </div>
+                                                <div class="justified-space-around flex-vertical">
+                                                    <div class="code">[[item.index]]</div>
+                                                    <div class="primary price">[[item.preco]]</div>
+                                                </div>
+
+                                            </div>
+                                        </template>
+                                    </iron-list>
+                                </div>
+                            </iron-pages>
+                        </div>
+                        <!-- <div>
+
+                             <paper-card class="display-table-on-mobile flex-horizontal">
+                                 <div class="card-content flexchild-vertical flex-size-12 border-left">
+                                     <div class="title">Total</div>
+                                     <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                         <paper-input label="Cliente" class="flexchild flex-size-2">
+                                             <paper-icon-button slot="suffix" onclick="clearInput()" icon="search" id="searchP" alt="search" title="search">
+                                             </paper-icon-button>
+                                             <paper-icon-button slot="suffix" onclick="clearInput()" icon="add" alt="add" id="addP" title="add ">
+                                             </paper-icon-button>
+                                         </paper-input>
+
+                                     </div>
+                                     <div class="contain-three-inputs flex-horizontal">
+                                         <paper-input label="Produtos" class="flexchild size16 flex-size-3" ></paper-input>
+                                         <paper-input label="Serviços" class="flexchild size16 flex-size-3" ></paper-input>
+                                     </div>
+                                     <div class="contain-three-inputs flex-horizontal">
+                                         <paper-input label="Desconto %" class="flexchild size16 flex-size-3" ></paper-input>
+                                         <paper-input label="Desconto" class="flexchild size16 flex-size-3" ></paper-input>
+                                     </div>
+
+                                     <div class="contain-three-inputs flex-horizontal">
+                                         <paper-input label="Tipo Frete" class="flexchild size16 flex-size-3" ></paper-input>
+                                         <paper-input label="Frete" class="flexchild size16 flex-size-3" ></paper-input>
+                                     </div>
+
+                                     <div class="contain-three-inputs flex-horizontal">
+                                         <paper-input label="Índice" class="flexchild size16 flex-size-3" ></paper-input>
+                                         <paper-input label="Total" class="flexchild size16 flex-size-3" ></paper-input>
+                                     </div>
+
+                                 </div>
+
+                             </paper-card>
+                         </div>-->
+                    </iron-pages>
+
+                </div>
 
 
 

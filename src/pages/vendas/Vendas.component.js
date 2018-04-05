@@ -13,6 +13,15 @@ class Vendas extends Polymer.Element {
             },selected2: {
                 type: Number,
                 value: 0,
+            },selected3: {
+                type: Number,
+                value: 0,
+            },selected4: {
+                type: Number,
+                value: 0,
+            },selected5: {
+                type: Number,
+                value: 0,
             }
 
         };
