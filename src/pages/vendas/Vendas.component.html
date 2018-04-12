@@ -66,12 +66,21 @@
                                     <div class="contain-three-inputs flex-horizontal display-table-on-mobile barcode">
                                         <paper-input label="Código de Barras" class="flexchild flex-size-2">
                                             <iron-icon icon="view-array" slot="prefix"></iron-icon>
-
+                                            <paper-icon-button slot="suffix" icon="add" alt="add" id="addProd">
                                         </paper-input>
                                     </div>
                                 </div>
-                                <paper-fab mini icon="add" id="add"></paper-fab>
-                                <paper-fab mini icon="undo" id="undo"></paper-fab>
+                                <a href="/dashboard/oculosdegrau"><paper-fab mini icon="mail" id="add"></paper-fab></a>
+                                <a href="/dashboard/armacao"><paper-fab mini icon="undo" id="undo"></paper-fab></a>
+                                <a href="/dashboard/armacao"><paper-fab mini icon="build" id="build"></paper-fab></a>
+
+                                <paper-tooltip for="undo" offset="0" position="top">Devolução</paper-tooltip>
+
+                                <paper-tooltip for="add" offset="0" position="top">Criar Envelope</paper-tooltip>
+
+                                <paper-tooltip for="build" offset="0" position="top">Ordem de serviço</paper-tooltip>
+
+                                <paper-tooltip for="addProd" offset="0" position="top">Adicionar Produto</paper-tooltip>
 
                             </paper-card>
 
@@ -106,8 +115,8 @@
                             </paper-tabs>
                             <iron-pages selected="{{selected4}}">
                                 <div class="display-table-on-mobile width100 self-stretch">
-                                    <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
-                                    <iron-list id="list" items="[[data]]" as="item" selection-enabled
+                                    <iron-ajax url="http://192.168.1.174:8081/src/carrinho.json" last-response="{{items}}" auto></iron-ajax>
+                                    <iron-list id="list" items="[[items]]" as="item" selection-enabled
                                                style="height: calc(100vh - 384px);">
                                         <template>
                                             <div class="item" tabindex$="[[tabIndex]]">
@@ -130,8 +139,8 @@
                                 </div>
 
                                 <div class="display-table-on-mobile width100 self-stretch">
-                                    <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
-                                    <iron-list id="list" items="[[data]]" as="item" selection-enabled
+                                    <iron-ajax url="http://192.168.1.174:8081/src/carrinho.json" last-response="{{sugestoes}}" auto></iron-ajax>
+                                    <iron-list id="list" items="[[sugestoes]]" as="item" selection-enabled
                                                style="height: calc(100vh - 384px);">
                                         <template>
                                             <div class="item" tabindex$="[[tabIndex]]">
@@ -153,7 +162,7 @@
                                     </iron-list>
                                 </div>
                                 <div class="display-table-on-mobile width100 self-stretch">
-                                    <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
+                                    <iron-ajax url="http://192.168.1.174:8081/src/carrinho.json" last-response="{{data}}" auto></iron-ajax>
                                     <iron-list id="list" items="[[data]]" as="item" selection-enabled
                                                style="height: calc(100vh - 384px);">
                                         <template>

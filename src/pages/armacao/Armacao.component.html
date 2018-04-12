@@ -37,7 +37,7 @@
                         <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
                         <iron-list id="list" items="[[data]]" as="item" selection-enabled>
                             <template>
-                                <div class="item" tabindex$="[[tabIndex]]">
+                                <a href="/dashboard/vendas" class="item" tabindex$="[[tabIndex]]">
                                     <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
                                     <div class="pad justified-start">
                                         <div class="primary">
@@ -50,7 +50,7 @@
                                         <div class="primary price">[[item.preco]]</div>
                                     </div>
 
-                                </div>
+                                </a>
                             </template>
                         </iron-list>
                     </div>

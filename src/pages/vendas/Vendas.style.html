@@ -76,6 +76,7 @@
             }
             paper-fab{
                 position: absolute;
+                z-index: 0;
                 z-index: 999;
                 bottom: -28px;
                 right: 16px;
@@ -84,8 +85,11 @@
                 width: 56px;
                 @apply(--shadow-elevation-3dp)
             }
+            paper-fab#build{
+                right: 78px;
+            }
             paper-fab#undo{
-                right: 82px;
+                right: 141px;
             }
             iron-list iron-icon.blue{
                 color: #0098DB;
@@ -178,6 +182,16 @@
                     --iron-list-items-container: {
                         width: 100% ;
                     }
+                }
+                paper-fab{
+                    width: 46px;
+                    height: 46px;
+                }
+                paper-fab#build{
+                    right: 68px;
+                }
+                paper-fab#undo{
+                    right: 120px;
                 }
             }
             paper-input.card{

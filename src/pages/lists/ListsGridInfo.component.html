@@ -34,7 +34,8 @@
                 <template>
 
                     <div class="photoContainer">
-                        <div class="photoContent flex-vertical" tabindex$="[[tabIndex]]">
+                        <a href="/dashboard/vendas" class="photoContent flex-vertical" tabindex$="[[tabIndex]]">
+
                             <iron-image sizing="cover"
                                         src="[[item.image]]">
                             </iron-image>
@@ -46,8 +47,10 @@
                                 <p class="shortText">[[item.descricao]]</p>
                                 <h3 class="primary price">[[item.preco]]</h3>
 
-                        </div>
+
+                        </a>
                     </div>
+
                 </template>
             </iron-list>
 

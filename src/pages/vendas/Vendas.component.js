@@ -33,10 +33,15 @@ class Vendas extends Polymer.Element {
         this.$.addM.addEventListener('click', this.openBy.bind(this), false);
         this.$.searchP.addEventListener('click', this.openBy.bind(this), false);
         this.$.searchM.addEventListener('click', this.openBy.bind(this), false);
-        this.$.add.addEventListener('click', this.openBy.bind(this), false);
+       this.$.addProd.addEventListener('click', this.golink.bind(this), false);
     }
     openBy() {
         this.$.actions.open();
+    }
+
+    golink(el) {
+        // Wait for ripple to finish.
+        location.href = '/dashboard/listsgridinfo';
     }
 }
 
