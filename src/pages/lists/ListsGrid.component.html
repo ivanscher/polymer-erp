@@ -33,14 +33,14 @@
             <iron-list id="list" items="[[data]]" as="item" selection-enabled grid>
                 <template>
 
-                    <div class="photoContainer">
+                    <a href="/dashboard/itens" class="photoContainer">
                         <div class="photoContent" tabindex$="[[tabIndex]]">
                             <iron-image sizing="cover"
                                         src="[[item.image]]">
                             </iron-image>
                             <div class="detail">[[item.name]]</div>
                         </div>
-                    </div>
+                    </a>
                 </template>
             </iron-list>
 

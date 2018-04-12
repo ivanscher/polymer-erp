@@ -31,10 +31,14 @@ class Lists extends Polymer.Element {
 
     ready() {
         super.ready();
-        this.$.add.addEventListener('click', this.openBy.bind(this), false);
+        this.$.add.addEventListener('click', this.golink.bind(this), false);
     }
     openBy() {
         this.$.actions.open();
+    }
+    golink(el) {
+        // Wait for ripple to finish.
+        location.href = '/dashboard/contatos';
     }
 }
 

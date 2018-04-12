@@ -23,6 +23,15 @@ class Armacao extends Polymer.Element {
         };
 
     }
+    ready() {
+        super.ready();
+        this.$.add.addEventListener('click', this.golink.bind(this), false);
+    }
+
+    golink(el) {
+        // Wait for ripple to finish.
+        location.href = '/dashboard/vendas';
+    }
 
 }
 
