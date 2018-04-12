@@ -80,7 +80,7 @@
 
     </app-header>
 
-    <app-drawer id="menuDrawer" align="start" swipe-open>
+    <app-drawer id="menuDrawer" align="start" swipe-open >
       <div style="height: 100%; overflow: auto;">
         <div class="head">
           <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
@@ -91,8 +91,24 @@
           </div>
         </div>
 
-        <iron-selector id="menu" selected="[[page]]" attr-for-selected="name" class="drawer-list"
-                                                                    role="navigation">
+
+        <iron-selector id="menu" selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+
+          <div class="flex-horizontal">
+
+            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon><div main-code class="bs-label bg-red">53</div></a></paper-item>
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+
+
+          </div>
+          <hr class="separated">
+
+          <paper-menu><paper-input label="Buscar" class="card" no-label-float  >
+            <iron-icon icon="search" slot="prefix"></iron-icon>
+          </paper-input></paper-menu>
           <paper-menu >
             <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu"><a>Tem Submenu <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon></a></paper-item>
 
@@ -114,17 +130,7 @@
             </iron-collapse>
             <hr class="separated">
 
-            <div class="flex-horizontal">
 
-            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon><div main-code class="bs-label bg-red">53</div></a></paper-item>
-
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
-
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
-
-
-            </div>
-            <hr class="separated">
 
             <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon> Chat <div main-code class="bs-label bg-red">53</div></a></paper-item>
 

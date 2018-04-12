@@ -29,6 +29,8 @@ class Dashboard extends Polymer.Element {
 
   toggle() {
     this.$.collapse.toggle();
+      let first = Polymer.dom(this.$.menu).querySelectorAll('paper-input[label="Buscar"]');
+      first.blur();
   }
 
   ready() {
@@ -39,16 +41,17 @@ class Dashboard extends Polymer.Element {
       menuDrawer,
     } = this.$;
 
-    console.log();
-
     let menu = Polymer.dom(this.$.menu).querySelectorAll('.menu');
       for(let i=0; i<menu.length; i++) {
           menu[i].addEventListener('click', (e) => {
               menuDrawer.toggle();
+
+
           })
       }
     buttonMenu.addEventListener('click', (e) => {
       menuDrawer.toggle();
+
     })
   }
 
