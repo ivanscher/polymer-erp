@@ -1,6 +1,9 @@
 <link rel="import" href="../../../bower_components/polymer/polymer-element.html">
 
 <link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../../../bower_components/iron-icons/notification-icons.html">
+<link rel="import" href="../../../bower_components/iron-icons/editor-icons.html">
 <link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
@@ -96,7 +99,7 @@
             <iron-collapse id="collapse" opened="{{opened}}">
               <paper-menu class="menu-content">
 
-                <paper-item><a href="[[dashboardPath]]drag" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Drag</a></paper-item>
+                <paper-item><a href="[[dashboardPath]]drag" class="menu"><iron-icon icon="extension" slot="item-icon"></iron-icon> Drag</a></paper-item>
 
                 <paper-item><a href="[[dashboardPath]]oculosdegrau" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Oculos de Grau</a></paper-item>
                 <paper-item><a href="[[dashboardPath]]prescricao" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Prescrição</a></paper-item>
@@ -111,23 +114,44 @@
             </iron-collapse>
             <hr class="separated">
 
+            <div class="flex-horizontal">
 
-            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon> Chat</a></paper-item>
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> Timeline</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon><div main-code class="bs-label bg-red">53</div></a></paper-item>
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+
+
+            </div>
+            <hr class="separated">
+
+            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon> Chat <div main-code class="bs-label bg-red">53</div></a></paper-item>
+
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:sentiment-satisfied" slot="item-icon"></iron-icon> Social <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:notifications-active" slot="item-icon"></iron-icon> Central Notificações <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
 
 
 
             <hr class="separated">
+            <p style="padding-left: 1em; margin-bottom: 0;"><small>Menu</small></p>
             <!--<paper-item><a href="[[dashboardPath]]contatos" class="menu"><iron-icon icon="account-circle" slot="item-icon"></iron-icon> Adicionar Contato</a></paper-item> -->
             <paper-item><a href="[[dashboardPath]]lista" class="menu"><iron-icon icon="account-circle" slot="item-icon"></iron-icon> Contatos</a></paper-item>
             <paper-item><a href="[[dashboardPath]]listagrid" class="menu"><iron-icon icon="view-module" slot="item-icon"></iron-icon> Itens</a></paper-item>
             <paper-item><a href="[[dashboardPath]]armacao" class="menu"><iron-icon icon="add-shopping-cart" slot="item-icon"></iron-icon> Vendas</a></paper-item>
             <hr class="separated">
+            <paper-item><a href="[[rootPath]]"><iron-icon icon="help" slot="item-icon"></iron-icon> Ajuda</a></paper-item>
+            <paper-item><a href="[[rootPath]]"><iron-icon icon="settings" slot="item-icon"></iron-icon> Configurações</a></paper-item>
+            <paper-item><a href="[[rootPath]]"><iron-icon icon="cached" slot="item-icon"></iron-icon> Sincronizar</a></paper-item>
+              <hr class="separated">
             <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
           </paper-menu>
 
         </iron-selector>
 
+        <p style="padding: 0 1em;"><small>Optsoul - Optidados <br/>©2018 Geeklabs, B15</small></p>
       </div>
 
     </app-drawer>
