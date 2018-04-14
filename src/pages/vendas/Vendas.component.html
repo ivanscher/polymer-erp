@@ -10,7 +10,7 @@
         <app-header class="page-header">
             <app-toolbar>
                 <paper-icon-button icon="arrow-back"></paper-icon-button>
-                <div spacer main-title class="section-title">1324 - Vendas</div>
+                <div spacer main-title class="section-title"></div>
 
 
                 <paper-item>Total R$ 2.000,00</paper-item>
@@ -50,7 +50,7 @@
                 <div class="page">
 
                     <paper-tabs selected="{{selected2}}">
-                        <paper-tab>Carrinho</paper-tab>
+                        <paper-tab>Atendimento</paper-tab>
                         <paper-tab>Dados Principais</paper-tab>
 
                         <!--<paper-tab>Total</paper-tab>-->
@@ -107,7 +107,7 @@
                             -->
 
                             <paper-tabs selected="{{selected4}}" scrollable>
-                                <paper-tab active>Itens no Carrinho</paper-tab>
+                                <paper-tab active>Itens</paper-tab>
                                 <paper-tab>Sugestões</paper-tab>
                                 <paper-tab class="havebadge">Histórico
                                     <div main-code class="bs-label bg-red">2</div>
@@ -115,7 +115,7 @@
                             </paper-tabs>
                             <iron-pages selected="{{selected4}}">
                                 <div class="display-table-on-mobile width100 self-stretch">
-                                    <iron-ajax url="http://192.168.1.174:8081/src/carrinho.json" last-response="{{items}}" auto></iron-ajax>
+                                    <iron-ajax url="http://localhost:8081/src/carrinho.json" last-response="{{items}}" auto></iron-ajax>
                                     <iron-list id="list" items="[[items]]" as="item" selection-enabled
                                                style="height: calc(100vh - 384px);">
                                         <template>
@@ -139,7 +139,7 @@
                                 </div>
 
                                 <div class="display-table-on-mobile width100 self-stretch">
-                                    <iron-ajax url="http://192.168.1.174:8081/src/carrinho.json" last-response="{{sugestoes}}" auto></iron-ajax>
+                                    <iron-ajax url="http://localhost:8081/src/carrinho.json" last-response="{{sugestoes}}" auto></iron-ajax>
                                     <iron-list id="list" items="[[sugestoes]]" as="item" selection-enabled
                                                style="height: calc(100vh - 384px);">
                                         <template>
@@ -162,7 +162,7 @@
                                     </iron-list>
                                 </div>
                                 <div class="display-table-on-mobile width100 self-stretch">
-                                    <iron-ajax url="http://192.168.1.174:8081/src/carrinho.json" last-response="{{data}}" auto></iron-ajax>
+                                    <iron-ajax url="http://localhost:8081/src/carrinho.json" last-response="{{data}}" auto></iron-ajax>
                                     <iron-list id="list" items="[[data]]" as="item" selection-enabled
                                                style="height: calc(100vh - 384px);">
                                         <template>

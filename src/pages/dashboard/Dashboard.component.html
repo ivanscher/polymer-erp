@@ -86,8 +86,8 @@
           <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
           <div class="contact-info">
 
-            <div class="name">Jonathan</div>
-            <div class="email">heyfromjonathan@gmail.com</div>
+            <div class="name">Orlando Bueno</div>
+            <div class="email">Diniz Franchising</div>
           </div>
         </div>
 
@@ -98,9 +98,9 @@
 
             <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon><div main-code class="bs-label bg-red">53</div></a></paper-item>
 
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="thumb-up" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
 
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="flag" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:notifications-active" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
 
 
           </div>
@@ -109,8 +109,29 @@
           <paper-menu><paper-input label="Buscar" class="card" no-label-float  >
             <iron-icon icon="search" slot="prefix"></iron-icon>
           </paper-input></paper-menu>
+<!--
+            <hr class="separated">
+
+
+
+            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon> Chat <div main-code class="bs-label bg-red">53</div></a></paper-item>
+
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="thumb-up" slot="item-icon"></iron-icon> Social <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+
+            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:notifications-active" slot="item-icon"></iron-icon> Alertas <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+-->
+
+
+            <hr class="separated">
+            <p style="padding-left: 1em; margin-bottom: 0;"><small>Menu</small></p>
+            <!--<paper-item><a href="[[dashboardPath]]contatos" class="menu"><iron-icon icon="account-circle" slot="item-icon"></iron-icon> Adicionar Contato</a></paper-item> -->
+            <paper-item><a href="[[dashboardPath]]lista" class="menu"><iron-icon icon="supervisor-account" slot="item-icon"></iron-icon> Contatos</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]listagrid" class="menu"><iron-icon icon="star" slot="item-icon"></iron-icon> Itens</a></paper-item>
+            <paper-item><a href="[[dashboardPath]]armacao" class="menu"><iron-icon icon="mail" slot="item-icon"></iron-icon> Atendimento</a></paper-item>
+
           <paper-menu >
-            <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu"><a>Tem Submenu <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon></a></paper-item>
+            <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu"><a>Outros <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon></a></paper-item>
 
             <iron-collapse id="collapse" opened="{{opened}}">
               <paper-menu class="menu-content">
@@ -126,27 +147,10 @@
                 <paper-item><a href="[[dashboardPath]]lentes" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Lentes</a></paper-item>
 
 
-              </paper-menu>
+
             </iron-collapse>
-            <hr class="separated">
+          </paper-menu>
 
-
-
-            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon> Chat <div main-code class="bs-label bg-red">53</div></a></paper-item>
-
-
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:sentiment-satisfied" slot="item-icon"></iron-icon> Social <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
-
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:notifications-active" slot="item-icon"></iron-icon> Central Notificações <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
-
-
-
-            <hr class="separated">
-            <p style="padding-left: 1em; margin-bottom: 0;"><small>Menu</small></p>
-            <!--<paper-item><a href="[[dashboardPath]]contatos" class="menu"><iron-icon icon="account-circle" slot="item-icon"></iron-icon> Adicionar Contato</a></paper-item> -->
-            <paper-item><a href="[[dashboardPath]]lista" class="menu"><iron-icon icon="account-circle" slot="item-icon"></iron-icon> Contatos</a></paper-item>
-            <paper-item><a href="[[dashboardPath]]listagrid" class="menu"><iron-icon icon="view-module" slot="item-icon"></iron-icon> Itens</a></paper-item>
-            <paper-item><a href="[[dashboardPath]]armacao" class="menu"><iron-icon icon="add-shopping-cart" slot="item-icon"></iron-icon> Vendas</a></paper-item>
             <hr class="separated">
             <paper-item><a href="[[rootPath]]"><iron-icon icon="help" slot="item-icon"></iron-icon> Ajuda</a></paper-item>
             <paper-item><a href="[[rootPath]]"><iron-icon icon="settings" slot="item-icon"></iron-icon> Configurações</a></paper-item>
@@ -156,8 +160,11 @@
           </paper-menu>
 
         </iron-selector>
+        <p"><small> </small></p>
+        <hr class="separated">
 
-        <p style="padding: 0 1em;"><small>Optsoul - Optidados <br/>©2018 Geeklabs, B15</small></p>
+        <p style="padding: 0 1em;"><small>OptiSoul - Optidados</small></p>
+        <p style="padding: 0 1em;">©2018 Geeks Labs, B15</p>
       </div>
 
     </app-drawer>
