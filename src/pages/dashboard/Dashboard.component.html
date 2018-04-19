@@ -48,6 +48,7 @@
 <link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
 
 <link rel="import" href="../../../bower_components/iron-swipeable-pages/iron-swipeable-pages.html">
+<link rel="import" href="../../../bower_components/in-app-search/in-app-search.html">
 
 <link rel="import" href="../contatos/Contatos.component.html">
 <link rel="import" href="../lists/Lists.component.html">
@@ -72,12 +73,13 @@
 
         <app-header condenses reveals effects="waterfall">
             <app-toolbar>
+
                 <paper-icon-button icon="menu" id="buttonMenu"></paper-icon-button>
                 <div main-title>
                     <img src="http://beta.spartandesign.com.br/b15/wp-content/uploads/2017/12/Logo_b15_home_footer.png"
                          alt="B15" width="50" class="b15" style="margin-left: 8px">
                 </div>
-
+                <in-app-search placeholder="Search"></in-app-search>
                 <paper-icon-button icon="question-answer" id="button-import" class="hideonmobile"></paper-icon-button>
                 <paper-tooltip for="button-import" offset="0" position="top">Chat</paper-tooltip>
 
