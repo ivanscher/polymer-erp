@@ -35,7 +35,7 @@
 <link rel="import" href="../../../bower_components/paper-toggle-button/paper-toggle-button.html">
 
 <!--
-<link rel="import" href="../../../bower_components/bwt-datatable/bwt-datatable.html">
+  <link rel="import" href="../../../bower_components/bwt-datatable/bwt-datatable.html">
 -->
 
 <link rel="import" href="../../../bower_components/paper-radio-group/paper-radio-group.html">
@@ -64,12 +64,12 @@
 <link rel="import" href="../lentes/Lentes.component.html">
 <link rel="import" href="../vendas/Vendas.component.html">
 
-
 <link rel="import" href="Dashboard.style.html">
 
 <dom-module id="dashboard-page">
   <template>
     <style include="dashboard-style"></style>
+
     <app-header condenses reveals effects="waterfall">
       <app-toolbar>
         <paper-icon-button icon="menu" id="buttonMenu"></paper-icon-button>
@@ -77,122 +77,204 @@
           <img src="http://beta.spartandesign.com.br/b15/wp-content/uploads/2017/12/Logo_b15_home_footer.png" alt="B15" width="50" class="b15">
         </div>
       </app-toolbar>
-
     </app-header>
 
-    <app-drawer id="menuDrawer" align="start" swipe-open >
+    <app-drawer id="menuDrawer" align="start" swipe-open>
       <div style="height: 100%; overflow: auto;">
         <div class="head">
-          <iron-image class="avatar" sizing="contain" src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg"></iron-image>
-          <div class="contact-info">
+          <iron-image 
+             class="avatar"
+             sizing="contain"
+             src="https://s3.amazonaws.com/uifaces/faces/twitter/enda/73.jpg">
+          </iron-image>
 
+          <div class="contact-info">
             <div class="name">Orlando Bueno</div>
             <div class="email">Diniz Franchising</div>
           </div>
         </div>
 
-
-        <iron-selector id="menu" selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-
+        <iron-selector id="menu" class="drawer-list" selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <div class="flex-horizontal">
+            <paper-item tabindex="-1">
+              <a href="[[dashboardPath]]chat" class="menu" tabindex="-1">
+                <iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon>
+                <div main-code class="bs-label bg-red">53</div>
+              </a>
+            </paper-item>
 
-            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon><div main-code class="bs-label bg-red">53</div></a></paper-item>
+            <paper-item tabindex="-1">
+              <a href="[[dashboardPath]]timeline" class="menu" tabindex="-1">
+                <iron-icon icon="thumb-up" slot="item-icon"></iron-icon>
+                <div main-code class="bs-label bg-transparent">22</div>
+              </a>
+            </paper-item>
 
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="thumb-up" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
-
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:notifications-active" slot="item-icon"></iron-icon> <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
-
-
+            <paper-item tabindex="-1">
+              <a href="[[dashboardPath]]timeline" class="menu" tabindex="-1">
+                <iron-icon icon="social:notifications-active" slot="item-icon"></iron-icon> 
+                <div main-code class="bs-label bg-transparent">22</div>
+              </a>
+            </paper-item>
           </div>
+
           <hr class="separated">
 
-          <paper-menu><paper-input label="Buscar" class="card" no-label-float  >
-            <iron-icon icon="search" slot="prefix"></iron-icon>
-          </paper-input></paper-menu>
-<!--
-            <hr class="separated">
+          <paper-menu>
+            <paper-input label="Buscar" class="card" no-label-float>
+              <iron-icon icon="search" slot="prefix"></iron-icon>
+            </paper-input>
+          </paper-menu>
 
+          <hr class="separated">
 
+          <p style="padding-left: 1em; margin-bottom: 0;"><small>Menu</small></p>
 
-            <paper-item><a href="[[dashboardPath]]chat" class="menu"><iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon> Chat <div main-code class="bs-label bg-red">53</div></a></paper-item>
+          <paper-item tabindex="-1">
+            <a href="[[dashboardPath]]lista" class="menu" tabindex="-1">
+              <iron-icon icon="supervisor-account" slot="item-icon"></iron-icon>
+              Contatos
+            </a>
+          </paper-item>
 
+          <paper-item tabindex="-1">
+            <a href="[[dashboardPath]]listagrid" class="menu" tabindex="-1">
+              <iron-icon icon="star" slot="item-icon"></iron-icon>
+              Itens
+            </a>
+          </paper-item>
 
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="thumb-up" slot="item-icon"></iron-icon> Social <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
+          <paper-item tabindex="-1">
+            <a href="[[dashboardPath]]armacao" class="menu" tabindex="-1">
+              <iron-icon icon="mail" slot="item-icon"></iron-icon>
+              Atendimento
+            </a>
+          </paper-item>
 
-            <paper-item><a href="[[dashboardPath]]timeline" class="menu"><iron-icon icon="social:notifications-active" slot="item-icon"></iron-icon> Alertas <div main-code class="bs-label bg-transparent">22</div></a></paper-item>
--->
-
-
-            <hr class="separated">
-            <p style="padding-left: 1em; margin-bottom: 0;"><small>Menu</small></p>
-            <!--<paper-item><a href="[[dashboardPath]]contatos" class="menu"><iron-icon icon="account-circle" slot="item-icon"></iron-icon> Adicionar Contato</a></paper-item> -->
-            <paper-item><a href="[[dashboardPath]]lista" class="menu"><iron-icon icon="supervisor-account" slot="item-icon"></iron-icon> Contatos</a></paper-item>
-            <paper-item><a href="[[dashboardPath]]listagrid" class="menu"><iron-icon icon="star" slot="item-icon"></iron-icon> Itens</a></paper-item>
-            <paper-item><a href="[[dashboardPath]]armacao" class="menu"><iron-icon icon="mail" slot="item-icon"></iron-icon> Atendimento</a></paper-item>
-
-          <paper-menu >
-            <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu"><a>Outros <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon></a></paper-item>
+          <paper-menu>
+            <paper-item on-click="toggle" aria-expanded$="[[opened]]" aria-controls="collapse" class="collapse-menu" tabindex="-1">
+              <a tabindex="-1">
+                Outros
+                <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon>
+              </a>
+            </paper-item>
 
             <iron-collapse id="collapse" opened="{{opened}}">
               <paper-menu class="menu-content">
-
-                <paper-item><a href="[[dashboardPath]]drag" class="menu"><iron-icon icon="extension" slot="item-icon"></iron-icon> Drag</a></paper-item>
-
-                <paper-item><a href="[[dashboardPath]]oculosdegrau" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Oculos de Grau</a></paper-item>
-                <paper-item><a href="[[dashboardPath]]prescricao" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Prescrição</a></paper-item>
-                <paper-item><a href="[[dashboardPath]]armacao" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Armação</a></paper-item>
-                <paper-item><a href="[[dashboardPath]]armacaoform" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Armação Formulário</a></paper-item>
-                <paper-item><a href="[[dashboardPath]]listagrid" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> List Grid</a></paper-item>
-
-                <paper-item><a href="[[dashboardPath]]lentes" class="menu"><iron-icon icon="label" slot="item-icon"></iron-icon> Lentes</a></paper-item>
-
-
-
+                <paper-item tabindex="-1">
+                  <a href="[[dashboardPath]]drag" class="menu" tabindex="-1">
+                    <iron-icon icon="extension" slot="item-icon"></iron-icon>
+                    Drag
+                  </a>
+                </paper-item>
+                <paper-item tabindex="-1">
+                  <a href="[[dashboardPath]]oculosdegrau" class="menu" tabindex="-1">
+                    <iron-icon icon="label" slot="item-icon"></iron-icon>
+                    Oculos de Grau
+                  </a>
+                </paper-item>
+                <paper-item tabindex="-1">
+                  <a href="[[dashboardPath]]prescricao" class="menu" tabindex="-1">
+                    <iron-icon icon="label" slot="item-icon"></iron-icon>
+                    Prescrição
+                  </a>
+                </paper-item>
+                <paper-item tabindex="-1">
+                  <a href="[[dashboardPath]]armacao" class="menu" tabindex="-1">
+                    <iron-icon icon="label" slot="item-icon"></iron-icon>
+                    Armação
+                  </a>
+                </paper-item>
+                <paper-item tabindex="-1">
+                  <a href="[[dashboardPath]]armacaoform" class="menu" tabindex="-1">
+                    <iron-icon icon="label" slot="item-icon"></iron-icon>
+                    Armação Formulário
+                  </a>
+                </paper-item>
+                <paper-item tabindex="-1">
+                  <a href="[[dashboardPath]]listagrid" class="menu" tabindex="-1">
+                    <iron-icon icon="label" slot="item-icon"></iron-icon>
+                    List Grid
+                  </a>
+                </paper-item>
+                <paper-item tabindex="-1">
+                  <a href="[[dashboardPath]]lentes" class="menu" tabindex="-1">
+                    <iron-icon icon="label" slot="item-icon"></iron-icon>
+                    Lentes
+                  </a>
+                </paper-item>
+              </paper-menu>
             </iron-collapse>
-          </paper-menu>
 
             <hr class="separated">
-            <paper-item><a href="[[rootPath]]"><iron-icon icon="help" slot="item-icon"></iron-icon> Ajuda</a></paper-item>
-            <paper-item><a href="[[rootPath]]"><iron-icon icon="settings" slot="item-icon"></iron-icon> Configurações</a></paper-item>
-            <paper-item><a href="[[rootPath]]"><iron-icon icon="cached" slot="item-icon"></iron-icon> Sincronizar</a></paper-item>
-              <hr class="separated">
-            <paper-item><a href="[[rootPath]]" class="geek-blue"><iron-icon icon="settings-power" slot="item-icon"></iron-icon> Logout</a></paper-item>
+
+            <paper-item tabindex="-1">
+              <a href="[[rootPath]]" tabindex="-1">
+                <iron-icon icon="help" slot="item-icon"></iron-icon>
+                Ajuda
+              </a>
+            </paper-item>
+            <paper-item tabindex="-1">
+              <a href="[[rootPath]]" tabindex="-1">
+                <iron-icon icon="settings" slot="item-icon"></iron-icon>
+                Configurações
+              </a>
+            </paper-item>
+            <paper-item tabindex="-1">
+              <a href="[[rootPath]]" tabindex="-1">
+                <iron-icon icon="cached" slot="item-icon"></iron-icon>
+                Sincronizar
+              </a>
+            </paper-item>
+            
+            <hr class="separated">
+
+            <paper-item tabindex="-1" tabindex="-1">
+              <a href="[[rootPath]]" class="geek-blue" tabindex="-1">
+                <iron-icon icon="settings-power" slot="item-icon"></iron-icon>
+                Logout
+              </a>
+            </paper-item>
           </paper-menu>
-
         </iron-selector>
-        <p"><small> </small></p>
-        <hr class="separated">
 
+        <hr class="separated">
         <p style="padding: 0 1em;"><small>OptiSoul - Optidados</small></p>
         <p style="padding: 0 1em;">©2018 Geeks Labs, B15</p>
       </div>
-
     </app-drawer>
 
     <section id="view">
-
       <app-route
-             route="{{route}}"
-             pattern="/:page"
-             data="{{routeData}}"></app-route>
-           <iron-pages selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="contatos" selected-attribute="visible" role="main">
-             <contatos-page name="contatos"></contatos-page>
-             <lists-page name="lista"></lists-page>
-             <listsgrid-page name="listagrid"></listsgrid-page>
-             <listsgridinfo-page name="listsgridinfo"></listsgridinfo-page>
-             <drag-page name="drag"></drag-page>
-             <timeline-page name="timeline"></timeline-page>
-             <chat-page name="chat"></chat-page>
-             <itens-page name="itens"></itens-page>
-             <prescricao-page name="prescricao"></prescricao-page>
-             <oculosdegrau-page name="oculosdegrau"></oculosdegrau-page>
-             <armacao-page name="armacao"></armacao-page>
-             <armacaoform-page name="armacaoform"></armacaoform-page>
-             <lentes-page name="lentes"></lentes-page>
-             <vendas-page name="vendas"></vendas-page>
-           </iron-pages>
-
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}">
+      </app-route>
+      <iron-pages
+        selected="[[routeData.page]]"
+        attr-for-selected="name"
+        fallback-selection="contatos"
+        selected-attribute="visible"
+        role="main">
+        <contatos-page name="contatos"></contatos-page>
+        <lists-page name="lista"></lists-page>
+        <listsgrid-page name="listagrid"></listsgrid-page>
+        <listsgridinfo-page name="listsgridinfo"></listsgridinfo-page>
+        <drag-page name="drag"></drag-page>
+        <timeline-page name="timeline"></timeline-page>
+        <chat-page name="chat"></chat-page>
+        <itens-page name="itens"></itens-page>
+        <prescricao-page name="prescricao"></prescricao-page>
+        <oculosdegrau-page name="oculosdegrau"></oculosdegrau-page>
+        <armacao-page name="armacao"></armacao-page>
+        <armacaoform-page name="armacaoform"></armacaoform-page>
+        <lentes-page name="lentes"></lentes-page>
+        <vendas-page name="vendas"></vendas-page>
+      </iron-pages>
     </section>
+
   </template>
+
   <script src="Dashboard.component.js"></script>
+
 </dom-module>

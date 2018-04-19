@@ -50,7 +50,12 @@
     "webcomponentsjs": "^1.0.0",
     "paper-input": "^2.0.5",
     "paper-item": "^2.0.0",
-    "iron-collapse": "^2.0.0"
+    "iron-collapse": "^2.0.0",
+    "paper-styles": "^2.0.0",
+    "iron-validatable-behavior": "^2.0.0",
+    "iron-resizable-behavior": "2.0-preview",
+    "iron-form-element-behavior": "^2.0.0",
+    "iron-input": "^2.0.0"
   },
   "devDependencies": {
     "web-component-tester": "Polymer/web-component-tester#^6.0.0"
