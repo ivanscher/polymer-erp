@@ -10,9 +10,9 @@
                 background-color: #eee;
             }
             #menuDrawer .avatar{
-                width: 64px;
-                height: 64px;
-                margin-bottom: 8px;
+                width: 54px;
+                height: 54px;
+                margin: 0 0 16px 16px;
             }
             paper-item.collapse-menu,
             paper-item.collapse-menu:focus{
@@ -28,10 +28,30 @@
             img.b15{
                 margin-top: 7px;
             }
+            .collapse-menu iron-icon{
+                float: right;
+            }
+            #menuDrawer div.head ul li a{
+                display: block;
+                font-size: 12px;
+                color: white;
+            }
+            #menuDrawer div.head ul li{
+                list-style: none;
+            }
+            #menuDrawer div.head ul{
+                padding: 0;
+                margin-left: 16px;
+            }
+            #menuDrawer div.head p{
+                font-size: 12px;
+                margin-left: 16px !important;
+                color: white;
+            }
             div.head{
                 background: url(../../resources/login-bg.jpg) top no-repeat;
                 background-size: cover;
-                padding: 16px 8px;
+                padding: 16px 24px 4px 0;
                 color: white;
             }
             hr.separated{
@@ -67,8 +87,11 @@
             }
             #menuDrawer{
                 z-index: 9999;
+                --app-drawer-width: 320px;
             }
             #startDrawer {
+
+
                 --app-drawer-content-container: {
                     box-shadow: 1px 0 2px 1px rgba(0,0,0,0.18);
                 }
@@ -78,6 +101,7 @@
                     box-shadow: -1px 0 2px 1px rgba(0,0,0,0.18);
                 }
             }
+
             app-header {
                 position: fixed;
                 top: 0;

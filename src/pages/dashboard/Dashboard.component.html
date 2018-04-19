@@ -77,11 +77,22 @@
                     <img src="http://beta.spartandesign.com.br/b15/wp-content/uploads/2017/12/Logo_b15_home_footer.png"
                          alt="B15" width="50" class="b15" style="margin-left: 8px">
                 </div>
+
+                <paper-icon-button icon="question-answer" id="button-import"></paper-icon-button>
+                <paper-tooltip for="button-import" offset="0" position="top">Chat</paper-tooltip>
+
+                <paper-icon-button icon="thumb-up" id="button-refresh"></paper-icon-button>
+                <paper-tooltip for="button-refresh" offset="0" position="top">Timeline</paper-tooltip>
+
+                <paper-icon-button icon="social:notifications-active" id="button-save"></paper-icon-button>
+                <paper-tooltip for="button-save" offset="0" position="top">Timeline</paper-tooltip>
+
+
             </app-toolbar>
         </app-header>
 
         <app-drawer id="menuDrawer" align="start" swipe-open>
-            <div style="height: 100%; overflow: auto;">
+            <div id="menubody" style="height: 100%; overflow: auto;">
                 <div class="head">
                     <iron-image
                             class="avatar"
@@ -90,9 +101,36 @@
                     </iron-image>
 
                     <div class="contact-info">
-                        <div class="name">Orlando Bueno</div>
-                        <div class="email">Diniz Franchising</div>
+                        <p><strong>Orlando Bueno</strong></p>
+                        <p>Diniz Franchising</p>
                     </div>
+                    <ul>
+
+                        <li on-click="toggle2" aria-expanded$="[[opened2]]" aria-controls="collapse"
+                            class="collapse-menu">
+                            <a tabindex="-1">
+                                Ótica Diniz
+                                <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon>
+                            </a>
+                        </li>
+                        <iron-collapse id="collapse2" opened="{{opened2}}">
+                            <ul class="menu-content">
+
+                                <li tabindex="-1">
+                                    <a href="[[dashboardPath]]armacaoform" class="menu" tabindex="-1">
+                                        <iron-icon icon="label" slot="item-icon"></iron-icon>
+                                        Optdados
+                                    </a>
+                                </li>
+                                <li tabindex="-1">
+                                    <a href="[[dashboardPath]]listagrid" class="menu" tabindex="-1">
+                                        <iron-icon icon="label" slot="item-icon"></iron-icon>
+                                        Geek
+                                    </a>
+                                </li>
+                            </ul>
+                        </iron-collapse>
+                    </ul>
                 </div>
 
                 <iron-selector id="menu" class="drawer-list" selected="[[page]]" attr-for-selected="name"
@@ -138,21 +176,27 @@
                         <li tabindex="-1">
                             <a href="[[dashboardPath]]lista" class="menu" tabindex="-1">
                                 <iron-icon icon="supervisor-account" slot="item-icon"></iron-icon>
-                                Contatos
+                                Listar ontatos
                             </a>
                         </li>
 
                         <li tabindex="-1">
                             <a href="[[dashboardPath]]listagrid" class="menu" tabindex="-1">
                                 <iron-icon icon="star" slot="item-icon"></iron-icon>
-                                Itens
+                                Listar Itens
                             </a>
                         </li>
 
                         <li tabindex="-1">
                             <a href="[[dashboardPath]]armacao" class="menu" tabindex="-1">
-                                <iron-icon icon="mail" slot="item-icon"></iron-icon>
-                                Atendimento
+                                <iron-icon icon="view-headline" slot="item-icon"></iron-icon>
+                                Listar Produtos
+                            </a>
+                        </li>
+                        <li tabindex="-1">
+                            <a href="[[dashboardPath]]vendas" class="menu" tabindex="-1">
+                                <iron-icon icon="editor:attach-money" slot="item-icon"></iron-icon>
+                                Iniciar Atendimento
                             </a>
                         </li>
                     </ul>
