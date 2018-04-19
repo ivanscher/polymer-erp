@@ -11,43 +11,41 @@
             <app-toolbar>
                 <paper-icon-button icon="arrow-back"></paper-icon-button>
                 <div spacer main-title class="section-title">Lista de Fotos</div>
+                <paper-input label="Buscar" class="card" no-label-float name="search" on-value-changed="onChangeValueSearch">
+                    <iron-icon icon="search" slot="prefix"></iron-icon>
+                </paper-input>
                 <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
                 <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
 
                 <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
                 <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
-
-
             </app-toolbar>
         </app-header>
-
-
         <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
-
             <paper-input label="Buscar" class="card" no-label-float  >
                 <iron-icon icon="search" slot="prefix"></iron-icon>
             </paper-input>
-
-
-            <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
-            <iron-list id="list" items="[[data]]" as="item" selection-enabled grid>
-                <template>
-
+            <iron-ajax
+                url="../../armacao.json"
+                last-response="{{data}}"
+                on-response="handleResponse"
+                auto>
+            </iron-ajax>
+            <div class="list-items">
+                <template is="dom-repeat" items="{{dataList}}">
                     <a href="/dashboard/itens" class="photoContainer">
                         <div class="photoContent" tabindex$="[[tabIndex]]">
-                            <iron-image sizing="cover"
-                                        src="[[item.image]]">
-                            </iron-image>
+                            <iron-image sizing="cover" src="[[item.image]]"></iron-image>
                             <div class="detail">[[item.name]]</div>
                         </div>
                     </a>
                 </template>
-            </iron-list>
-
-
-
+            </div>
         </div>
 
+        <div>
+        </div>
+        
         <paper-fab mini icon="add" id="add"></paper-fab>
         <paper-dialog id="actions" modal>
             <h2>Dialog Title</h2>
