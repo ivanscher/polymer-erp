@@ -23,16 +23,16 @@ class Dashboard extends Polymer.Element {
       dashboardPath: {
         type: String, 
         value: '/dashboard/',
-      }
+      },
     };
   }
 
 
-    toggle() {
-        this.$.collapse.toggle();
-        let first = Polymer.dom(this.$.menu).querySelectorAll('paper-input[label="Buscar"]');
-        first.blur();
-    }
+  toggle() {
+      this.$.collapse.toggle();
+      let first = Polymer.dom(this.$.menu).querySelectorAll('paper-input[label="Buscar"]');
+      first.blur();
+  }
 
   toggle2() {
     this.$.collapse2.toggle();
@@ -46,24 +46,19 @@ class Dashboard extends Polymer.Element {
     const {
       buttonMenu,
       menuDrawer,
-        menubody
     } = this.$;
 
     let menu = Polymer.dom(this.$.menu).querySelectorAll('.menu');
-      for(let i=0; i<menu.length; i++) {
-          menu[i].addEventListener('click', (e) => {
-              menuDrawer.toggle();
-          })
-      }
-      menubody.addEventListener('mouseleave', (e) => {
-          menuDrawer.close();
-      })
-      buttonMenu.addEventListener('mouseenter', (e) => {
-          menuDrawer.open();
-      })
+
+    for(let i=0; i<menu.length; i++) {
+      menu[i].addEventListener('click', (e) => {
+        menuDrawer.toggle();
+      });
+    }
+
     buttonMenu.addEventListener('click', (e) => {
-      menuDrawer.open();
-    })
+      menuDrawer.toggle();
+    });    
   }
 
   _routePageChanged(page) {
