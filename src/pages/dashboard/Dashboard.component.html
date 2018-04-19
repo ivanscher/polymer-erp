@@ -78,13 +78,13 @@
                          alt="B15" width="50" class="b15" style="margin-left: 8px">
                 </div>
 
-                <paper-icon-button icon="question-answer" id="button-import"></paper-icon-button>
+                <paper-icon-button icon="question-answer" id="button-import" class="hideonmobile"></paper-icon-button>
                 <paper-tooltip for="button-import" offset="0" position="top">Chat</paper-tooltip>
 
-                <paper-icon-button icon="thumb-up" id="button-refresh"></paper-icon-button>
+                <paper-icon-button icon="thumb-up" id="button-refresh" class="hideonmobile"></paper-icon-button>
                 <paper-tooltip for="button-refresh" offset="0" position="top">Timeline</paper-tooltip>
 
-                <paper-icon-button icon="social:notifications-active" id="button-save"></paper-icon-button>
+                <paper-icon-button icon="social:notifications-active" id="button-save" class="hideonmobile"></paper-icon-button>
                 <paper-tooltip for="button-save" offset="0" position="top">Timeline</paper-tooltip>
 
 
@@ -141,8 +141,8 @@
                             <iron-icon icon="search" slot="prefix"></iron-icon>
                         </paper-input>
 
-                    <hr class="separated">
-                    <div class="flex-horizontal">
+                    <hr class="separated hideondesktop">
+                    <div class="flex-horizontal hideondesktop">
                         <paper-item tabindex="-1">
                             <a href="[[dashboardPath]]chat" class="menu" tabindex="-1">
                                 <iron-icon icon="question-answer" slot="item-icon" class="geek-blue"></iron-icon>

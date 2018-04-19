@@ -503,7 +503,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: rgba(0,0,0,.54);
         text-align: right;
       }
+      .hideondesktop{
+        display: none;
+      }
       @media (max-width: 840px) {
+        .hideonmobile{
+          display: none;
+        }
+        .hideondesktop{
+          display: block;
+        }
+
+        .hideondesktop.flex-vertical,
+        .hideondesktop.flex-horizontal{
+          display: flex;
+        }
         div[main-code]{
           text-align: left;
         }
