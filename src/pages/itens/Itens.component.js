@@ -16,9 +16,9 @@ class Itens extends Polymer.Element {
                 value: 0,
 
             },
-            selected2:{
+            selected2: {
                 type: Number,
-                value: 0
+                value: 0,
             }
 
         };
