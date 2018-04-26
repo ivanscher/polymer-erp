@@ -82,6 +82,13 @@
                 box-shadow: none;
             }
 
+            .show{
+                display: block;
+            }
+            .hide{
+                display: none;
+            }
+            #grid,
             #list {
                 padding-top: 0px;
                 height: calc(100vh - 64px);
@@ -196,16 +203,16 @@
                 }
             }
 
-            #list.grid .photoContainer {
+            #grid .photoContainer {
                 float: left;
                 width: 25%;
             }
 
-            #list.grid .photoContent {
+            #grid .photoContent {
                 width: auto;
             }
 
-            #list.grid .photoContent {
+            #grid .photoContent {
                 @apply --layout;
                 background-color: #fff;
                 position: relative;
@@ -218,7 +225,7 @@
                 border: 1px solid #ddd;
             }
 
-            #list.grid .photoContent > iron-image {
+            #grid .photoContent > iron-image {
                 width: 90%;
                 display: block;
                 margin: 10px auto;
@@ -226,7 +233,7 @@
                 min-height: 166px;
             }
 
-            #list.grid .photoContent > .detail {
+            #grid .photoContent > .detail {
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -240,41 +247,41 @@
                 transition: opacity 0.1s;
             }
 
-            #list.grid .primary{
+            #grid .primary{
                 text-align: center;
                 font-size: 18px;
                 margin: 0px;
                 padding: 5px;
                 background-color: white;
             }
-            #list.grid .shortText{
+            #grid .shortText{
                 background-color: white;
                 color: grey;
                 font-size: 12px;
                 margin: 12px 0;
                 text-align: center;
             }
-            #list.grid .price{
+            #grid .price{
                 font-size: 24px;
                 color:  #0098db;
             }
             @media (max-width: 990px) {
-                #list.grid .photoContainer {
+                #grid .photoContainer {
                     width: 50%;
                 }
 
-                #list.grid .photoContent {
+                #grid .photoContent {
                     width: auto;
                 }
             }
 
             @media (max-width: 640px) {
 
-                #list.grid .photoContent > iron-image{
+                #grid .photoContent > iron-image{
                     width: 100%;
                     min-height: 120px;
                 }
-                #list.grid .photoContent > .detail {
+                #grid .photoContent > .detail {
                     opacity: 1;
                 }
             }

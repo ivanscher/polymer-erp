@@ -22,6 +22,14 @@ class Armacao extends Polymer.Element {
             dataList: {
                 type: Array,
                 value: [],
+            },
+            listclass: {
+                type: String,
+                value: 'show' // init the value to true so it will be hidden on page load
+            },
+            gridclass: {
+                type: String,
+                value: 'hide' // init the value to true so it will be hidden on page load
             }
 
         };
@@ -46,6 +54,17 @@ class Armacao extends Polymer.Element {
         super.ready();
         this.$.add.addEventListener('click', this.golink.bind(this), false);
         this.$.buttonfilter.addEventListener('click', this.openBy.bind(this), false);
+        this.$.viewmodule.addEventListener('click', this.gridView.bind(this), false);
+        this.$.viewlist.addEventListener('click', this.listView.bind(this), false);
+    }
+    listView(){
+        this.listclass='show';
+        this.gridclass='hide';
+
+    }
+    gridView(){
+        this.listclass='hide';
+        this.gridclass='show';
     }
 
     golink(el) {

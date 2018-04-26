@@ -27,8 +27,8 @@
                     </paper-listbox>
                 </paper-menu-button>
 
-                <!--<paper-icon-button icon="view-list" id="button-refresh"></paper-icon-button>-->
-                <paper-icon-button icon="view-module" id="button-refresh"></paper-icon-button>
+                <paper-icon-button icon="view-list" id="viewlist" class$="{{gridclass}}"></paper-icon-button>
+                <paper-icon-button icon="view-module" id="viewmodule"  class$="{{listclass}}"></paper-icon-button>
 
             </app-toolbar>
         </app-header>
@@ -43,11 +43,9 @@
                 <div class="page">
                     <div class=" display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
 
-
-
-
                         <iron-ajax url="../../armacao.json  " last-response="{{data}}" on-response="handleResponse" auto></iron-ajax>
-                        <div id="list">
+
+                        <div id="list" class$="{{listclass}}" >
                             <template is="dom-repeat" items="{{dataList}}">
                                 <a href="/dashboard/vendas" class="item" tabindex$="[[tabIndex]]">
                                     <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
@@ -65,7 +63,7 @@
                             </template>
                         </div>
 
-                        <div id="list" class="grid">
+                        <div id="grid" class$="{{gridclass}}">
                             <template is="dom-repeat" items="{{dataList}}">
 
                                 <div class="photoContainer">
