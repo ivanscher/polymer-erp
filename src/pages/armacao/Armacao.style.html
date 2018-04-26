@@ -195,6 +195,89 @@
                     font-size: 14px;
                 }
             }
+
+            #list.grid .photoContainer {
+                float: left;
+                width: 25%;
+            }
+
+            #list.grid .photoContent {
+                width: auto;
+            }
+
+            #list.grid .photoContent {
+                @apply --layout;
+                background-color: #fff;
+                position: relative;
+                margin: 8px;
+                padding: 8px;
+                border: 1px solid #fff;
+            }
+            .photoContent:hover{
+                cursor: pointer;
+                border: 1px solid #ddd;
+            }
+
+            #list.grid .photoContent > iron-image {
+                width: 90%;
+                display: block;
+                margin: 10px auto;
+                height: auto;
+                min-height: 166px;
+            }
+
+            #list.grid .photoContent > .detail {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #0098DB ;
+                color: white;
+                font-size: 20px;
+                font-weight: 100;
+                padding: 20px;
+                opacity: 0;
+                transition: opacity 0.1s;
+            }
+
+            #list.grid .primary{
+                text-align: center;
+                font-size: 18px;
+                margin: 0px;
+                padding: 5px;
+                background-color: white;
+            }
+            #list.grid .shortText{
+                background-color: white;
+                color: grey;
+                font-size: 12px;
+                margin: 12px 0;
+                text-align: center;
+            }
+            #list.grid .price{
+                font-size: 24px;
+                color:  #0098db;
+            }
+            @media (max-width: 990px) {
+                #list.grid .photoContainer {
+                    width: 50%;
+                }
+
+                #list.grid .photoContent {
+                    width: auto;
+                }
+            }
+
+            @media (max-width: 640px) {
+
+                #list.grid .photoContent > iron-image{
+                    width: 100%;
+                    min-height: 120px;
+                }
+                #list.grid .photoContent > .detail {
+                    opacity: 1;
+                }
+            }
         </style>
     </template>
 </dom-module>

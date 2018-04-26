@@ -64,6 +64,30 @@
                                 </a>
                             </template>
                         </div>
+
+                        <div id="list" class="grid">
+                            <template is="dom-repeat" items="{{dataList}}">
+
+                                <div class="photoContainer">
+                                    <a href="/dashboard/vendas" class="photoContent flex-vertical" tabindex$="[[tabIndex]]">
+
+                                        <iron-image sizing="cover"
+                                                    src="[[item.image]]">
+                                        </iron-image>
+
+                                        <h2 class="primary ">
+                                            [[item.name]]
+
+                                        </h2>
+                                        <p class="shortText">[[item.descricao]]</p>
+                                        <h3 class="primary price">[[item.preco]]</h3>
+
+
+                                    </a>
+                                </div>
+
+                            </template>
+                        </div>
                     </div>
                 </div>
             </div>

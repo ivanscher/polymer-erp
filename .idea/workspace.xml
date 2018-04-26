@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dc10c5c-0bef-4a48-9241-3b3a59094c72" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/armacao/Armacao.component.html" afterPath="$PROJECT_DIR$/src/pages/armacao/Armacao.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/armacao/Armacao.style.html" afterPath="$PROJECT_DIR$/src/pages/armacao/Armacao.style.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/lists/ListsGridInfo.style.html" afterPath="$PROJECT_DIR$/src/pages/lists/ListsGridInfo.style.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Armacao.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Armacao.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/armacao/Armacao.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="468">
+              <caret line="67" column="50" lean-forward="false" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#paper-button#0;n#paper-dialog#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
               </folding>
@@ -29,21 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListsGridInfo.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/lists/ListsGridInfo.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Armacao.style.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/armacao/Armacao.style.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+            <state relative-caret-position="267">
+              <caret line="276" column="27" lean-forward="false" selection-start-line="276" selection-start-column="27" selection-end-line="276" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -160,9 +152,9 @@
         <option value="$PROJECT_DIR$/src/pages/lists/Lists.style.html" />
         <option value="$PROJECT_DIR$/src/pages/lists/ListsGridInfo.component.html" />
         <option value="$PROJECT_DIR$/src/pages/lists/ListsGridInfo.component.js" />
-        <option value="$PROJECT_DIR$/src/pages/lists/ListsGridInfo.style.html" />
         <option value="$PROJECT_DIR$/src/pages/dashboard/Dashboard.component.html" />
         <option value="$PROJECT_DIR$/src/pages/armacao/Armacao.component.js" />
+        <option value="$PROJECT_DIR$/src/pages/lists/ListsGridInfo.style.html" />
         <option value="$PROJECT_DIR$/src/pages/armacao/Armacao.style.html" />
         <option value="$PROJECT_DIR$/src/pages/armacao/Armacao.component.html" />
       </list>
@@ -322,7 +314,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Prototipos/assinatura-lian" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../elitetraining" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="D:\laragon\www\polymer-erp\node_modules\eslint" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -466,12 +458,12 @@
       <workItem from="1523543347490" duration="14811000" />
       <workItem from="1524142094432" duration="6284000" />
       <workItem from="1524151768394" duration="13691000" />
-      <workItem from="1524745671589" duration="14197000" />
+      <workItem from="1524745671589" duration="15571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303944000" />
+    <option name="totallyTimeSpent" value="305318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -768,14 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/lists/ListsGridInfo.style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/paper-input/paper-input.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1381">
@@ -859,29 +843,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/lists/ListsGridInfo.style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="116" column="13" lean-forward="false" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/lists/ListsGridInfo.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="54" column="18" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="54" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/armacao/Armacao.style.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+        <state relative-caret-position="267">
+          <caret line="276" column="27" lean-forward="false" selection-start-line="276" selection-start-column="27" selection-end-line="276" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/armacao/Armacao.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="468">
+          <caret line="67" column="50" lean-forward="false" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#paper-button#0;n#paper-dialog#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/lists/ListsGridInfo.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
