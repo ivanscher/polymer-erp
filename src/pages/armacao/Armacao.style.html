@@ -27,14 +27,10 @@
                 text-transform: none;
             }
 
-            iron-list {
+            #list {
                 padding-top: 0px;
                 height: calc(100vh - 192px);
-                --iron-list-items-container: {
-                    width: calc(100% - 16px);
-                    margin: 0 auto;
-                    border-bottom: 1px solid #ddd;
-                };
+                overflow-y: auto;
             }
             paper-fab{
                 position: fixed;
@@ -45,13 +41,13 @@
                 height: 56px;
                 width: 56px;
             }
-            iron-list iron-icon.blue{
+            #list iron-icon.blue{
                 color: #0098DB;
             }
-            iron-list iron-icon.red{
+            #list iron-icon.red{
                 color: #EB5757;
             }
-            iron-list iron-icon{
+            #list iron-icon{
                 margin-right: 10px;
             }
             .item {
@@ -134,11 +130,6 @@
             @media (max-width: 840px) {
                 paper-toolbar .bottom.title {
                     font-size: 14px;
-                }
-                iron-list{
-                    --iron-list-items-container: {
-                        width: 100% ;
-                    }
                 }
             }
         </style>

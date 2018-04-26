@@ -11,9 +11,7 @@
             <app-toolbar>
                 <paper-icon-button icon="arrow-back"></paper-icon-button>
                 <div spacer main-title class="section-title">Lista de Fotos</div>
-                <paper-input label="Buscar" class="card" no-label-float name="search" on-value-changed="onChangeValueSearch">
-                    <iron-icon icon="search" slot="prefix"></iron-icon>
-                </paper-input>
+
                 <paper-icon-button icon="file-upload" id="button-import"></paper-icon-button>
                 <paper-tooltip for="button-import" offset="0" position="top">Importar</paper-tooltip>
 
@@ -22,7 +20,7 @@
             </app-toolbar>
         </app-header>
         <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
-            <paper-input label="Buscar" class="card" no-label-float  >
+            <paper-input label="Buscar" class="card" no-label-float name="search" on-value-changed="onChangeValueSearch">
                 <iron-icon icon="search" slot="prefix"></iron-icon>
             </paper-input>
             <iron-ajax

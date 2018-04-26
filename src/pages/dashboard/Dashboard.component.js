@@ -27,7 +27,6 @@ class Dashboard extends Polymer.Element {
     };
   }
 
-
   toggle() {
       this.$.collapse.toggle();
       let first = Polymer.dom(this.$.menu).querySelectorAll('paper-input[label="Buscar"]');

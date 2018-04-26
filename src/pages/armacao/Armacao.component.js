@@ -18,10 +18,27 @@ class Armacao extends Polymer.Element {
             selected2:{
                 type: Number,
                 value: 0
+            },
+            dataList: {
+                type: Array,
+                value: [],
             }
 
         };
 
+    }
+    handleResponse({detail}) {
+        const {response} = detail;
+        this.dataList = response;
+    }
+
+    onChangeValueSearch({detail}) {
+        const {value} = detail;
+        const data = this.data;
+
+        const filteredData = data.filter((item) => item.name.toLowerCase().includes(value) && item);
+
+        this.dataList = filteredData;
     }
     ready() {
         super.ready();

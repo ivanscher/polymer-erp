@@ -24,14 +24,14 @@
 
         <div class="page display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
 
-            <paper-input label="Buscar" class="card" no-label-float  >
+            <paper-input label="Buscar" class="card" no-label-float on-value-changed="onChangeValueSearch">
                 <iron-icon icon="search" slot="prefix"></iron-icon>
             </paper-input>
 
 
-            <iron-ajax url="../../contatos.json" last-response="{{data}}" auto></iron-ajax>
-            <iron-list id="list" items="[[data]]" as="item" selection-enabled>
-                <template>
+            <iron-ajax url="../../contatos.json" last-response="{{data}}" on-response="handleResponse" auto></iron-ajax>
+            <div id="list">
+                <template is="dom-repeat" items="{{dataList}}">
                     <!--<div class$="[[getClassForItem(item, selected)]]" tabindex$="[[tabIndex]]">-->
                     <div class="item" tabindex$="[[tabIndex]]" draggable="true">
                         <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
@@ -50,7 +50,7 @@
                         <div class="code">[[item.index]]</div>
                     </div>
                 </template>
-            </iron-list>
+            </div>
 
 
 

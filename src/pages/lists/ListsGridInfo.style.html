@@ -15,15 +15,12 @@
                 padding-top: 64px;
                 min-height: auto;
             }
-            iron-list {
+            #list {
                 background-color: white;
                 padding-top: 0px;
                 height: calc(100vh - 192px);
-                --iron-list-items-container: {
-                    width: calc(100% - 16px);
-                    margin: 0 auto;
-                    border-bottom: 1px solid #ddd;
-                };
+                overflow-y: auto;
+
             }
             paper-fab{
                 position: fixed;
@@ -35,7 +32,8 @@
                 width: 56px;
             }
             .photoContainer {
-                width: calc(25% - 16px);
+                float: left;
+                width: 25%;
             }
 
             .photoContent {

@@ -11,11 +11,6 @@
             <app-toolbar>
                 <paper-icon-button icon="arrow-back"></paper-icon-button>
                 <div spacer main-title class="section-title">Atendimentos</div>
-
-                <!--<paper-button>Óculos Próprio</paper-button>
-                <paper-icon-button icon="refresh" id="button-refresh"></paper-icon-button>
-                <paper-tooltip for="button-refresh" offset="0" position="top">Atualizar</paper-tooltip>
--->
             </app-toolbar>
         </app-header>
 
@@ -29,7 +24,7 @@
                 <div class="page">
                     <div class=" display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
 
-                        <paper-input label="Buscar" class="card" no-label-float>
+                        <paper-input label="Buscar" class="card" no-label-float on-value-changed="onChangeValueSearch" >
                             <iron-icon icon="search" slot="prefix"></iron-icon>
                             <iron-icon icon="filter-list" slot="suffix"></iron-icon>
                             <iron-icon icon="swap-vert" slot="suffix"></iron-icon>
@@ -38,9 +33,9 @@
                         </paper-input>
 
 
-                        <iron-ajax url="../../armacao.json  " last-response="{{data}}" auto></iron-ajax>
-                        <iron-list id="list" items="[[data]]" as="item" selection-enabled>
-                            <template>
+                        <iron-ajax url="../../armacao.json  " last-response="{{data}}" on-response="handleResponse" auto></iron-ajax>
+                        <div id="list">
+                            <template is="dom-repeat" items="{{dataList}}">
                                 <a href="/dashboard/vendas" class="item" tabindex$="[[tabIndex]]">
                                     <iron-image class="avatar" sizing="contain" src="[[item.image]]"></iron-image>
                                     <div class="pad justified-start">
@@ -55,7 +50,7 @@
                                     </div>
                                 </a>
                             </template>
-                        </iron-list>
+                        </div>
                     </div>
                 </div>
             </div>
