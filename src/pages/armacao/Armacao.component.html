@@ -9,8 +9,18 @@
         <style include="armacao-style"></style>
         <app-header class="page-header">
             <app-toolbar>
-                <paper-icon-button icon="arrow-back"></paper-icon-button>
-                <div spacer main-title class="section-title">Atendimentos</div>
+                <paper-icon-button icon="arrow-back" onClick="javascript:history.back()"></paper-icon-button>
+
+                    <paper-input label="Buscar" class="search" no-label-float on-value-changed="onChangeValueSearch" >
+                        <iron-icon icon="search" slot="prefix"></iron-icon>
+                        <iron-icon icon="close" slot="suffix"></iron-icon>
+                    </paper-input>
+                <paper-icon-button icon="filter-list" id="button-refresh"></paper-icon-button>
+                <paper-icon-button icon="swap-vert" id="button-refresh"></paper-icon-button>
+                <!--<paper-icon-button icon="view-list" id="button-refresh"></paper-icon-button>-->
+                <paper-icon-button icon="view-module" id="button-refresh"></paper-icon-button>
+
+
             </app-toolbar>
         </app-header>
 
@@ -24,13 +34,7 @@
                 <div class="page">
                     <div class=" display-table-on-mobile flex-size-12 flex-vertical flex-stretch">
 
-                        <paper-input label="Buscar" class="card" no-label-float on-value-changed="onChangeValueSearch" >
-                            <iron-icon icon="search" slot="prefix"></iron-icon>
-                            <iron-icon icon="filter-list" slot="suffix"></iron-icon>
-                            <iron-icon icon="swap-vert" slot="suffix"></iron-icon>
-                            <iron-icon icon="view-list" slot="suffix"></iron-icon>
-                            <iron-icon icon="view-module" slot="suffix"></iron-icon>
-                        </paper-input>
+
 
 
                         <iron-ajax url="../../armacao.json  " last-response="{{data}}" on-response="handleResponse" auto></iron-ajax>

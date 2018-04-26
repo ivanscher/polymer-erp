@@ -9,10 +9,38 @@
                 margin: 0;
                 background-color: #eee;
             }
+            app-header.page-header{
+                top: 0;
+            }
+            app-toolbar paper-input.search iron-icon{
+                margin-top: -8px;
+            }
+            app-toolbar paper-input.search{
+                background-color: rgba(255,255,255,.1);
+                width: 100%;
+                border-radius: 4px;
+                padding-left: 8px;
+                color: white;
+                --paper-input-container-label: {
+                    font-size: 14px;
+                    color: white;
+                };
+                --paper-input-container-input: {
+                    font-size: 14px;
+                    color: white;
+                    top: -4px;
+                };
+                --paper-input-container-underline-focus: {
+                    border-color: #0098db;
+                };
+                --paper-input-container-underline: {
+                    border-color:transparent;
+                };
 
+            }
             .page{
-                padding-top: 64px;
-                min-height: calc(100vh - 192px);
+                padding-top: 16px;
+                min-height: calc(100vh - 64px);
             }
 
             .code{
@@ -29,7 +57,7 @@
 
             #list {
                 padding-top: 0px;
-                height: calc(100vh - 192px);
+                height: calc(100vh - 94px);
                 overflow-y: auto;
             }
             paper-fab{
