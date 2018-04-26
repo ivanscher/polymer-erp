@@ -15,11 +15,20 @@
                         <iron-icon icon="search" slot="prefix"></iron-icon>
                         <iron-icon icon="close" slot="suffix"></iron-icon>
                     </paper-input>
-                <paper-icon-button icon="filter-list" id="button-refresh"></paper-icon-button>
-                <paper-icon-button icon="swap-vert" id="button-refresh"></paper-icon-button>
+                <paper-icon-button icon="filter-list" id="buttonfilter"></paper-icon-button>
+
+                <paper-menu-button  horizontal-align="right">
+                    <paper-icon-button icon="swap-vert" slot="dropdown-trigger" alt="menu"></paper-icon-button>
+                    <paper-listbox slot="dropdown-content">
+
+                        <paper-item><iron-icon icon="close"></iron-icon> Label da Ação</paper-item>
+                        <paper-item><iron-icon icon="close"></iron-icon> Metodo com Nome longo</paper-item>
+                        <paper-item><iron-icon icon="close"></iron-icon> Item3</paper-item>
+                    </paper-listbox>
+                </paper-menu-button>
+
                 <!--<paper-icon-button icon="view-list" id="button-refresh"></paper-icon-button>-->
                 <paper-icon-button icon="view-module" id="button-refresh"></paper-icon-button>
-
 
             </app-toolbar>
         </app-header>
@@ -69,6 +78,45 @@
         </div>
 
         <paper-fab mini icon="add" id="add"></paper-fab>
+
+        <paper-dialog id="actions" with-backdrop>
+
+            <h2>Filtros Avançados:</h2>
+
+            <paper-button dialog-dismiss style=" position: absolute; padding:0; min-width: 30px; height: 30px; border-radius: 30px; right:0; top: 0;"><iron-icon icon="close"></iron-icon></paper-button>
+
+            <paper-card class="display-table-on-mobile flex-horizontal">
+                <div class="card-content flexchild-vertical flex-size-12">
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+
+                        <paper-input label="Pesquisar nome do produto" class="flexchild size16 flex-size-3"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+
+                        <paper-input label="Pesquisar preço do produto" class="flexchild size16 flex-size-3"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+
+                        <paper-input label="Pesquisar código do produto" class="flexchild size16 flex-size-3"></paper-input>
+                    </div>
+
+                    <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+
+                        <paper-input label="Pesquisar termo na descrição do produto" class="flexchild size16 flex-size-3"></paper-input>
+                    </div>
+
+                </div>
+
+            </paper-card>
+
+            <div class="buttons">
+                <paper-button>Limpar</paper-button>
+                <paper-button dialog-confirm autofocus class="blue">Buscar</paper-button>
+            </div>
+        </paper-dialog>
     </template>
     <script src="Armacao.component.js"></script>
 </dom-module>

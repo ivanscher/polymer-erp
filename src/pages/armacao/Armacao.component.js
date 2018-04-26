@@ -31,7 +31,9 @@ class Armacao extends Polymer.Element {
         const {response} = detail;
         this.dataList = response;
     }
-
+    openBy() {
+        this.$.actions.open();
+    }
     onChangeValueSearch({detail}) {
         const {value} = detail;
         const data = this.data;
@@ -43,6 +45,7 @@ class Armacao extends Polymer.Element {
     ready() {
         super.ready();
         this.$.add.addEventListener('click', this.golink.bind(this), false);
+        this.$.buttonfilter.addEventListener('click', this.openBy.bind(this), false);
     }
 
     golink(el) {

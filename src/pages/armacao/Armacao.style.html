@@ -15,6 +15,9 @@
             app-toolbar paper-input.search iron-icon{
                 margin-top: -8px;
             }
+            app-toolbar{
+                padding: 0;
+            }
             app-toolbar paper-input.search{
                 background-color: rgba(255,255,255,.1);
                 width: 100%;
@@ -23,6 +26,7 @@
                 color: white;
                 --paper-input-container-label: {
                     font-size: 14px;
+                    margin-top: 2px;
                     color: white;
                 };
                 --paper-input-container-input: {
@@ -39,7 +43,6 @@
 
             }
             .page{
-                padding-top: 16px;
                 min-height: calc(100vh - 64px);
             }
 
@@ -52,17 +55,41 @@
             }
             paper-button{
                 font-size: 16px;
+
                 text-transform: none;
+            }
+
+            paper-dialog paper-button.red{
+                color: #EB5757;
+            }
+            paper-dialog .card-content{
+                padding: 8px 24px;
+            }
+
+            paper-dialog paper-icon-button,
+            paper-dialog paper-button{
+                color: rgba(0,0,0,.56);
+            }
+            paper-dialog paper-button.blue{
+                color: #0098DB;
+            }
+            paper-dialog{
+                width: 100%;
+                max-width: 600px !important;
+            }
+            paper-dialog paper-card{
+                margin-top: 0;
+                box-shadow: none;
             }
 
             #list {
                 padding-top: 0px;
-                height: calc(100vh - 94px);
+                height: calc(100vh - 64px);
                 overflow-y: auto;
             }
             paper-fab{
                 position: fixed;
-                z-index: 999;
+                z-index: 101;
                 bottom: 16px;
                 right: 16px;
                 --paper-fab-background: #0098DB;
@@ -156,6 +183,14 @@
 
             }
             @media (max-width: 840px) {
+                iron-overlay-backdrop{
+                    z-index: 9999;
+                }
+                paper-dialog{
+                }
+                app-toolbar paper-input.search{
+                    width: 56%;
+                }
                 paper-toolbar .bottom.title {
                     font-size: 14px;
                 }
