@@ -9,18 +9,21 @@
         <style include="armacao-style"></style>
         <app-header class="page-header">
             <app-toolbar>
+
                 <paper-icon-button icon="arrow-back" onClick="javascript:history.back()"></paper-icon-button>
 
-                    <paper-input label="Buscar" class="search" no-label-float on-value-changed="onChangeValueSearch" >
+                <div spacer main-title class="section-title">
+                    <paper-input label="Buscar Produtos" class="search" no-label-float on-value-changed="onChangeValueSearch" >
                         <iron-icon icon="search" slot="prefix"></iron-icon>
                         <iron-icon icon="close" slot="suffix"></iron-icon>
                     </paper-input>
+                </div>
+
                 <paper-icon-button icon="filter-list" id="buttonfilter"></paper-icon-button>
 
-                <paper-menu-button  horizontal-align="right">
+                <paper-menu-button  horizontal-align="right" style="padding: 0">
                     <paper-icon-button icon="swap-vert" slot="dropdown-trigger" alt="menu"></paper-icon-button>
                     <paper-listbox slot="dropdown-content">
-
                         <paper-item><iron-icon icon="close"></iron-icon> Label da Ação</paper-item>
                         <paper-item><iron-icon icon="close"></iron-icon> Metodo com Nome longo</paper-item>
                         <paper-item><iron-icon icon="close"></iron-icon> Item3</paper-item>
@@ -68,19 +71,10 @@
 
                                 <div class="photoContainer">
                                     <a href="/dashboard/vendas" class="photoContent flex-vertical" tabindex$="[[tabIndex]]">
-
-                                        <iron-image sizing="cover"
-                                                    src="[[item.image]]">
-                                        </iron-image>
-
-                                        <h2 class="primary ">
-                                            [[item.name]]
-
-                                        </h2>
+                                        <iron-image sizing="cover" src="[[item.image]]"></iron-image>
+                                        <h2 class="primary ">[[item.name]]</h2>
                                         <p class="shortText">[[item.descricao]]</p>
                                         <h3 class="primary price">[[item.preco]]</h3>
-
-
                                     </a>
                                 </div>
 

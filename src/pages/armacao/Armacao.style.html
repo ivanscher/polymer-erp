@@ -9,6 +9,10 @@
                 margin: 0;
                 background-color: #eee;
             }
+            div[main-title]{
+                pointer-events: auto;
+                margin-right: 8px;
+            }
             app-header.page-header{
                 top: 0;
             }
@@ -19,20 +23,30 @@
                 padding: 0;
             }
             app-toolbar paper-input.search{
+                height: 44px;
+
                 background-color: rgba(255,255,255,.1);
                 width: 100%;
+                max-width: 720px;
                 border-radius: 4px;
-                padding-left: 8px;
+                padding:0 0 0 8px;
                 color: white;
+                --paper-input-container: {
+                    padding: 0;
+                }
                 --paper-input-container-label: {
                     font-size: 14px;
-                    margin-top: 2px;
+                    line-height: 44px;
+                    top:0;
+                    padding: 0;
                     color: white;
                 };
                 --paper-input-container-input: {
                     font-size: 14px;
                     color: white;
-                    top: -4px;
+                    top:0;
+                    padding: 0;
+                    line-height: 44px;
                 };
                 --paper-input-container-underline-focus: {
                     border-color: #0098db;
@@ -43,7 +57,7 @@
 
             }
             .page{
-                min-height: calc(100vh - 64px);
+                min-height: calc(100vh - 82px);
             }
 
             .code{
@@ -91,7 +105,7 @@
             #grid,
             #list {
                 padding-top: 0px;
-                height: calc(100vh - 64px);
+                height: calc(100vh - 82px);
                 overflow-y: auto;
             }
             paper-fab{
@@ -116,9 +130,12 @@
                 @apply --layout-horizontal;
                 padding: 0 20px;
                 background-color: white;
+                border: 1px solid white;
                 border-bottom: 1px solid #ddd;
                 cursor: pointer;
-                margin-bottom: 10px;
+            }
+            .item:hover{
+                border: 1px solid #ddd;
             }
             .avatar {
                 width: 150px;
@@ -203,9 +220,18 @@
                 }
             }
 
+            #list,
+            #grid{
+                padding: 8px;
+                background-color: white;
+            }
+            #grid .photoContainer:hover{
+                border: 1px solid #ddd;
+            }
             #grid .photoContainer {
                 float: left;
-                width: 25%;
+                width: calc(25% - 2px);
+                border: 1px solid white;
             }
 
             #grid .photoContent {
@@ -216,7 +242,6 @@
                 @apply --layout;
                 background-color: #fff;
                 position: relative;
-                margin: 8px;
                 padding: 8px;
                 border: 1px solid #fff;
             }
@@ -277,6 +302,9 @@
 
             @media (max-width: 640px) {
 
+                app-toolbar paper-input.search{
+                    width: 100%;
+                }
                 #grid .photoContent > iron-image{
                     width: 100%;
                     min-height: 120px;
