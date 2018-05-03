@@ -11,21 +11,31 @@
             <app-toolbar>
                 <paper-icon-button icon="arrow-back"></paper-icon-button>
                 <div spacer main-title class="section-title">Contatos</div>
-                <paper-icon-button icon="file-upload" id="buttonimport"></paper-icon-button>
-                <paper-tooltip for="buttonimport" offset="0" position="top">Importar</paper-tooltip>
 
-                <paper-icon-button icon="refresh" id="buttonrefresh"></paper-icon-button>
-                <paper-tooltip for="buttonrefresh" offset="0" position="top">Atualizar</paper-tooltip>
 
-                <paper-icon-button icon="save" id="buttonsave"></paper-icon-button>
-                <paper-tooltip for="buttonsave" offset="0" position="top">Salvar</paper-tooltip>
 
+                <paper-button id="buttonsave">Salvar</paper-button>
+
+
+
+                <paper-tooltip for="delete" offset="0" position="top">Deletar/Inativar</paper-tooltip>
+
+                <!-- Paper Button Menu // Component responsible to create a action of drop the new menu with the options // see example on the browser. -->
+                <paper-menu-button  horizontal-align="right">
+                    <paper-icon-button icon="icons:delete"  slot="dropdown-trigger"></paper-icon-button>
+                    <paper-listbox slot="dropdown-content">
+                        <paper-item>Excluir</paper-item>
+                        <paper-item>Inativar</paper-item>
+
+                    </paper-listbox>
+                </paper-menu-button>
                 <!-- Paper Button Menu // Component responsible to create a action of drop the new menu with the options // see example on the browser. -->
                 <paper-menu-button  horizontal-align="right">
                     <paper-icon-button icon="more-vert" slot="dropdown-trigger" alt="menu"></paper-icon-button>
                     <paper-listbox slot="dropdown-content">
-                        <paper-item>Importar Contatos (.xlsx)</paper-item>
+                        <paper-item>Importar Contato</paper-item>
                         <paper-item>Migrar Contato</paper-item>
+                        <paper-item>Incluir Redes Sociais</paper-item>
                     </paper-listbox>
                 </paper-menu-button>
             </app-toolbar>
