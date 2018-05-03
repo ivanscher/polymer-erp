@@ -51,7 +51,7 @@ class Dashboard extends Polymer.Element {
     if(this.companyclass=='hide'){
       this.companyclass='show';
       this.menuclass='hide';
-      this.arrow='arrow-drop-upcls';
+      this.arrow='arrow-drop-up';
     }else{
         this.arrow='arrow-drop-down';
       this.companyclass='hide';

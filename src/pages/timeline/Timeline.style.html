@@ -88,10 +88,15 @@
                 border-radius: 50%;
             }
             @media (max-width: 840px){
+                .timeline li {
+                    @apply(--layout-vertical);
+                }
                 .timeline li paper-card{
+                    padding-left: 25px;
 
                 }
                 .timeline .time {
+                    margin: -40px 0 0 40px;
                     width: auto;
                 }
             }

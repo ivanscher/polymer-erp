@@ -42,7 +42,8 @@
     "ud-stepper": "urdeveloper/ud-stepper#^0.3.0",
     "iron-swipeable-pages": "2.0-preview",
     "google-chart": "https://github.com/GoogleWebComponents/google-chart",
-    "in-app-search": "hunsalz/in-app-search#^1.0.2"
+    "in-app-search": "hunsalz/in-app-search#^1.0.2",
+    "vaadin-upload": "vaadin/vaadin-upload#^4.0.0"
   },
   "resolutions": {
     "polymer": "^2.0.0",

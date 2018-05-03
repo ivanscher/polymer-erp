@@ -1,4 +1,4 @@
-class Contatos extends Polymer.Element {
+class ContatosPage extends Polymer.Element {
     constructor() {
         super();
     }
@@ -20,26 +20,18 @@ class Contatos extends Polymer.Element {
                 type: Number,
                 value: 0
             },
-            // the paper-dropdown value is get using properties, inside de component is setup like {{dropdownValue}},
-            // the same name declared on properties here, the value is the value what will be list item value.
-            dropdownValue: {
-                type: String,
-                value: 'Masculino'
-            }
+
         };
     }
 
     ready() {
         super.ready();
-        const {
-            paperRadioValue,
-            paperSelect,
-        } = this.$;
 
-        paperRadioValue.addEventListener('click', (e) => {
-            console.log(paperRadioValue.selected);
-        })
+        this.$.avatar.addEventListener('click', this.openBy.bind(this), false);
+    }
+    openBy() {
+        this.$.actions.open();
     }
 }
 
-window.customElements.define(Contatos.is, Contatos);
+window.customElements.define(ContatosPage.is, ContatosPage);

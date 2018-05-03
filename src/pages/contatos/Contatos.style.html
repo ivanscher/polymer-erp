@@ -17,7 +17,33 @@
                 margin: 16px auto 0;
             }
 
-
+            paper-input.social{
+                --paper-input-container-label: {
+                    padding-left: 10px;
+                    font-size: 14px;
+                };
+                --paper-input-container-input: {
+                    padding-left: 10px;
+                    font-size: 14px;
+                };
+            }
+            .avatarContainer{
+                position: relative;
+                cursor: pointer;
+            }
+            .avatarContainer:hover paper-icon-button{
+                opacity: 1;
+            }
+            .avatarContainer paper-icon-button{
+                color: white;
+                position: absolute;
+                top:50%;
+                left: 50%;
+                margin: -20px;
+                z-index: 2;
+                opacity: .5;
+                pointer-events: none;
+            }
             paper-textarea {
                 padding: 4px 16px;
                 background-color: var(--google-grey-100);
@@ -33,13 +59,26 @@
 
             paper-card{
                 @apply(--shadow-elevation-12d);
-                margin-bottom: 16px;
+                margin-bottom: 16px;margin-top: 54px
                 -webkit-border-radius: 0 0 8px 8px;
                 border-radius: 0 0 8px 8px;
             }
 
+            paper-textarea{
+                margin-top: 54px
+            }
+            .pdtDiffDesk{
+                padding-top: 40px;
+            }
+
             @media (max-width: 840px){
 
+                paper-textarea{
+                    margin-top: 8px
+                }
+                .pdtDiffDesk{
+                    padding-top: 16px;
+                }
                 app-toolbar paper-icon-button{display: none}
                 app-toolbar paper-icon-button:first-child,
                 app-toolbar paper-icon-button:last-child{
