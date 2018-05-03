@@ -24,6 +24,20 @@ class Dashboard extends Polymer.Element {
         type: String, 
         value: '/dashboard/',
       },
+        menuclass: {
+            type: String,
+            value: 'show' // init the value to true so it will be hidden on page load
+        },
+        companyclass: {
+            type: String,
+            value: 'hide' // init the value to true so it will be hidden on page load
+        },
+        arrow: {
+            type: String,
+            value: 'arrow-drop-down' // init the value to true so it will be hidden on page load
+        }
+
+
     };
   }
 
@@ -33,10 +47,21 @@ class Dashboard extends Polymer.Element {
       first.blur();
   }
 
-  toggle2() {
+  toggleMenu() {
+    if(this.companyclass=='hide'){
+      this.companyclass='show';
+      this.menuclass='hide';
+      this.arrow='arrow-drop-upcls';
+    }else{
+        this.arrow='arrow-drop-down';
+      this.companyclass='hide';
+      this.menuclass='show';
+    }
+    /*
     this.$.collapse2.toggle();
       let first = Polymer.dom(this.$.menu).querySelectorAll('paper-input[label="Buscar"]');
       first.blur();
+      */
   }
 
   ready() {

@@ -107,35 +107,35 @@
                     </div>
                     <ul>
 
-                        <li on-click="toggle2" aria-expanded$="[[opened2]]" aria-controls="collapse"
+                        <li on-click="toggleMenu"  aria-controls="collapse"
                             class="collapse-menu">
                             <a tabindex="-1">
                                 Ótica Diniz
-                                <iron-icon icon="arrow-drop-down" slot="item-icon"></iron-icon>
+                                <iron-icon icon$="{{arrow}}" slot="item-icon"></iron-icon>
                             </a>
                         </li>
-                        <iron-collapse id="collapse2" opened="{{opened2}}">
-                            <ul class="menu-content">
-
-                                <li tabindex="-1">
-                                    <a href="[[dashboardPath]]armacaoform" class="menu" tabindex="-1">
-                                        <iron-icon icon="label" slot="item-icon"></iron-icon>
-                                        Optdados
-                                    </a>
-                                </li>
-                                <li tabindex="-1">
-                                    <a href="[[dashboardPath]]listagrid" class="menu" tabindex="-1">
-                                        <iron-icon icon="label" slot="item-icon"></iron-icon>
-                                        Geek
-                                    </a>
-                                </li>
-                            </ul>
-                        </iron-collapse>
                     </ul>
                 </div>
 
-                <iron-selector id="menu" class="drawer-list" selected="[[page]]" attr-for-selected="name"
-                               class="drawer-list" role="navigation">
+                <iron-selector id="menu" class="drawer-list" class$="{{companyclass}}" selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+                    <paper-input label="Buscar" class="card" no-label-float tabindex="-1">
+                        <iron-icon icon="search" slot="prefix"></iron-icon>
+                    </paper-input>
+                    <hr class="separated">
+                    <p>
+                        <small>Sistemas</small>
+                    </p>
+
+                    <ul>
+                        <li tabindex="-1">
+                            <a href="[[dashboardPath]]lista" class="menu" tabindex="-1">
+                                <iron-icon icon="supervisor-account" slot="item-icon"></iron-icon>
+                                Empresa 1
+                            </a>
+                        </li>
+                    </ul>
+                </iron-selector>
+                <iron-selector id="menu" class="drawer-list" class$="{{menuclass}}" selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
 
 
                         <paper-input label="Buscar" class="card" no-label-float tabindex="-1">
