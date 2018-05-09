@@ -12,7 +12,6 @@
                 padding-top: 64px;
             }
 
-
             paper-fab[super-mini]:focus,
             paper-fab[super-mini] {
                 background: white;
@@ -33,10 +32,6 @@
             .card-content .card-content{
                 padding: 0 16px;
             }
-/*
-            .card-content .card-content:first-child{
-                padding-left: 0;
-            }*/
 
             .card-content .card-content:last-child{
                 padding-right: 0;
@@ -60,21 +55,36 @@
                 margin: 0 8px;
             }
 
-
-
-
             paper-button {
-                margin-top: 16px;
-                clear: left;
-                float: right;
+                margin: 8px auto;
+                display: block;
+                text-align: center;
                 padding: 8px 16px;
                 color: #0098db;
 
+            }
+            .pt0{
+                padding-top:  0 !important
             }
 
             paper-button iron-icon {
                 margin-right: 8px;
             }
+            .m0{
+                margin: 0 !important;
+            }
+            .pl0{
+                padding-left: 0 !important;
+            }
+            .pl16{
+                padding-left: 16px;
+            }
+            .align-center{
+                text-align: center;
+            }
+.scroll{
+    height: 326px;overflow-y: scroll;overflow-x: hidden;
+}
             paper-card{
                 @apply(--shadow-elevation-12d);
                 margin-bottom: 16px;
@@ -83,6 +93,13 @@
             }
 
             @media (max-width: 840px){
+                .align-center{
+                    text-align: left;
+                    @apply(--layout-horizontal);
+                }
+                .pl16{
+                    padding-left: 0;
+                }
                 .card-content .card-content{
                     padding: 0 0;
                 }

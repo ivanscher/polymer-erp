@@ -24,6 +24,15 @@ class Itens extends Polymer.Element {
         };
 
     }
+    ready() {
+        super.ready();
+
+        this.$.uploadbutton.addEventListener('click', this.openBy.bind(this), false);
+    }
+    openBy() {
+        console.log('teste');
+        this.$.uploadmodal.open();
+    }
 }
 
 window.customElements.define(Itens.is, Itens);

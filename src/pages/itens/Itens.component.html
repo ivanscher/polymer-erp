@@ -48,128 +48,150 @@
                                     <paper-toggle-button checked></paper-toggle-button>
                                 </div>
 
-                                <paper-input label="Nome" class="flexchild bolder size24" no-label-float></paper-input>
+                                <paper-input label="Nome" class="flexchild bolder size24 m0" no-label-float></paper-input>
                             </div>
                             <div class="flex-horizontal display-table-on-mobile flex-size-12">
                                 <div class="flex-vertical display-table-on-mobile flex-size-3 ">
-
-
-                                    <mp-slider controls bullets showThumbs="false">
-                                        <div>
-                                            <img src="http://baconmockup.com/700/700"/>
-                                        </div>
-
-                                        <div>
-                                            <img src="http://baconmockup.com/800/800"/>
-                                        </div>
-
-                                        <div>
-                                            <img src="http://baconmockup.com/900/900"/>
-                                        </div>
-                                    </mp-slider>
-
-                                    <paper-button>
-                                        <iron-icon icon="cloud-upload"></iron-icon>
-                                        Fazer upload
-                                    </paper-button>
+                                    <div class="pl16">
+                                        <cosmoz-image-viewer show-nav show-detach
+                                                             images='["http://placekitten.com/g/768/768","http://placekitten.com/g/840/840"]'>
+                                        </cosmoz-image-viewer>
+                                        <paper-button id="uploadbutton">
+                                            <iron-icon icon="cloud-upload" ></iron-icon>
+                                            Fazer upload
+                                        </paper-button>
+                                    </div>
 
                                 </div>
-                                <div class="flex-vertical flex-size-9 display-table-on-mobile border-left">
+                                <div class="flex-vertical flex-size-9 display-table-on-mobile">
                                     <div class="flex-horizontal display-table-on-mobile">
-                                        <div class="card-content flex-vertical flex-size-9">
-                                            <div class="contain-three-inputs flex-horizontal display-table-on-mobile">
+                                        <div class="card-content flex-vertical flex-size-9 pt0">
+                                            <div class="flex-horizontal width100 justified-space-between">
+                                                <div class="title"><iron-icon icon="editor:attach-money" slot="prefix" style="margin-right: 6px"></iron-icon> Valores</div>
 
-                                                <paper-input label="Descrição Comercial"
-                                                             class="flexchild"></paper-input>
-                                                <paper-input label="Tipo" class="flexchild"></paper-input>
-                                            </div>
-
-
-                                            <div class=" flex-horizontal display-table-on-mobile">
-                                                <div class="flex-size-3">
-                                                    <paper-dropdown-menu label="Linha">
-                                                        <paper-listbox slot="dropdown-content" selected="1">
-                                                            <paper-item>Linha 1</paper-item>
-                                                            <paper-item>Linha 2</paper-item>
-                                                            <paper-item>Outros</paper-item>
-                                                        </paper-listbox>
-                                                    </paper-dropdown-menu>
-                                                </div>
-                                                <div class="flex-size-3">
-                                                    <paper-dropdown-menu label="Grupo">
-                                                        <paper-listbox slot="dropdown-content" selected="1">
-                                                            <paper-item>Grupo 1</paper-item>
-                                                            <paper-item>Grupo 2</paper-item>
-                                                            <paper-item>Outros</paper-item>
-                                                        </paper-listbox>
-                                                    </paper-dropdown-menu>
-                                                </div>
-                                                <div class="flex-size-3">
-                                                    <paper-dropdown-menu label="SubGrupo">
-                                                        <paper-listbox slot="dropdown-content" selected="1">
-                                                            <paper-item>SubGrupo 1</paper-item>
-                                                            <paper-item>SubGrupo 2</paper-item>
-                                                            <paper-item>Outros</paper-item>
-                                                        </paper-listbox>
-                                                    </paper-dropdown-menu>
-                                                </div>
-                                                <div class="flex-size-3">
-                                                    <paper-dropdown-menu label="Unidade">
-                                                        <paper-listbox slot="dropdown-content" selected="1">
-                                                            <paper-item>Unidade 1</paper-item>
-                                                            <paper-item>Unidade 2</paper-item>
-                                                            <paper-item>Outros</paper-item>
-                                                        </paper-listbox>
-                                                    </paper-dropdown-menu>
-                                                </div>
-                                            </div>
-
-                                            <div class="flex-horizontal display-table-on-mobile">
-                                                <paper-input label="NCM" class="flexchild flex-size-2"></paper-input>
-                                                <paper-input label="Aplicação"
-                                                             class="flexchild flex-size-1"></paper-input>
                                             </div>
                                             <div class="flex-horizontal display-table-on-mobile">
-                                                <paper-input label="Regras de Compra"
-                                                             class="flexchild flex-size-1"></paper-input>
-                                                <paper-input label="Regras de Venda"
-                                                             class="flexchild flex-size-1"></paper-input>
-                                            </div>
-                                        </div>
-                                        <div class="card-content flex-vertical flex-size-3 border-left">
+                                                <paper-input label="Compra" class="flexchild"></paper-input>
 
-                                            <div class="flex-horizontal display-table-on-mobile">
-                                                <paper-input label="Compra" class="flexchild bolder"
-                                                             no-label-float></paper-input>
-                                            </div>
-                                            <div class="flex-horizontal display-table-on-mobile">
-                                                <label class="flex-horizontal">
+                                                <label class="flex-horizontal" style="margin-top: 0">
                                                     <paper-toggle-button checked></paper-toggle-button>
                                                     Usar Composição?</label>
                                             </div>
                                             <div class="flex-horizontal display-table-on-mobile">
 
-                                                <paper-input label="Lucro Comercial" class="flexchild bolder"
-                                                             no-label-float></paper-input>
-                                            </div>
-                                            <div class="flex-horizontal display-table-on-mobile">
-                                                <label class="flex-horizontal">
+                                                <paper-input label="Lucro Comercial" class="flexchild"></paper-input>
+
+                                                <label class="flex-horizontal" style="margin-top: 0">
                                                     <paper-toggle-button checked></paper-toggle-button>
                                                     Usar Lucro %?</label>
                                             </div>
-                                            <div class="flex-horizontal display-table-on-mobile">
+                                            <div class="flex-horizontal display-table-on-mobile" style="margin-top: 4px">
 
-                                                <paper-input label="Venda" class="flexchild bolder size24"
-                                                             no-label-float></paper-input>
+                                                <paper-input label="Venda" class="flexchild size22"></paper-input>
                                             </div>
+
+                                            <div class="card-content flexchild-vertical width100 pl0" style="margin-top: 56px; ">
+
+                                                <div class="flex-horizontal width100 justified-space-between" style="margin-bottom: 32px">
+                                                    <div class="title"><iron-icon icon="icons:extension" slot="prefix" style="margin-right: 6px"></iron-icon> Armação</div>
+                                                </div>
+
+                                                <div class="display-table-on-mobile flex-horizontal width100 justified-space-between">
+                                                    <div class="flexchild-vertical align-center">
+                                                        <iron-image src="/src/resources/icon1.jpg" slot="prefix"></iron-image>
+                                                        <paper-input label="Dimensão" class="flexchild"></paper-input>
+                                                    </div>
+                                                    <div class="flexchild-vertical align-center">
+                                                        <iron-image src="/src/resources/icon2.jpg" slot="prefix"></iron-image>
+                                                        <paper-input label="Tamanho" class="flexchild"></paper-input>
+                                                    </div>
+                                                    <div class="flexchild-vertical align-center">
+                                                        <iron-image src="/src/resources/icon3.jpg" slot="prefix"></iron-image>
+                                                        <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                    </div>
+
+                                                    <div class="flexchild-vertical align-center">
+                                                        <iron-image src="/src/resources/icon4.jpg" slot="prefix"></iron-image>
+                                                        <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                    </div>
+                                                    <div class="flexchild-vertical align-center">
+                                                        <iron-image src="/src/resources/icon5.jpg" slot="prefix"></iron-image>
+                                                        <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-content flexchild-vertical width100 pl0" style="margin-top: 56px; ">
+
+                                                <div class="flex-horizontal width100 justified-space-between" >
+                                                    <div class="title"><iron-icon icon="icons:extension" slot="prefix" style="margin-right: 6px"></iron-icon> Lentes</div>
+                                                </div>
+
+                                                <div class="display-table-on-mobile flex-horizontal width100 justified-space-between">
+
+                                                        <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                        <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                        <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                        <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-content flexchild-vertical width100 pl0" style="margin-top: 56px; ">
+
+                                                <div class="flex-horizontal width100 justified-space-between" >
+                                                    <div class="title"><iron-icon icon="icons:extension" slot="prefix" style="margin-right: 6px"></iron-icon> Outros</div>
+                                                </div>
+
+                                                <div class="flex-vertical width100 justified-space-between">
+
+                                                    <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                    <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                    <paper-input label="Ponte" class="flexchild"></paper-input>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                    </div>
-                                    <div class="flex-horizontal display-table-on-mobile"
-                                         style="margin-top: 16px">
-                                        <div class="card-content flex-vertical flex-size-12">
-                                        <paper-textarea label="Observação" class="flexchild" rows="2" always-float-label
-                                                        char-counter
-                                                        placeholder="Digite sua observação"></paper-textarea>
+                                        <div class="card-content flex-size-3 pt0" >
+                                            <paper-input label="Descrição Comercial" class="flexchild"></paper-input>
+                                            <paper-input label="Tipo" class="flexchild"></paper-input>
+
+                                                <paper-dropdown-menu label="Linha">
+                                                    <paper-listbox slot="dropdown-content" selected="1">
+                                                        <paper-item>Linha 1</paper-item>
+                                                        <paper-item>Linha 2</paper-item>
+                                                        <paper-item>Outros</paper-item>
+                                                    </paper-listbox>
+                                                </paper-dropdown-menu>
+
+                                                <paper-dropdown-menu label="Grupo">
+                                                    <paper-listbox slot="dropdown-content" selected="1">
+                                                        <paper-item>Grupo 1</paper-item>
+                                                        <paper-item>Grupo 2</paper-item>
+                                                        <paper-item>Outros</paper-item>
+                                                    </paper-listbox>
+                                                </paper-dropdown-menu>
+
+                                                <paper-dropdown-menu label="SubGrupo">
+                                                    <paper-listbox slot="dropdown-content" selected="1">
+                                                        <paper-item>SubGrupo 1</paper-item>
+                                                        <paper-item>SubGrupo 2</paper-item>
+                                                        <paper-item>Outros</paper-item>
+                                                    </paper-listbox>
+                                                </paper-dropdown-menu>
+
+                                                <paper-dropdown-menu label="Unidade">
+                                                    <paper-listbox slot="dropdown-content" selected="1">
+                                                        <paper-item>Unidade 1</paper-item>
+                                                        <paper-item>Unidade 2</paper-item>
+                                                        <paper-item>Outros</paper-item>
+                                                    </paper-listbox>
+                                                </paper-dropdown-menu>
+
+                                            <paper-input label="NCM" class="flexchild flex-size-2"></paper-input>
+                                            <paper-input label="Aplicação" class="flexchild flex-size-1"></paper-input>
+                                            <paper-input label="Regras de Compra" class="flexchild flex-size-1"></paper-input>
+                                            <paper-input label="Regras de Venda" class="flexchild flex-size-1"></paper-input>
+                                            <paper-textarea label="Observação" class="flexchild" rows="4" always-float-label char-counter placeholder="Digite sua observação" style="margin-top: 16px"></paper-textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -520,6 +542,17 @@
                 </div>
             </iron-pages>
         </div>
+        <paper-dialog id="uploadmodal" modal>
+
+            <vaadin-upload accept=".jpg">
+                <iron-icon slot="drop-label-icon" icon="description"></iron-icon>
+                <span slot="drop-label">Solte seu arquivo aqui. (somente .JPG)</span>
+            </vaadin-upload>
+            <div class="buttons">
+                <paper-button dialog-dismiss>Fechar</paper-button>
+                <paper-button dialog-confirm autofocus>Alterar</paper-button>
+            </div>
+        </paper-dialog>
     </template>
     <script src="Itens.component.js"></script>
 </dom-module>

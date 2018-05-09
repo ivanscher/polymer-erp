@@ -43,7 +43,9 @@
     "iron-swipeable-pages": "2.0-preview",
     "google-chart": "https://github.com/GoogleWebComponents/google-chart",
     "in-app-search": "hunsalz/in-app-search#^1.0.2",
-    "vaadin-upload": "vaadin/vaadin-upload#^4.0.0"
+    "vaadin-upload": "vaadin/vaadin-upload#^4.0.0",
+    "photo-gallery": "supachailllpay/photo-gallery#^2.0.5",
+    "cosmoz-image-viewer": "Neovici/cosmoz-image-viewer#^1.2.4"
   },
   "resolutions": {
     "polymer": "^2.0.0",
